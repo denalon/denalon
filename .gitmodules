@@ -1,0 +1,9 @@
+[submodule "themes/docsy"]
+	path = themes/docsy
+	url = https://e.coding.net/denalon/asset/docsy.git
+[submodule "content/tech/develop"]
+	path = content/tech/develop
+	url = https://e.coding.net/elsatar/doc/develop.git
+[submodule "content/essay/essay"]
+	path = content/essay/essay
+	url = https://e.coding.net/elsatar/doc/essay.git

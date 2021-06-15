@@ -49,7 +49,7 @@ pipeline {
   stage('发布到public') {
     steps {
       dir('./public') {
-        echo '''rm -rf .git
+        sh '''rm -rf .git
 git init
 git remote add origin git@e.coding.net:denalon/public/blog.git
 git add .

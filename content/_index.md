@@ -4,6 +4,7 @@ linkTitle = "图书馆"
 +++
 
 {{< blocks/cover title="云上记事本" image_anchor="top" height="full" color="success" >}}
+
 <div class="mx-auto">
 	<a class="btn btn-lg btn-default btn-colourful text-white mr-3 mb-4" href="{{< relref "/tech" >}}">
 		技术<i class="fas fa-arrow-alt-circle-right ml-2"></i>
@@ -15,6 +16,7 @@ linkTitle = "图书馆"
 		存放各类网络资源，素材，模板
 	</p>
 </div>
+
 {{< /blocks/cover >}}
 
 

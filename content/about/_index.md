@@ -40,6 +40,13 @@ Google提到，Docsy的特殊功能包括网站导览以及多语言支持等，
 {{% /blocks/section %}}
 
 
+{{% blocks/section type="section" color="primary" %}}
+## Docsy 主题
+
+本站点使用的主题为[hugo-docsy主题](https://github.com/google/docsy)
+
+{{% /blocks/section %}}
+
 <!-- 
 {{< blocks/section >}}
 <div class="container">

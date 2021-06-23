@@ -192,8 +192,8 @@ enable = false
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "本站源码"
-	url = "https://denalon.coding.net/public/code/blog/git/files"
-	icon = "fab fa-github"
+	url = "https://denalon.coding.net/public/code/note/git/files"
+	icon = "fa fa-file-text"
         desc = "站点源码"
 # [[params.links.developer]]
 # 	name = "备用站点"

@@ -7,3 +7,6 @@
 [submodule "content/essay/essay"]
 	path = content/essay/essay
 	url = https://e.coding.net/elsatar/doc/essay.git
+[submodule "content/essay/update"]
+	path = content/essay/update
+	url = https://e.coding.net/frednab/content/update.git

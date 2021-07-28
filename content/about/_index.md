@@ -37,5 +37,3 @@ Docsy是一个文件式的网站，提供了使用者一些样板以及文件指
 
 Google提到，Docsy的特殊功能包括网站导览以及多语言支持等，Hugo本身就提供了简单的部署功能，Google额外增加了使用说明，包括添加页面、建构文件以及接受社群贡献的方法。目前Kubeflow、Knative和Agones都是用Docsy主题建制的，Google也创建了示范网站，并在其中大量使用Docsy的功能，供使用者浏览复制。
 {{% /blocks/section %}}
-
-

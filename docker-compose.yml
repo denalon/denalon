@@ -1,6 +1,0 @@
-version: '3'
-services:
-  hugo:
-    image: klakegg/hugo:ext-alpine
-    volumes:
-      - ".:/src"

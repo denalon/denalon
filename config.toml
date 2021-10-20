@@ -11,7 +11,7 @@ enableGitInfo = false
 
 # Language settings
 contentDir = "content"
-defaultContentLanguage = "zh"
+defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
@@ -75,7 +75,7 @@ anchor = "smart"
 # Language configuration
 
 [languages]
-[languages.zh]
+[languages.zh-cn]
 title = "记事本"
 description = "note"
 languageName ="中文"

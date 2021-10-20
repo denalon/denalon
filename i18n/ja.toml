@@ -3,16 +3,16 @@
 # UI strings. Buttons and similar.
 
 [ui_pager_prev]
-other = "上一页"
+other = "前へ"
 
 [ui_pager_next]
-other = "下一页"
+other = "次へ"
 
 [ui_read_more]
-other = "更多"
+other = "続きを読む"
 
 [ui_search]
-other = "站内搜索…"
+other = "サイトを検索..."
 
 # Used in sentences such as "Posted in News"
 [ui_in]
@@ -23,26 +23,26 @@ other = "in"
 other = "All Rights Reserved"
 
 [footer_privacy_policy]
-other = "隐私政策"
+other = "プライバシーポリシー"
 
 
 # Post (blog, articles etc.)
 [post_byline_by]
 other = "By"
 [post_created]
-other = "创建"
+other = "作成"
 [post_last_mod]
-other = "最后修改"
+other = "最終更新"
 [post_edit_this]
-other = "编辑此页"
+other = "ページの編集"
 [post_create_child_page]
-other = "添加子页面"
+other = "子ページを作成"
 [post_create_issue]
-other = "提交文档问题"
+other = "ドキュメントのissueを作成"
 [post_create_project_issue]
-other = "提交项目问题"
+other = "プロジェクトのissueを作成"
 [post_posts_in]
-other = "Posts in"
+other = "記事一覧"
 [post_reading_time]
 other = "minute read"
 [post_less_than_a_minute_read]
@@ -50,10 +50,10 @@ other = "less than a minute"
 
 # Print support
 [print_printable_section]
-other = "这是本节的多页打印视图。"
+other = "これは、このセクションの複数ページの印刷可能なビューです。"
 [print_click_to_print]
-other = "点击此处打印"
+other = "印刷するには、ここをクリックしてください"
 [print_show_regular]
-other = "返回本页常规视图"
+other = "このページの通常のビューに戻る"
 [print_entire_section]
-other = "整节打印"
+other = "セクション全体を印刷"

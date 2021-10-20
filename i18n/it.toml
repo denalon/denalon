@@ -3,16 +3,16 @@
 # UI strings. Buttons and similar.
 
 [ui_pager_prev]
-other = "上一页"
+other = "Precedente"
 
 [ui_pager_next]
-other = "下一页"
+other = "Successivo"
 
 [ui_read_more]
-other = "更多"
+other = "Leggi tutto"
 
 [ui_search]
-other = "站内搜索…"
+other = "Cerca nel sito…"
 
 # Used in sentences such as "Posted in News"
 [ui_in]
@@ -20,29 +20,29 @@ other = "in"
 
 # Footer text
 [footer_all_rights_reserved]
-other = "All Rights Reserved"
+other = "Tutti i diritti riservati"
 
 [footer_privacy_policy]
-other = "隐私政策"
+other = "Privacy Policy"
 
 
 # Post (blog, articles etc.)
 [post_byline_by]
-other = "By"
+other = "Di"
 [post_created]
-other = "创建"
+other = "Creato"
 [post_last_mod]
-other = "最后修改"
+other = "Ultima modifica"
 [post_edit_this]
-other = "编辑此页"
+other = "Modifica"
 [post_create_child_page]
-other = "添加子页面"
+other = "Create child page"
 [post_create_issue]
-other = "提交文档问题"
+other = "Crea issue di documentazione"
 [post_create_project_issue]
-other = "提交项目问题"
+other = "Crea issue di progetto"
 [post_posts_in]
-other = "Posts in"
+other = "Post in"
 [post_reading_time]
 other = "minute read"
 [post_less_than_a_minute_read]
@@ -50,10 +50,10 @@ other = "less than a minute"
 
 # Print support
 [print_printable_section]
-other = "这是本节的多页打印视图。"
+other = "This the multi-page printable view of this section."
 [print_click_to_print]
-other = "点击此处打印"
+other = "Click here to print"
 [print_show_regular]
-other = "返回本页常规视图"
+other = "Return to the regular view of this page"
 [print_entire_section]
-other = "整节打印"
+other = "Print entire section"

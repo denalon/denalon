@@ -3,46 +3,46 @@
 # UI strings. Buttons and similar.
 
 [ui_pager_prev]
-other = "上一页"
+other = "Önceki"
 
 [ui_pager_next]
-other = "下一页"
+other = "Sonraki"
 
 [ui_read_more]
-other = "更多"
+other = "Daha fazla oku"
 
 [ui_search]
-other = "站内搜索…"
+other = "Bu sitede arayın…"
 
 # Used in sentences such as "Posted in News"
 [ui_in]
-other = "in"
+other = "içinde"
 
 # Footer text
 [footer_all_rights_reserved]
-other = "All Rights Reserved"
+other = "Bütün haklar saklıdır"
 
 [footer_privacy_policy]
-other = "隐私政策"
+other = "Gizlilik Politikası"
 
 
 # Post (blog, articles etc.)
 [post_byline_by]
-other = "By"
+other = "by"
 [post_created]
-other = "创建"
+other = "Oluşturuldu"
 [post_last_mod]
-other = "最后修改"
+other = "Son düzenleme"
 [post_edit_this]
-other = "编辑此页"
+other = "Bu sayfayı düzenle"
 [post_create_child_page]
-other = "添加子页面"
+other = "Çocuk sayfası oluştur"
 [post_create_issue]
-other = "提交文档问题"
+other = "Belge konusu oluştur"
 [post_create_project_issue]
-other = "提交项目问题"
+other = "Proje konusu oluştur"
 [post_posts_in]
-other = "Posts in"
+other = "Gönderiler in"
 [post_reading_time]
 other = "minute read"
 [post_less_than_a_minute_read]
@@ -50,10 +50,10 @@ other = "less than a minute"
 
 # Print support
 [print_printable_section]
-other = "这是本节的多页打印视图。"
+other = "Bu bölümün görüntüsü yazdırılabilir."
 [print_click_to_print]
-other = "点击此处打印"
+other = "Yazdırmak için tıklayın"
 [print_show_regular]
-other = "返回本页常规视图"
+other = "Bu sayfanın normal görüntüsüne dönün"
 [print_entire_section]
-other = "整节打印"
+other = "Bütün bölümü yazıdırın"

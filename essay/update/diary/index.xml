@@ -1,0 +1,183 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>记事本 – 日记</title>
+    <link>/essay/update/diary/</link>
+    <description>Recent content in 日记 on 记事本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 01 Feb 2022 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="/essay/update/diary/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Essay: 202202</title>
+      <link>/web/note/2022/20220201/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2022/20220201/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;2022-02-01&#34;&gt;2022-02-01&lt;/h3&gt;
+&lt;h3 id=&#34;2022-02-10&#34;&gt;2022-02-10&lt;/h3&gt;
+&lt;h3 id=&#34;2022-02-16&#34;&gt;2022-02-16&lt;/h3&gt;
+&lt;p&gt;俄军指挥官从中国媒体上看到俄军将进攻乌克兰&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 202201</title>
+      <link>/web/note/2022/20220101/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2022/20220101/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;2022-01-01&#34;&gt;2022-01-01&lt;/h3&gt;
+&lt;p&gt;游戏&amp;quot;原神&amp;quot;&lt;/p&gt;
+&lt;p&gt;刻意将游戏里的城邦对应现实里的国家，造成文化的侵蚀。影射欧洲中世纪的蒙德，人人乐于助人，讨好别人，骑士团恪尽职守，无私奉献。影射中国古代的璃月，处处展现中华文化，但是充实着唯利是图的奸商，缺斤短两，投机倒把，强买强卖。影射古代日本的稻妻，封闭锁国，集权统治。&lt;/p&gt;
+&lt;p&gt;游戏内容受限&lt;/p&gt;
+&lt;p&gt;为了推广小宠物，游戏的主要助手 派蒙 无法随时跟随主角。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 202112</title>
+      <link>/web/note/2021/2021120101/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021120101/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;2021-12-01&#34;&gt;2021-12-01&lt;/h3&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 202111</title>
+      <link>/web/note/2021/20211101/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/20211101/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;下线博客&#34;&gt;下线博客&lt;/h3&gt;
+&lt;p&gt;停止使用.cn的域名以及部署在国内服务器上的博客，文章的仓库同步到多个git仓库，进行冗余和备份。&lt;/p&gt;
+&lt;p&gt;后续将提供一个牢固的部署方式将特定文章部署到固定地方，而不是将所有文章完全公开。&lt;/p&gt;
+&lt;h3 id=&#34;博客下线原因&#34;&gt;博客下线原因&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;风险不可控&lt;/em&gt;
+文章撰写时仅仅体现了当时的心情和认识，但这些文字记录可能发生不必要的联系和影响。哪怕是引用历史人物的某些只言片语，都有可能造成不必要的麻烦。所以，博客的文章将仅仅作为个人的随身笔记，并不完全对外访问。&lt;/p&gt;
+&lt;p&gt;之前同样处于这种考虑没有在博客上配置评论功能，就是避免不可控的评论。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 202110</title>
+      <link>/web/note/2021/20211001/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/20211001/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;2021-10-10&#34;&gt;2021-10-10&lt;/h3&gt;
+&lt;p&gt;使用pt下载和收集资源，构建1PB资料库&lt;/p&gt;
+&lt;h3 id=&#34;2021-10-12&#34;&gt;2021-10-12&lt;/h3&gt;
+&lt;p&gt;由于本地网络下载实在太慢，使用vps安装qBittorrent在线下载文件，当没有上传流量时删除文件。&lt;/p&gt;
+&lt;h3 id=&#34;2021-10-18&#34;&gt;2021-10-18&lt;/h3&gt;
+&lt;p&gt;迅雷快鸟上传会员会提高上传速度，但需要付费，而且不同于提升下载速度的迅雷超级会员，这个快鸟上传会员需要另外付费！&lt;/p&gt;
+&lt;h3 id=&#34;2021-10-20&#34;&gt;2021-10-20&lt;/h3&gt;
+&lt;p&gt;松鼠型收集&lt;/p&gt;
+&lt;h3 id=&#34;2021-10-22&#34;&gt;2021-10-22&lt;/h3&gt;
+&lt;p&gt;临时磁盘使用RAID0，&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 202109</title>
+      <link>/web/note/2021/20210901/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/20210901/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;2021-09-03&#34;&gt;2021-09-03&lt;/h3&gt;
+&lt;p&gt;由于之前对服务器功能的评估不足，错误的使用了2.5寸服务器，导致数块3.5寸硬盘无法正常接入服务器，只能通过raid卡接入普通pc上，甚至由于服务器的功耗太高，长时间的下载应在pc上进行。平时服务器的多个硬盘应拔下做冷备份&lt;/p&gt;
+&lt;h3 id=&#34;2021-09-06&#34;&gt;2021-09-06&lt;/h3&gt;
+&lt;p&gt;dell服务器上的tpm无法转移到其他服务器上使用，但为什么要做成可插拔的芯片。导致购买的旧服务器并没有找到tpm芯片，随便选购淘宝上的拆机芯片又无法使用，只能购买dell原厂出的全新芯片。&lt;/p&gt;
+&lt;p&gt;idrac莫名其妙没有画面，服务器正常开机，但是idrac一直显示无画面，导致并不清楚服务器是故障还是正常开机，需要接入显示器才行。&lt;/p&gt;
+&lt;p&gt;dell服务器没有找到风扇调速的方式，导致风扇耗能过高。&lt;/p&gt;
+&lt;p&gt;假设单个硬盘5W，20个硬盘插满功率要到100W&lt;/p&gt;
+&lt;p&gt;windows 更新网卡驱动以后，重启电脑，网络连接居然被禁用了，导致远程桌面无法访问&lt;/p&gt;
+&lt;h3 id=&#34;2021-09-07&#34;&gt;2021-09-07&lt;/h3&gt;
+&lt;p&gt;通过以下代码开启风扇手动调速&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ipmitool.exe -I lanplus -H 地址 -U 用户名 -P 密码 raw 0x30 0x30 0x01 0x00
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;通过一下代码将风扇调到10%&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ipmitool.exe -I lanplus -H 地址 -U 用户名 -P 密码 raw 0x30 0x30 0x02 0xff 0x0a
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;我发现，无论是10%还是全速100%，cpu和机箱温度均在40度左右&lt;/p&gt;
+&lt;h3 id=&#34;2021-09-10&#34;&gt;2021-09-10&lt;/h3&gt;
+&lt;p&gt;针对阶梯式电价下的服务器运行，高峰期仅运行低功耗的服务器,NAS。晚上启动服务器全速下载。下载服务器均为虚拟机。&lt;/p&gt;
+&lt;h3 id=&#34;2021-09-24&#34;&gt;2021-09-24&lt;/h3&gt;
+&lt;p&gt;万由810a机箱问题：&lt;/p&gt;
+&lt;p&gt;1 部分机箱螺丝太小，关键结构件的固定用力过大，导致螺丝刀容易滑丝。&lt;/p&gt;
+&lt;p&gt;2 机箱内部风道不规整，风扇孔位太少。顶部可以使用抽风风扇，但风扇为少见的7cm风扇。并非常见的机箱6cm风扇。&lt;/p&gt;
+&lt;p&gt;3 只有背部风扇进风，需要换用高风压风扇。（或者硬盘背板出增加风扇，在硬盘接满以后提高硬盘散热）&lt;/p&gt;
+&lt;p&gt;4 主板的支撑金属板开槽太窄，容易同主板背板螺丝冲突。&lt;/p&gt;
+&lt;p&gt;5 电源出线口上面刚好是风扇位置，线缆容易碰到风扇扇叶&lt;/p&gt;
+&lt;h3 id=&#34;2021-09-26&#34;&gt;2021-09-26&lt;/h3&gt;
+&lt;p&gt;HBO美剧 基地 奇葩的角色，剧情，世界观。&lt;/p&gt;
+&lt;p&gt;美剧 太阳召唤&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 202108</title>
+      <link>/web/note/2021/20210825/</link>
+      <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/20210825/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;2021-08-20&#34;&gt;2021-08-20&lt;/h3&gt;
+&lt;p&gt;分类服务器的功能&lt;/p&gt;
+&lt;p&gt;alfa 测试 日志 容器测试&lt;/p&gt;
+&lt;p&gt;bravo 静态资源 正常部署应用&lt;/p&gt;
+&lt;p&gt;charlie windows应用 .net应用&lt;/p&gt;
+&lt;p&gt;delta 网络代理  内网穿透服务&lt;/p&gt;
+&lt;p&gt;echo 数据库&lt;/p&gt;
+&lt;h3 id=&#34;2021-08-25&#34;&gt;2021-08-25&lt;/h3&gt;
+&lt;p&gt;二维码系统&lt;/p&gt;
+&lt;p&gt;部署蘑菇博客&lt;/p&gt;
+&lt;p&gt;撰写文章：日常生活的控制力-第一篇&lt;/p&gt;
+&lt;h3 id=&#34;2021-08-26&#34;&gt;2021-08-26&lt;/h3&gt;
+&lt;p&gt;取消了cdn的部署，&lt;/p&gt;
+&lt;p&gt;将阿里云的oss公开访问存储桶全部转移到腾讯云cos，只保留备份存储桶&lt;/p&gt;
+&lt;h3 id=&#34;2021-08-29&#34;&gt;2021-08-29&lt;/h3&gt;
+&lt;p&gt;服务器上线，20块硬盘接入，考虑到散热问题，硬盘将以1-3-5-7-9的隔位排列接入服务器。&lt;/p&gt;
+&lt;p&gt;docker运行数据库项目，mysql不支持arm，mariadb却支持arm和arm64&lt;/p&gt;
+&lt;h3 id=&#34;2021-08-31&#34;&gt;2021-08-31&lt;/h3&gt;
+&lt;p&gt;由于基本熟悉了git的分支管理，用于博客的项目被重新规划了分支，博客的源码从master分支删除，重新部署在blog分支。&lt;/p&gt;
+&lt;p&gt;master分支仅仅用来展示项目的声明，文档说明等内容。后续main分支将代替master分支作为默认分支。&lt;/p&gt;
+&lt;p&gt;当前情况并不会立即启用main分支。无论&amp;quot;master&amp;quot;是否有种族歧视问题。毕竟英语并不是我的母语，我必要为了别人的语言差异改变自己的习惯。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

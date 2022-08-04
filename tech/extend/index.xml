@@ -1,0 +1,32 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>记事本 – extend</title>
+    <link>/tech/extend/</link>
+    <description>Recent content in extend on 记事本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 09 Jan 2022 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="/tech/extend/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Tech: 2022</title>
+      <link>/tech/extend/2022/</link>
+      <pubDate>Sun, 09 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/tech/extend/2022/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;2022年发布的随笔&#34;&gt;2022年发布的随笔&lt;/h2&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

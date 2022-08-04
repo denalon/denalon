@@ -1,0 +1,33 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>记事本 – 测试代码</title>
+    <link>/tech/test/test/</link>
+    <description>Recent content in 测试代码 on 记事本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="/tech/test/test/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Tech: test001</title>
+      <link>/web/test/2021010191.html</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/test/2021010191.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;test&#34;&gt;test&lt;/h3&gt;
+&lt;p&gt;该仓库是作为脱离于博客存档文章以外的额外更新包。平时针对该仓库进行管理和更新，当年末时，这些文章将转移到存档目录下，文章的url地址不变&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,46 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>记事本 – update</title>
+    <link>/essay/update/</link>
+    <description>Recent content in update on 记事本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 01 Feb 2022 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="/essay/update/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Essay: 日记</title>
+      <link>/essay/update/diary/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/essay/update/diary/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;日记&#34;&gt;日记&lt;/h2&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 随笔</title>
+      <link>/essay/update/first/</link>
+      <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/essay/update/first/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;当前发布的随笔&#34;&gt;当前发布的随笔&lt;/h2&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

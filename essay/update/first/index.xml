@@ -1,0 +1,1025 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>记事本 – 随笔</title>
+    <link>/essay/update/first/</link>
+    <description>Recent content in 随笔 on 记事本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 30 Nov 2021 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="/essay/update/first/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Essay: 文章继续更新</title>
+      <link>/web/note/2021/2021113001.html</link>
+      <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021113001.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;文章继续更新&#34;&gt;文章继续更新&lt;/h3&gt;
+&lt;p&gt;纵然对外访问的博客已经关闭，但博客的文章依然更新&lt;/p&gt;
+&lt;h3 id=&#34;大仓库plus&#34;&gt;大仓库plus&lt;/h3&gt;
+&lt;p&gt;之前以为自己收集10T的资料已经够用了，然而随着热衷于pt网站，已经搜集了100T各类资源影视文章&lt;/p&gt;
+&lt;h3 id=&#34;hetzner&#34;&gt;hetzner&lt;/h3&gt;
+&lt;h3 id=&#34;veracrypt&#34;&gt;VeraCrypt&lt;/h3&gt;
+&lt;p&gt;关于VeraCrypt的文件和vhd文件多重嵌套加密&lt;/p&gt;
+&lt;h3 id=&#34;资料的收集和整理&#34;&gt;资料的收集和整理&lt;/h3&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: docker运行qbittorrent</title>
+      <link>/web/note/2021/2021110801.html</link>
+      <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021110801.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
+&lt;p&gt;之所以使用docker运行qbittorrent是为了针对型的配置qbittorrent，修改默认下载位置，使用端口号等操作。&lt;/p&gt;
+&lt;h3 id=&#34;第一步-准备服务器&#34;&gt;第一步 准备服务器&lt;/h3&gt;
+&lt;h4 id=&#34;登录云服务器&#34;&gt;登录云服务器&lt;/h4&gt;
+&lt;p&gt;通过ssh命令使用购买服务器后提供的用户名和密码登录服务器，如果你是使用的Hetzner服务器需要自行配置RAID0，##先不要急着登录服务器##&lt;/p&gt;
+&lt;h4 id=&#34;配置raid&#34;&gt;配置RAID&lt;/h4&gt;
+&lt;p&gt;第一步 进入Hetzner的控制后台，找到服务器，选择Rescue (救援模式)，设置完成后重启服务器&lt;/p&gt;
+&lt;p&gt;第二步 登陆云服务器，进入救援模式，使用&lt;code&gt;installimage&lt;/code&gt;配置服务器初始化&lt;/p&gt;
+&lt;p&gt;其他使用默认配置，只需要根据下图，修改服务器的RAID 为&lt;code&gt;0&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/11/1554730489.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;RAID设置区分
+NO RIAD：一般情况建议不设置RAID，这样既保证空间大小，也保证了安全性.；
+RIAD 0：好处：速度快，合并容量，缺点：两个硬盘只要挂一个，那么文件全都挂了；
+RIAD 1：好处：同时把文件写入到两个硬盘，坏一个也没事，缺点：浪费空间，读写速度稍微有降低；&lt;/p&gt;
+&lt;p&gt;编辑完成后按F10 保存配置文件；&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt; 登录救援模式后本地会保存服务器的验证信息，重新登录服务器需要先删除之前的验证信息，避免出现验证信息修改的报错。&lt;/p&gt;
+&lt;h4 id=&#34;配置磁盘空间&#34;&gt;配置磁盘空间&lt;/h4&gt;
+&lt;p&gt;使用&lt;code&gt;fdisk -l&lt;/code&gt;查看服务器的硬盘，将未挂载的硬盘挂载的目录，对于配置永久挂载的请参考其他文章编辑磁盘配置文件。这里的挂载只是临时性的。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mount /dev/md3 /denalon/downloads&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;挂载&lt;code&gt;/dev/md3&lt;/code&gt;的硬盘空间为目录&lt;code&gt;/denalon/downloads&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第二步-准备docker环境&#34;&gt;第二步 准备docker环境&lt;/h3&gt;
+&lt;h4 id=&#34;一键安装docker&#34;&gt;一键安装docker&lt;/h4&gt;
+&lt;p&gt;对于大多数服务器使用一键安装脚本即可安装docker&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;如果安装时报错，意味着服务器上某些应用未正确安装和配置，可以参考自定义安装docker&lt;/p&gt;
+&lt;h4 id=&#34;自定义安装docker&#34;&gt;自定义安装docker&lt;/h4&gt;
+&lt;p&gt;为没有安装sudo的机器安装&lt;code&gt;sudo&lt;/code&gt;，避免抄一下代码运行时报错&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt-get install sudo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;卸载旧版docker&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get remove docker docker-engine docker.io containerd runc
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;更新包&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装必要组件&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; sudo apt-get update
+ sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;设置官方 GPG 密钥&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; echo \
+  &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
+  $(lsb_release -cs) stable&amp;#34; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装docker&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get install docker-ce docker-ce-cli containerd.io
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;安装docker-compose&#34;&gt;安装docker-compose&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo chmod +x /usr/local/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;第三步-部署qbittorrent&#34;&gt;第三步 部署qbittorrent&lt;/h3&gt;
+&lt;h4 id=&#34;qbittorrent的配置文件&#34;&gt;qbittorrent的配置文件&lt;/h4&gt;
+&lt;p&gt;docker-compose.yml内容&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;version: &amp;#34;3.9&amp;#34;
+services:
+  qbittorrent:
+    image: linuxserver/qbittorrent
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - WEBUI_PORT=8080
+    volumes:
+      - ./config:/config
+      - ./downloads:/downloads
+    ports:
+      - 6881:6881
+      - 6881:6881/udp
+      - 17010:17010
+      - 17010:17010/udp
+      - 8080:8080
+    restart: unless-stopped
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;运行docker-compose-up--d&#34;&gt;运行docker-compose up -d&lt;/h4&gt;
+&lt;p&gt;直接在目录下运行docker-compose up -d即可&lt;/p&gt;
+&lt;h4 id=&#34;登录qbittorrent&#34;&gt;登录qbittorrent&lt;/h4&gt;
+&lt;p&gt;用户名 admin&lt;/p&gt;
+&lt;p&gt;密码 adminadmin&lt;/p&gt;
+&lt;h4 id=&#34;配置qbittorrent参数&#34;&gt;配置qbittorrent参数&lt;/h4&gt;
+&lt;p&gt;根据需要修改下载和上传的连接数和流量控制，中文界面，登录端口号和密码&lt;/p&gt;
+&lt;h3 id=&#34;第四步-优化&#34;&gt;第四步 优化&lt;/h3&gt;
+&lt;h3 id=&#34;其他-安装quickbox&#34;&gt;其他 安装quickbox&lt;/h3&gt;
+&lt;p&gt;1安装Ubuntu     &lt;a href=&#34;https://cn.wiki.ptbox.dev/hetzner-onekey/&#34;&gt;https://cn.wiki.ptbox.dev/hetzner-onekey/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;echo x | installimage -p /boot:ext3:1G,/:ext4:all -l 0 -r yes -i images/Ubuntu-1804-bionic-64-minimal.tar.gz -a -n Hz &amp;amp;&amp;amp; reboot&lt;/p&gt;
+&lt;p&gt;2你需要首先以 root 身份登录，运行以下指令来抓取最新的代码 … &lt;a href=&#34;https://www.qiuvps.com/1382.html&#34;&gt;https://www.qiuvps.com/1382.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;apt-get -yqq update
+apt-get -yqq upgrade
+apt-get -yqq install git lsb-release dos2unix
+git clone &lt;a href=&#34;https://github.com/amefs/quickbox-lite.git&#34;&gt;https://github.com/amefs/quickbox-lite.git&lt;/a&gt; /etc/QuickBox
+dos2unix /etc/QuickBox/setup.sh
+bash /etc/QuickBox/setup.sh&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 硬盘故障</title>
+      <link>/web/note/2021/2021110201.html</link>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021110201.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;统计遇到的硬盘故障&#34;&gt;统计遇到的硬盘故障&lt;/h3&gt;
+&lt;p&gt;由于windows的睡眠模式，关机以后并没有断开硬盘供电链接，拔下硬盘后再次接入提示硬盘错误&lt;/p&gt;
+&lt;p&gt;使用老旧的硬盘组成RAID0，其中一块硬盘发生读写错误，导致整个RAID0盘数据无法正常读取&lt;/p&gt;
+&lt;h3 id=&#34;结论&#34;&gt;结论&lt;/h3&gt;
+&lt;p&gt;老旧硬盘，翻新硬盘，不稳定硬盘不能长期使用。只能做冷备份且需要冗余&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 资本家提供的服务</title>
+      <link>/web/note/2021/2021110202.html</link>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021110202.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;问题&#34;&gt;问题&lt;/h3&gt;
+&lt;p&gt;满清时期闭关锁国，拒绝一切洋人的货物，技术。难道他们对欧美地区的新鲜事物没兴趣吗？并不，皇家宫廷里自鸣钟，火枪等等。但他们并没有动力去生产，推广这些东西。&lt;/p&gt;
+&lt;p&gt;工信部要求保障网盘免费用户下载速率，有人发帖询问为什么国家不推出网盘服务，国家的服务应该稳定可靠，总比百度115等资本家运营的服务要好太多。&lt;/p&gt;
+&lt;h3 id=&#34;可笑&#34;&gt;可笑&lt;/h3&gt;
+&lt;p&gt;整个问题着实可笑，突出了某些网民的认识欠缺。国家为什么要推出网盘？没有网盘老百姓又能怎么着？哪怕群众呼吁推出网盘，某个领导顺应民意推出该服务，那万一某些人使用网盘造成恶劣影响，那推出该服务的公务员领导是否要追究责任？&lt;/p&gt;
+&lt;p&gt;因为在国家层面，这些“可有可无”的东西，有比没有风险更不&lt;strong&gt;可控&lt;/strong&gt;，就像早期的wifi在国内禁用，手机上市必须去掉wifi一样，对百姓有利并不意味着就是必须的。&lt;/p&gt;
+&lt;h3 id=&#34;服务&#34;&gt;服务&lt;/h3&gt;
+&lt;p&gt;前面说了，这些“可有可无”的服务，基于风险和不可控的因素国家没必要亲自推出，那群众的需求就可以让私营企业去提供，提供好了企业创收，国家增加税收，而且社会和谐，群众满意。服务出错那就是这些私营企业资本家唯利是图，国家出手干预，攫取资本家的利益让群众满意。“工信部要求保障网盘免费用户下载速率”就完美体现了这种情况。工信部并没有说明为了降低网盘服务的成本有那些措施，单方面要求企业改善服务，自然影响网盘企业的服务成本。网盘企业要么将成本转移到用户上，要么缩减利润。&lt;/p&gt;
+&lt;p&gt;也就是说，看似让用户满意的政策，实则上是在企业和用户的利益上做干涉，并不能解决实质问题。&lt;/p&gt;
+&lt;h3 id=&#34;其他&#34;&gt;其他&lt;/h3&gt;
+&lt;p&gt;我倒不希望百度为了应付工信部政策而提高网络速度。应该检测自己的10kb基本速度。甚至让免费的用户直接无法下载文件。&lt;/p&gt;
+&lt;p&gt;网盘这种服务有需求有市场，那么百度出来提供服务，用户需要考虑的是要不要使用，要不要承担整个价格这些问题。&lt;/p&gt;
+&lt;p&gt;而假如没有任何一家提供这种服务，用户的需求是天然存在的，市场也是存在的包括海外。用户就需要使用海外服务，为了顺利流畅访问海外服务就需要使用不必要的手段，同时用户为此要形成法律之外的圈子，团体来构建整个服务。网盘企业也需要冒着法律空白情况下的违法违规风险提供服务，同时形成贿赂贪腐不作为等等问题。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 规避隐私风险</title>
+      <link>/web/note/2021/2021102501.html</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021102501.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;规避隐私风险&#34;&gt;规避隐私风险&lt;/h3&gt;
+&lt;h4 id=&#34;heading&#34;&gt;&lt;/h4&gt;
+&lt;p&gt;原则： 普通空间是不安全的 安全空间的容量和功能是有限的，泄露信息的app不得与安全内容放到一个硬件设备和虚拟空间里&lt;/p&gt;
+&lt;h4 id=&#34;手机的安全空间&#34;&gt;手机的安全空间&lt;/h4&gt;
+&lt;p&gt;重要的，设计隐私的照片和文件应放到手机安全空间里。&lt;/p&gt;
+&lt;h5 id=&#34;泄露信息的app&#34;&gt;泄露信息的app&lt;/h5&gt;
+&lt;h5 id=&#34;电脑软件&#34;&gt;电脑软件&lt;/h5&gt;
+&lt;p&gt;电脑里使用虚拟机，对于qq 钉钉等泄露信息的app单独放置到虚拟空间里。&lt;/p&gt;
+&lt;h3 id=&#34;基于虚拟磁盘文件的备份&#34;&gt;基于虚拟磁盘文件的备份&lt;/h3&gt;
+&lt;p&gt;新建VHD虚拟磁盘文件，容量设置为25G，实际存储量在20G左右，配置bitlocker加密，刻录到光盘上。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 随笔2021-10-29</title>
+      <link>/web/note/2021/2021102901.html</link>
+      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021102901.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;糟糕的验证码&#34;&gt;糟糕的验证码&lt;/h3&gt;
+&lt;p&gt;糟糕的验证码
+下图是点击验证，对平板手机等触控设备不友好（过小且触控功能可能受限）
+&lt;img src=&#34;https://base.oribos.city/images/2021/11/110201.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;下图是选择图片验证，对视力不佳或紧急登录时不友好
+&lt;img src=&#34;https://base.oribos.city/images/2021/11/110202.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;下图是输入字母验证，大小写，数字字母混淆，o与Q 9与q 7与f I与1 2与Z容易混淆
+&lt;img src=&#34;https://base.oribos.city/images/2021/11/110203.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;验证码的本质&#34;&gt;验证码的本质&lt;/h3&gt;
+&lt;p&gt;分布式计算，大量用户帮网站免费处理复杂的图形识别学习，网站让用户免费花费脑子帮他们训练人工智能。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 随笔2021-11-04</title>
+      <link>/web/note/2021/2021110401.html</link>
+      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021110401.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;hexo糟糕的使用&#34;&gt;hexo糟糕的使用&lt;/h3&gt;
+&lt;p&gt;我部署了一个hexo&lt;a href=&#34;https://frednab.coding.net/public/dev/hexo-blog/git/files&#34;&gt;主题模板&lt;/a&gt; ，当今天无意间想增加一些有趣的主题时发现许多问题。一些主题使用了五花八门的依赖，这些依赖要么对hexo版本有要求要么对nodejs环境有要求，导致在本机运行hexo init 以后生成的项目，部署新主题时，要么依赖低，要么依赖高，要么组件下载404错误。&lt;/p&gt;
+&lt;p&gt;一些主题并没有按照hexo官方指导的方式，使用_config.主题名.yml和_config.yml分开的方法，而是采用npm安装，然后将主题移动到themes目录下的奇葩操作。有些则是在hexo init生成的环境安装其主题后显示&lt;code&gt;  err: TypeError: Cannot read property &#39;path&#39; of undefined&lt;/code&gt;等各类错误。&lt;/p&gt;
+&lt;p&gt;总之，hexo的各类乱七八糟的主题要求参差不齐，组件五花八门，有些甚至需要更改nodejs环境，代理连接等等操作导致部署失败率太高。&lt;/p&gt;
+&lt;h3 id=&#34;hexo报错机制&#34;&gt;hexo报错机制&lt;/h3&gt;
+&lt;p&gt;hexo使用nodejs环境，npm包管理器，各类涉及依赖和组件的版本要求五花八门，而报错信息几乎一点用都没有。&lt;/p&gt;
+&lt;p&gt;如下图铺天盖地的报错和提示&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/11/110401.png&#34; alt=&#34;提示1&#34;&gt;
+&lt;img src=&#34;https://base.oribos.city/images/2021/11/110402.png&#34; alt=&#34;提示2&#34;&gt;
+&lt;img src=&#34;https://base.oribos.city/images/2021/11/110403.png&#34; alt=&#34;提示3&#34;&gt;
+&lt;img src=&#34;https://base.oribos.city/images/2021/11/110404.png&#34; alt=&#34;提示4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;不知道的还以为拿hexo做什么复杂的高科技研发工作&lt;/p&gt;
+&lt;h3 id=&#34;hetzner奇葩的登录方式&#34;&gt;Hetzner奇葩的登录方式&lt;/h3&gt;
+&lt;p&gt;在使用Hetzner云服务时发现一个奇葩的现象：登录服务需要使用一个“Client number”的客户码&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/11/110405.png&#34; alt=&#34;hetzner登录界面&#34;&gt;&lt;/p&gt;
+&lt;p&gt;问题时这个客户码不是用户自定义有意义的号码或者id，而是hetzner随机生成的，这个客户码可以在&lt;strong&gt;登录以后找到&lt;/strong&gt;，也就是说用户第一次注册时必须牢记这个客户码，以后续登录。如果忘记或者压根就不知道自己有什么客户码，那不好意思，无法登录。而且hetzner并没有通过用户注册时的邮箱或其他用户id的方式快捷的找回客户码，也没有使用用户id，邮箱地址来登录的备用方式。&lt;/p&gt;
+&lt;p&gt;着实是商家狠狠的教用户怎么用产品&lt;/p&gt;
+&lt;h3 id=&#34;改变的成本&#34;&gt;改变的成本&lt;/h3&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 随笔20211010</title>
+      <link>/web/note/2021/2021101001.html</link>
+      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021101001.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;随笔&#34;&gt;随笔&lt;/h3&gt;
+&lt;p&gt;windows 11 安装强制要求tpm2.0，而使用hyperV里虚拟机，选“启用受信任的平台模块”可以再hyperV里运行安装windows11&lt;/p&gt;
+&lt;p&gt;曾经的电脑病毒并没有消失，而是换成了各类app，窃取用户信息，诱导用户受骗&lt;/p&gt;
+&lt;h3 id=&#34;pt下载&#34;&gt;PT下载&lt;/h3&gt;
+&lt;p&gt;优先下载新发布的资源&lt;/p&gt;
+&lt;p&gt;优先下载免费资源&lt;/p&gt;
+&lt;p&gt;多个带宽&lt;/p&gt;
+&lt;p&gt;不同网站服务器技术不同，有的需要公网ip有的不需要&lt;/p&gt;
+&lt;h3 id=&#34;对用户的裹挟消费&#34;&gt;对用户的裹挟消费&lt;/h3&gt;
+&lt;p&gt;使用正版并为正版付费应该是提倡的，但是软件和服务的提供商往往存在对用户的裹挟消费。比如往应用里塞广告展示，弹窗。强制云服务，按月计费，按销售数据计费等等。&lt;/p&gt;
+&lt;h4 id=&#34;不同付费的区别&#34;&gt;不同付费的区别&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;按功能收费，即软件区分免费版，专业版，至尊版等不同层次的版本。用户根据自己需求付费。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这种付费应该是合理的，正常的。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;付费去广告展示，免费软件采用广告付费本身是应该提倡的。此时用户拥有软件的正常使用权限，根据需要付费去除广告。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这种付费应该是正常的。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;弹窗 不同于广告展示，强制性弹窗是让人极其厌恶的，这突出一个强制性展示，逼迫用户采取互动操作去关闭或延迟。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这种付费是极其难以接受的&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;强制云服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;腾讯云文档 谷歌文档 office online等类似的功能，需要不断联网导致在网络不佳时很难操作，在断网情况下就成了摆设，&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;强制按月&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;某操作系统，应用软件，本身可以断网使用，也不需要软件提供后续服务支持，比如plesk。尽管软件理论上可以买断，官方却不提供买断功能或者将买断收费极其高昂。此时仔细计算就会发现这种软件收费极其不合理。不推荐使用。&lt;/p&gt;
+&lt;p&gt;极其不推荐为这种软件付费&lt;/p&gt;
+&lt;h3 id=&#34;安装qb步骤&#34;&gt;安装qb步骤&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo chmod +x /usr/local/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果需要添加额外的硬盘&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/dev/vdb                     /denalon/downloads         ext4  defaults 1   2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;docker-compose.yml内容&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;version: &amp;#34;3.9&amp;#34;
+services:
+  qbittorrent:
+    image: linuxserver/qbittorrent
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - WEBUI_PORT=8080
+    volumes:
+      - ./config:/config
+      - ./downloads:/downloads
+    ports:
+      - 6881:6881
+      - 6881:6881/udp
+      - 17010:17010
+      - 17010:17010/udp
+      - 8080:8080
+    restart: unless-stopped
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;部分主机需要安装gnupg2&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+apt-get update &amp;amp;&amp;amp; apt-get install -y gnupg2
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 随笔20210927</title>
+      <link>/web/note/2021/2021092701.html</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021092701.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;随笔&#34;&gt;随笔&lt;/h3&gt;
+&lt;p&gt;两个电源冗余，但是会出现两个电源同时无法使用&lt;/p&gt;
+&lt;h3 id=&#34;美剧英剧&#34;&gt;美剧英剧&lt;/h3&gt;
+&lt;p&gt;美剧异星灾变，电影异形普罗米修斯等等国外电影电视剧都在不自觉的传播他们的基督教信仰，希腊神话，北欧神话。将外星的未知的文明往他们古代的神话上套，总是追求一个受自己完全控制的世界，理解不了他们神话以外的东西，妄图把外星的未知的世界重新纳入他们的基督教教义，希腊神话故事里。&lt;/p&gt;
+&lt;p&gt;英剧神秘博士则讲述了一个病态的价值观，一切困难和麻烦都会被突如其来的博士解决，还不需要使用武力，不会引起各种伦理危机。总是宣扬一种病态的圣母主义。&lt;/p&gt;
+&lt;h3 id=&#34;国内电影电视剧&#34;&gt;国内电影电视剧&lt;/h3&gt;
+&lt;p&gt;宣扬服从，稳定，顾及他人感受，牺牲自己利益服务其他人利益，&lt;/p&gt;
+&lt;h3 id=&#34;三体&#34;&gt;三体&lt;/h3&gt;
+&lt;p&gt;三体的世界观是悲观的&lt;/p&gt;
+&lt;p&gt;黑暗森林只是有限的认知而产生的狭隘观念，并不是什么宇宙里的通用观念。&lt;/p&gt;
+&lt;h3 id=&#34;基地&#34;&gt;基地&lt;/h3&gt;
+&lt;p&gt;基地这部改变的科幻片人类文明发展几万年仍然使用当代的技术水平，简直匪夷所思。&lt;/p&gt;
+&lt;p&gt;一个帝国位处一万多年却同当代的政治水平没有一丝改变&lt;/p&gt;
+&lt;p&gt;政治革新，技术爆炸在基地这部&amp;quot;科幻片&amp;quot;里几乎存在。&lt;/p&gt;
+&lt;h3 id=&#34;瑞克和莫蒂&#34;&gt;瑞克和莫蒂&lt;/h3&gt;
+&lt;p&gt;瑞克是“无限控制力”的存在，类似于欧美神话中的“神”“上帝”一样。而不是现实社会的人。&lt;/p&gt;
+&lt;p&gt;普通人没有能力控制如此多的事情，动画片里的荒谬行为也是不存在的。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 随笔20210910</title>
+      <link>/web/note/2021/2021091003.html</link>
+      <pubDate>Fri, 10 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021091003.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;影视剧里角色的处境&#34;&gt;影视剧里角色的处境&lt;/h3&gt;
+&lt;p&gt;在各类小说影视剧里，各类角色都是处处被作者安排，铺垫，掌控的。角色没有自己的完整的性格，也无法掌控各类因素。是相当悲惨的存在。这种悲惨在优秀的小说影视剧里并不明显，但在一些低层次故事里就容易让人情绪受影响。如以下类型：&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;角色A愤怒之下向B开枪，而B阴差阳错的避开了攻击，A失手打死了自己女友或其他重要角色&lt;/p&gt;
+&lt;p&gt;角色C同D吵架，跑到偏僻地方不想见D，结果导致遇到坏人或车祸。D认识到错误回去找C，结果发现C出事，然后黑化&lt;/p&gt;
+&lt;p&gt;某某反派作恶多端，恨不得把历史上所有“恶人”做过的事都做一遍，而没有人能打败他，反派被主角多此打败，却越来越强大，整部剧都有他的恶心的面孔&lt;/p&gt;
+&lt;p&gt;角色E控制反派，朋友希望立即击杀他，避免他再屠戮更多无辜者，此时E圣母心泛滥，放过反派&lt;/p&gt;
+&lt;p&gt;角色F控制住G，朋友希望为了追求最大利益，放过他，避免造成事情无法挽回。此时F被以前G伤害自己的回忆惹怒，或者单纯就是复仇，发泄。杀害了G,导致G背后的势力彻底同F敌对&lt;/p&gt;
+&lt;hr&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 随笔20210830</title>
+      <link>/web/note/2021/2021083102.html</link>
+      <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021083102.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;控制力因素&#34;&gt;控制力因素&lt;/h3&gt;
+&lt;p&gt;金钱 权力 情感 是三个控制力因素&lt;/p&gt;
+&lt;h3 id=&#34;过分的模块化&#34;&gt;过分的模块化&lt;/h3&gt;
+&lt;p&gt;尽管模块化有助于降低成本，但刀片服务器是彻底的把产品做成了封闭环境，不同于机架式服务器，刀片服务器采用了完全不同的网络接口，内部数据接口，计算控制单元。&lt;/p&gt;
+&lt;p&gt;服务器上普普通通的风扇都要做成自封闭的接口，电压规范，调节模式等等。&lt;/p&gt;
+&lt;p&gt;pc上几个普通的风扇就可以将数百瓦的高端cpu和高端显卡稳定控制住温度，而服务器上需要使用极其耗能极其噪音的风扇来散热。&lt;/p&gt;
+&lt;h3 id=&#34;硬盘管理&#34;&gt;硬盘管理&lt;/h3&gt;
+&lt;h4 id=&#34;需求&#34;&gt;需求&lt;/h4&gt;
+&lt;p&gt;将多个小容量硬盘组成一个完整的仓库，由单个600G或900G的硬盘组成50T的仓库，&lt;/p&gt;
+&lt;p&gt;又要针对单个硬盘进行故障隔离。即不能因为某硬盘的故障影响其他数据的读取。&lt;/p&gt;
+&lt;h4 id=&#34;raid&#34;&gt;RAID&lt;/h4&gt;
+&lt;p&gt;将多个硬盘组成一个RAID就形成了一个难题：假设单个硬盘故障率固定，尽管越多的硬盘越不容易出现同时故障，却越容易出现单个故障。以RAID5为例，加入3个硬盘组成RAID5，容量会损失1块硬盘的容量。且三块硬盘任意一块出现故障都会引起RAID降级。3块硬盘物理的迁移，备份都会受限。对资料的归档只能通过复制或转移数据达成。组成RAID5的硬盘不应该频繁关机停转。&lt;/p&gt;
+&lt;p&gt;单个硬盘接入其他电脑并不会完整信息&lt;/p&gt;
+&lt;p&gt;对配置RAID5的电脑的硬盘进行打乱顺序是否会影响资料的读取？&lt;/p&gt;
+&lt;h3 id=&#34;瑞克和莫蒂&#34;&gt;瑞克和莫蒂&lt;/h3&gt;
+&lt;p&gt;瑞克是编剧刻画的具有近乎无限控制力的逆天角色&lt;/p&gt;
+&lt;p&gt;杰瑞的无能也是编剧刻意造成的反差，离开了瑞克的影响，杰瑞也并非一无是处。杰瑞的各种无能，自私，鲁莽只是一种极端的映衬&lt;/p&gt;
+&lt;p&gt;动画应该以一种娱乐的心态品味&lt;/p&gt;
+&lt;h3 id=&#34;为什么几个美剧都烂尾&#34;&gt;为什么几个美剧都烂尾&lt;/h3&gt;
+&lt;p&gt;权力的游戏 纸牌屋 均是大结局的时候各种人物智商离线，剧情崩坏？&lt;/p&gt;
+&lt;p&gt;小说，电视剧离不开编剧的刻意的塑造，是编剧的某些诉求的实现&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 对实物的二维码标识</title>
+      <link>/web/note/2021/2021082501.html</link>
+      <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021082501.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;二维码标识&#34;&gt;二维码标识&lt;/h3&gt;
+&lt;p&gt;对办公用品，药品，硬盘，u盘，电脑等标识二维码，统计各类物品的购买时间，内容，注意事项&lt;/p&gt;
+&lt;h3 id=&#34;实现方式&#34;&gt;实现方式&lt;/h3&gt;
+&lt;p&gt;资产管理系统&lt;/p&gt;
+&lt;p&gt;普通的html页面&lt;/p&gt;
+&lt;p&gt;访问验证&lt;/p&gt;
+&lt;p&gt;对于硬盘的内容截图，需要进行访问验证，不能直接将图片和列表内容完全公开&lt;/p&gt;
+&lt;h3 id=&#34;基础要求&#34;&gt;基础要求&lt;/h3&gt;
+&lt;p&gt;数据的可靠性&lt;/p&gt;
+&lt;p&gt;二维码的地址应该长期可用，随时查阅&lt;/p&gt;
+&lt;p&gt;保密&lt;/p&gt;
+&lt;p&gt;必要的保密措施&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 日常生活的控制力</title>
+      <link>/web/note/2021/2021082501/</link>
+      <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021082501/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;货币是最常见的控制力&#34;&gt;货币是最常见的控制力&lt;/h3&gt;
+&lt;p&gt;货币是经济的控制力，也是日常生活中常见的控制力。&lt;/p&gt;
+&lt;h3 id=&#34;控制力错觉&#34;&gt;控制力错觉&lt;/h3&gt;
+&lt;p&gt;有些领导吩咐工作时，遇到员工反馈困难，汇报问题时总会以超出实际的控制力来施加压力。比如“如果是中央领导视察，你完不成？” “这时如果在打仗，我毙了你！”“如果我有一个亿，拿钱砸死你！”等等类似的情况，这些明显时使用了超出自己目前情况的控制力，拥有战争特权的控制力和拥有数亿资产的控制力，跟当前的控制力水平根本不一样。处理事情的方式和态度也有很大差别。将行动能力无限放大，假借虚假的控制力来处理日常事务，是一种低能力的表现。&lt;/p&gt;
+&lt;h3 id=&#34;获得控制力会愉悦失去控制力会难受&#34;&gt;获得控制力会愉悦，失去控制力会难受&lt;/h3&gt;
+&lt;h3 id=&#34;征信也是一种控制力&#34;&gt;征信也是一种控制力&lt;/h3&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 随笔0811</title>
+      <link>/web/note/2021/2021081101/</link>
+      <pubDate>Wed, 11 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021081101/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;随笔&#34;&gt;随笔&lt;/h3&gt;
+&lt;h4 id=&#34;愚公移山&#34;&gt;愚公移山&lt;/h4&gt;
+&lt;p&gt;愚公的儿子孙子还没出生，就被愚公粗暴的安排好去移山？&lt;/p&gt;
+&lt;p&gt;愚公一家可以把山石转移到东边海边和北方远处，那为什么不直接定居在东边或北边，为什么要反复回去移山？&lt;/p&gt;
+&lt;p&gt;最终达成目标不是由于愚公的理论实现，而是外在的“天神”干涉。&lt;/p&gt;
+&lt;h3 id=&#34;体验落差&#34;&gt;体验落差&lt;/h3&gt;
+&lt;p&gt;苹果新发布的产品会热销，并非是苹果创造的什么不可拒绝的诱惑。而是由于顾客原有的商品体验跟新产品的体验的差距导致的。这个差距导致了顾客对新产品的渴望程度，如果旧产品体验极佳，那么新产品只有相对的更有吸引力才能促使顾客购买。或者苹果发布任意一款产品，哪怕是体验程度不如旧产品，只有存在没有旧产品的顾客，就依然会有人购买，因为对他们来说，从0开始的体验程度依然同新产品有体验上的差距。&lt;/p&gt;
+&lt;h3 id=&#34;不间断电源计划&#34;&gt;不间断电源计划&lt;/h3&gt;
+&lt;p&gt;给DHCP服务器，交换机配置ups&lt;/p&gt;
+&lt;p&gt;给NAS服务器配置单独的能自动关机的ups&lt;/p&gt;
+&lt;p&gt;给虚拟化服务器配置基于网络自动关机的ups配置，虚拟化服务器配置一个专用的交换机并确保主要设备同此服务器再一个子网内。&lt;/p&gt;
+&lt;p&gt;给服务器的显示器，键盘鼠标配置电源，可以在断电后通过最直接的方式输入关机指令&lt;/p&gt;
+&lt;p&gt;基于无线的路由器不间断电源，通过手机关闭服务器。&lt;/p&gt;
+&lt;p&gt;运行在交换机，路由器，无线设备，服务器，服务器外设均配置不间断电源。构建一个不间断电源网络&lt;/p&gt;
+&lt;h3 id=&#34;数据安全&#34;&gt;数据安全&lt;/h3&gt;
+&lt;p&gt;易损的安全令牌，当面对突然威胁或者绑架时，破坏易损的安全令牌会轻易的保护隐私数据，即便是收到胁迫依然无法恢复数据。&lt;/p&gt;
+&lt;p&gt;冗余的产品不建议采用同标准产品采用同规格的型号，即，硬盘，光盘，磁带，处理器，芯片。用来做冗余的部分应使用不同品牌，规格，厂商，地区的产品。避免厂商批量生产漏洞影响。&lt;/p&gt;
+&lt;p&gt;数据的存放和管理应基于必要的安全验证，加密等操作。即，口令，密钥，证书应在数据初始阶段就已经进行完善的风险限制行为。&lt;/p&gt;
+&lt;h3 id=&#34;人生就像容器运行&#34;&gt;人生就像容器运行&lt;/h3&gt;
+&lt;p&gt;人生就像一个容器的运行，一旦运行起来，数据就固定了，最初的容器没有任何额外的东西，只有外部的映射将数据，资源加载进容器。不同的容器都是由于映射的数据，加载的资源不同而运行不同的效果。&lt;/p&gt;
+&lt;p&gt;容器一旦停止就损毁，不会再恢复。只能新建，再映射外部资源重新跑起来。&lt;/p&gt;
+&lt;p&gt;旧的容器不复存在。&lt;/p&gt;
+&lt;h3 id=&#34;男生女生的认识差异&#34;&gt;男生女生的认识差异&lt;/h3&gt;
+&lt;p&gt;男生面对的是世界，认识，接触，创造改变。&lt;/p&gt;
+&lt;p&gt;许多问题是实实在在的存在性问题，比如更换一个灯泡，线路是否导通，开关是否接对。只要一点出问题都需要调整满足客观规律才行。&lt;/p&gt;
+&lt;p&gt;女生面对的是自己和男生，打扮，气质，辅助。&lt;/p&gt;
+&lt;p&gt;遇到感情问题，什么时候打扫家务，什么时候出去旅游，过节送什么礼物等等问题。都是感性的，面向的并不是客观存在的。&lt;/p&gt;
+&lt;h3 id=&#34;人的观念类似于电子的轨道跃迁&#34;&gt;人的观念类似于电子的轨道跃迁&lt;/h3&gt;
+&lt;p&gt;有些人很容易收到新内容，新理论的影响而发生改变，就像活跃的电子一样，虽然一点作用力就发生轨道跃迁。而有些电子处于内部轨道，收到原子核的影响，不会轻易发生改变。&lt;/p&gt;
+&lt;p&gt;不能通过是否改变去评价活跃电子的好坏对错。&lt;/p&gt;
+&lt;p&gt;拥有足够的控制力才能避免信息的影响，没有足够的控制了，一点点外部作用力都能影响。&lt;/p&gt;
+&lt;p&gt;有些人的思维定势，自身形成的牢固的控制力，很难受外力影响。&lt;/p&gt;
+&lt;h3 id=&#34;正反馈负反馈&#34;&gt;正反馈负反馈&lt;/h3&gt;
+&lt;h3 id=&#34;征信的作用&#34;&gt;征信的作用&lt;/h3&gt;
+&lt;h4 id=&#34;瑞克和莫蒂&#34;&gt;瑞克和莫蒂&lt;/h4&gt;
+&lt;p&gt;平行宇宙&lt;/p&gt;
+&lt;p&gt;杀手要求瑞克为他寻找一个女儿存活的平行宇宙，剧情表现的是杀手进入平行宇宙，杀掉原本的自己，代替原本的自己陪女儿生活。这其实是编剧为了突出平行宇宙设定的猎奇而故意将故事描述的暗黑。由于无限平行宇宙，剧情完全可以让瑞克为杀手寻找一个原本杀手死亡的世界，然后照顾女儿生活。就是另一个美好的设计。要知道平行宇宙的设定本身就是编辑写出来的，编辑并没有写美好而是故意写的暗黑，这其实就是一个刻意描述。&lt;/p&gt;
+&lt;h3 id=&#34;长寿&#34;&gt;长寿&lt;/h3&gt;
+&lt;p&gt;电视剧神秘博士里，博客拥有数千年寿命，那么已他的种族的基准来看，假如一个人类拥有了数百年，数千年寿命并不是悲哀的，痛苦的。神秘博士的种族完全可以为区区数百岁的人类指点迷津，正确长寿问题。&lt;/p&gt;
+&lt;p&gt;反而，认为数百年数千年的长寿是痛苦的，只会是人类自己。无法理解而造成的心理落差。&lt;/p&gt;
+&lt;p&gt;质量效应里，高科技的外星人，寿命比人类要长，那么他们完全没有必要急于同人类发生冲突和战斗。他们只需要维持一个极其漫长的计划，一步步对人类造成影响，同化或战胜人类。科技锁死，区域封锁是一种有效的方式。战争，决战是亏损的方式。因为一个还有900年寿命的外星人跟一个几十岁的地球人战斗，一旦外星人受伤甚至死亡，寿命数值上的损失要远远大于人类。更何况，如果外星人的繁殖缓慢的话，就会被相当繁衍快速的人类一步步吞没。&lt;/p&gt;
+&lt;h3 id=&#34;西部数据换芯片&#34;&gt;西部数据换芯片&lt;/h3&gt;
+&lt;p&gt;西部数据将红盘磁盘由垂直式改成叠瓦式，然后把叠瓦式命名为红盘，把垂直式红盘改名红盘plus&lt;/p&gt;
+&lt;p&gt;西部数据把固态硬盘SN550芯片改成SN350芯片&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 随笔0803</title>
+      <link>/web/note/2021/2021080103/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021080103/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;随笔&#34;&gt;随笔&lt;/h3&gt;
+&lt;h4 id=&#34;电信业务乱七八糟的事&#34;&gt;电信业务乱七八糟的事&lt;/h4&gt;
+&lt;p&gt;联通宽带到期，按照手机app上的续费300元一年，当地营业厅打电话续费540元一年。&lt;/p&gt;
+&lt;p&gt;装机时送的设备是一个千兆网口，其他四个都是百兆网口。而且ipv6未开启。显示断开&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://fly.oribos.cn/share/20210803001.png&#34; alt=&#34;ipv6显示断开&#34;&gt;&lt;/p&gt;
+&lt;p&gt;电信宽带，正常办理资费600元一年，100兆融合是70元一年，通过活动链接办理200兆29元每月。&lt;/p&gt;
+&lt;p&gt;装机时设备里的wan口地址为内网地址，ipv6可正常使用。电信淘宝店铺套餐588一年&lt;/p&gt;
+&lt;h3 id=&#34;it技术的槽点&#34;&gt;IT技术的槽点&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;usb3.2 gen1速度=usb3.1 gen1=usb3.0&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;厂商为了避免库存型号不至于马上淘汰，故意把型号混淆。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;intel频繁的更换cpu插槽，&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;type-C 高速线，低速线，雷电接口线 外观一摸一样，没有颜色，类型区分。有的支持显示输出，有的不支持，甚至有usb2.0速度的线材混入type-C&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;it技术发展&#34;&gt;IT技术发展&lt;/h3&gt;
+&lt;p&gt;VGA接口和DVI接口的螺丝固定 D型， I型不同，这些接口的螺丝在工业领域可以保持稳定链接。&lt;/p&gt;
+&lt;p&gt;usb的防止反插&lt;/p&gt;
+&lt;p&gt;ps/2键盘鼠标的不可热插拔，硬盘的热插拔&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 不兼容的需求</title>
+      <link>/web/note/2021/2021071901/</link>
+      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021071901/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;由于对资料的进一步要求使用以下对当前普通电脑不兼容的策略&#34;&gt;由于对资料的进一步要求，使用以下对当前普通电脑不兼容的策略。&lt;/h2&gt;
+&lt;p&gt;加密的目的是控制数据，访问限制&lt;/p&gt;
+&lt;h3 id=&#34;sas硬盘&#34;&gt;sas硬盘&lt;/h3&gt;
+&lt;h3 id=&#34;bitlocker加密&#34;&gt;bitlocker加密&lt;/h3&gt;
+&lt;h3 id=&#34;linux磁盘格式&#34;&gt;linux磁盘格式&lt;/h3&gt;
+&lt;h3 id=&#34;容器运行&#34;&gt;容器运行&lt;/h3&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;
+&lt;p&gt;本机的接入硬盘后，将硬盘设置脱机，然后再hyper-V里打开虚拟机，将硬盘接入hyper-V虚拟机。虚拟机系统盘也需要加密。&lt;/p&gt;
+&lt;p&gt;不同的hyper-V虚拟机可以是linux，也可以是windows。当虚拟机采用linux时可以识别ext4、btrfs或其他格式。&lt;/p&gt;
+&lt;p&gt;由于所有硬盘均需要bitlocker加密，群晖NAS，freenas，omv等linux类型的nas系统均不再适用。只使用windows server做文件服务器&lt;/p&gt;
+&lt;p&gt;运行docker也是在windows上运行docker for windows wsl2版本&lt;/p&gt;
+&lt;h3 id=&#34;35寸和25寸选择&#34;&gt;3.5寸和2.5寸选择&lt;/h3&gt;
+&lt;p&gt;旧设备，工作站使用3.5寸SATA或SAS&lt;/p&gt;
+&lt;p&gt;新设备，服务器使用2.5寸SATA或SAS&lt;/p&gt;
+&lt;h3 id=&#34;yubikey&#34;&gt;yubikey&lt;/h3&gt;
+&lt;p&gt;使用yubikey 对电脑，手机，平板进行安全口令的管理和验证&lt;/p&gt;
+&lt;p&gt;配置硬件加密，确保数据能再完全可控和数据限制。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 使用yubikey</title>
+      <link>/web/note/2021/2021081901/</link>
+      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021081901/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;p&gt;内容待更新&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;数据备份&#34;&gt;数据备份&lt;/h3&gt;
+&lt;p&gt;yubikey&lt;/p&gt;
+&lt;h3 id=&#34;出现问题&#34;&gt;出现问题&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;接口问题&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;由于我对接口换代的过分要求，已经只会购买USB type-C 接口的设备，然而同样的硬件，USB type-C接口的yubikey要贵90块钱。更离谱的是type-C不一定所有设备都能接入，有时候需要通过C转A口，插入旧式电脑。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;yubikey login for windows&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;程序里无法找到使用微软账户的账户名,即登录验证只能用于本地账户，而且如果你为本地账户配置的登录验证，再将本地账户转换成微软在线账户，那将无法登录系统。无论使用本地账户名还是微软账户地址。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;硬件易折损&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;为了应对特殊情况，比如绑架，胁迫等，yubikey设计的可以轻易折损。这样就可以有效防止信息泄露，然而特殊情况很少出现，这时候如果没有妥善保管硬件并备份好yubikey安全信息，极易导致计划外的信息丢失。这是一个很现实的安全和保险相冲突的情况。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 随笔</title>
+      <link>/web/note/2021/2021071901/</link>
+      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021071901/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;p&gt;内容待更新&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;数据备份&#34;&gt;数据备份&lt;/h3&gt;
+&lt;h3 id=&#34;数据安全&#34;&gt;数据安全&lt;/h3&gt;
+&lt;h3 id=&#34;资本家对选择的霸占&#34;&gt;资本家对选择的霸占&lt;/h3&gt;
+&lt;h3 id=&#34;个性和目的&#34;&gt;个性和目的&lt;/h3&gt;
+&lt;h3 id=&#34;过度集中化的设备&#34;&gt;过度集中化的设备&lt;/h3&gt;
+&lt;h3 id=&#34;人性化设计&#34;&gt;人性化设计&lt;/h3&gt;
+&lt;p&gt;页面返回或下拉后原内容不变&lt;/p&gt;
+&lt;h3 id=&#34;厂商&#34;&gt;厂商&lt;/h3&gt;
+&lt;p&gt;nero&lt;/p&gt;
+&lt;p&gt;网站访问速度极慢，有中文站点却不会自动跳转，还禁用鼠标跳转链接&lt;/p&gt;
+&lt;p&gt;软件捆绑各种自家产品，自动更新，而更新极其缓慢。导致产品无法正常使用。&lt;/p&gt;
+&lt;p&gt;adobe&lt;/p&gt;
+&lt;p&gt;microsoft&lt;/p&gt;
+&lt;p&gt;bitlocker加密，极其缓慢却无法定义处理速度，加快硬盘读写，cpu处理等参数。极其缓慢的加密和解密，期间还必须确保硬盘不能拔出&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 分享</title>
+      <link>/web/note/2021/2021071001/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021071001/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;hexo&#34;&gt;hexo&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://frednab.coding.net/public/dev/hexo-blog/git/files&#34;&gt;普通部署&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://frednab.coding.net/public/dev/hexo-pre-install/git/files&#34;&gt;使用npm部署&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;docker&#34;&gt;docker&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://denalon.coding.net/public/asset/docker-app/git/files&#34;&gt;docker模板&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://frednab.coding.net/public/build/docker-build/git/files&#34;&gt;一些docker项目代码&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;树莓派更新软件源&#34;&gt;树莓派更新软件源&lt;/h3&gt;
+&lt;p&gt;1、当前树莓派4b基于debian10&lt;/p&gt;
+&lt;p&gt;一、国内源说明
+1、先到https://tvtv.fun/ping测一下速度，看看哪个比较快，这里以电子科技大学为例&lt;/p&gt;
+&lt;p&gt;2、需要改的源有两个：Raspbian 和 Raspberrypi。可以看镜像站的使用说明如科技大学说明&lt;/p&gt;
+&lt;p&gt;二、改&lt;/p&gt;
+&lt;p&gt;1.系统源
+备份原文件&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一键修改&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo sed -i &amp;#39;s|raspbian.raspberrypi.org|mirrors.ustc.edu.cn/raspbian|g&amp;#39; /etc/apt/sources.list
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;也可以用nano手动把raspbian.raspberrypi.org/替换成mirrors.ustc.edu.cn/raspbian/&lt;/p&gt;
+&lt;p&gt;2.软件源
+备份原文件&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo cp /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一键修改&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo sed -i &amp;#39;s|//archive.raspberrypi.org|//mirrors.ustc.edu.cn/archive.raspberrypi.org|g&amp;#39; /etc/apt/sources.list.d/raspi.list
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;3.更新索引（修改源后必做）&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;4.更新软件包（建议）&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get upgrade 
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 随笔0706</title>
+      <link>/web/note/2021/2021070601/</link>
+      <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021070601/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;服务器端口&#34;&gt;服务器端口&lt;/h3&gt;
+&lt;p&gt;将服务器的ssh服务端口修改成3306 3389 6000等所谓的非安全端口，是否能起到防护作用？&lt;/p&gt;
+&lt;h3 id=&#34;备份冗余&#34;&gt;备份冗余&lt;/h3&gt;
+&lt;p&gt;由于对单个磁盘的可靠性极度不信任，对于备份一般都同时保存到多个设备。文件同时保存在多个设备，但由于实际使用中，并不能确保所有设备的文件都是同步的，导致后续使用无法确认哪个最新最有价值，这就导致了同时保留了一个文件的多个版本。&lt;/p&gt;
+&lt;p&gt;使用git进行版本控制，对于大型文件管理较困难，而对于零碎文件，在ssd里读写又影响速度。&lt;/p&gt;
+&lt;h3 id=&#34;冷备份&#34;&gt;冷备份&lt;/h3&gt;
+&lt;h4 id=&#34;纸张备份&#34;&gt;纸张备份&lt;/h4&gt;
+&lt;p&gt;恢复密钥需要打印出来保存，重要的密钥可选择使用激光镌刻在金属板上备份&lt;/p&gt;
+&lt;h4 id=&#34;光盘备份&#34;&gt;光盘备份&lt;/h4&gt;
+&lt;h3 id=&#34;换掉nas&#34;&gt;换掉NAS&lt;/h3&gt;
+&lt;p&gt;由于未找到合适的在群晖NAS接bitlocker加密的硬盘，只能停止使用NAS，转而将硬盘拆下来，放到磁盘阵列里在windows里使用&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 博客内容更新包</title>
+      <link>/web/note/2021/2021010101.html</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021010101.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;博客内容更新包&#34;&gt;博客内容更新包&lt;/h3&gt;
+&lt;p&gt;该仓库是作为脱离于博客存档文章以外的额外更新包。平时针对该仓库进行管理和更新，当年末时，这些文章将转移到存档目录下，文章的url地址不变&lt;/p&gt;
+&lt;h3 id=&#34;cloudflare-内容代理&#34;&gt;cloudflare 内容代理&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;#39;use strict&amp;#39;
+
+/**
+ * static files (404.html, sw.js, conf.js)
+ */
+const ASSET_URL = &amp;#39;http://fly.oribos.cn&amp;#39;
+
+const JS_VER = 10
+const MAX_RETRY = 1
+
+/** @type {RequestInit} */
+const PREFLIGHT_INIT = {
+  status: 204,
+  headers: new Headers({
+    &amp;#39;access-control-allow-origin&amp;#39;: &amp;#39;*&amp;#39;,
+    &amp;#39;access-control-allow-methods&amp;#39;: &amp;#39;GET,POST,PUT,PATCH,TRACE,DELETE,HEAD,OPTIONS&amp;#39;,
+    &amp;#39;access-control-max-age&amp;#39;: &amp;#39;1728000&amp;#39;,
+  }),
+}
+
+/**
+ * @param {any} body
+ * @param {number} status
+ * @param {Object&amp;lt;string, string&amp;gt;} headers
+ */
+function makeRes(body, status = 200, headers = {}) {
+  headers[&amp;#39;--ver&amp;#39;] = JS_VER
+  headers[&amp;#39;access-control-allow-origin&amp;#39;] = &amp;#39;*&amp;#39;
+  return new Response(body, {status, headers})
+}
+
+
+/**
+ * @param {string} urlStr 
+ */
+function newUrl(urlStr) {
+  try {
+    return new URL(urlStr)
+  } catch (err) {
+    return null
+  }
+}
+
+
+addEventListener(&amp;#39;fetch&amp;#39;, e =&amp;gt; {
+  const ret = fetchHandler(e)
+    .catch(err =&amp;gt; makeRes(&amp;#39;cfworker error:\n&amp;#39; + err.stack, 502))
+  e.respondWith(ret)
+})
+
+
+/**
+ * @param {FetchEvent} e 
+ */
+async function fetchHandler(e) {
+  const req = e.request
+  const urlStr = req.url
+  const urlObj = new URL(urlStr)
+  const path = urlObj.href.substr(urlObj.origin.length)
+
+  if (urlObj.protocol === &amp;#39;http:&amp;#39;) {
+    urlObj.protocol = &amp;#39;https:&amp;#39;
+    return makeRes(&amp;#39;&amp;#39;, 301, {
+      &amp;#39;strict-transport-security&amp;#39;: &amp;#39;max-age=99999999; includeSubDomains; preload&amp;#39;,
+      &amp;#39;location&amp;#39;: urlObj.href,
+    })
+  }
+
+  if (path.startsWith(&amp;#39;/http/&amp;#39;)) {
+    return httpHandler(req, path.substr(6))
+  }
+
+  switch (path) {
+  case &amp;#39;/http&amp;#39;:
+    return makeRes(&amp;#39;请更新 cfworker 到最新版本!&amp;#39;)
+  case &amp;#39;/ws&amp;#39;:
+    return makeRes(&amp;#39;not support&amp;#39;, 400)
+  case &amp;#39;/works&amp;#39;:
+    return makeRes(&amp;#39;it works&amp;#39;)
+  default:
+    // static files
+    return fetch(ASSET_URL + path)
+  }
+}
+
+
+/**
+ * @param {Request} req
+ * @param {string} pathname
+ */
+function httpHandler(req, pathname) {
+  const reqHdrRaw = req.headers
+  if (reqHdrRaw.has(&amp;#39;x-jsproxy&amp;#39;)) {
+    return Response.error()
+  }
+
+  // preflight
+  if (req.method === &amp;#39;OPTIONS&amp;#39; &amp;amp;&amp;amp;
+      reqHdrRaw.has(&amp;#39;access-control-request-headers&amp;#39;)
+  ) {
+    return new Response(null, PREFLIGHT_INIT)
+  }
+
+  let acehOld = false
+  let rawSvr = &amp;#39;&amp;#39;
+  let rawLen = &amp;#39;&amp;#39;
+  let rawEtag = &amp;#39;&amp;#39;
+
+  const reqHdrNew = new Headers(reqHdrRaw)
+  reqHdrNew.set(&amp;#39;x-jsproxy&amp;#39;, &amp;#39;1&amp;#39;)
+
+  // 此处逻辑和 http-dec-req-hdr.lua 大致相同
+  // https://github.com/EtherDream/jsproxy/blob/master/lua/http-dec-req-hdr.lua
+  const refer = reqHdrNew.get(&amp;#39;referer&amp;#39;)
+  const query = refer.substr(refer.indexOf(&amp;#39;?&amp;#39;) + 1)
+  if (!query) {
+    return makeRes(&amp;#39;missing params&amp;#39;, 403)
+  }
+  const param = new URLSearchParams(query)
+
+  for (const [k, v] of Object.entries(param)) {
+    if (k.substr(0, 2) === &amp;#39;--&amp;#39;) {
+      // 系统信息
+      switch (k.substr(2)) {
+      case &amp;#39;aceh&amp;#39;:
+        acehOld = true
+        break
+      case &amp;#39;raw-info&amp;#39;:
+        [rawSvr, rawLen, rawEtag] = v.split(&amp;#39;|&amp;#39;)
+        break
+      }
+    } else {
+      // 还原 HTTP 请求头
+      if (v) {
+        reqHdrNew.set(k, v)
+      } else {
+        reqHdrNew.delete(k)
+      }
+    }
+  }
+  if (!param.has(&amp;#39;referer&amp;#39;)) {
+    reqHdrNew.delete(&amp;#39;referer&amp;#39;)
+  }
+
+  // cfworker 会把路径中的 `//` 合并成 `/`
+  const urlStr = pathname.replace(/^(https?):\/+/, &amp;#39;$1://&amp;#39;)
+  const urlObj = newUrl(urlStr)
+  if (!urlObj) {
+    return makeRes(&amp;#39;invalid proxy url: &amp;#39; + urlStr, 403)
+  }
+
+  /** @type {RequestInit} */
+  const reqInit = {
+    method: req.method,
+    headers: reqHdrNew,
+    redirect: &amp;#39;manual&amp;#39;,
+  }
+  if (req.method === &amp;#39;POST&amp;#39;) {
+    reqInit.body = req.body
+  }
+  return proxy(urlObj, reqInit, acehOld, rawLen, 0)
+}
+
+
+/**
+ * 
+ * @param {URL} urlObj 
+ * @param {RequestInit} reqInit 
+ * @param {number} retryTimes 
+ */
+async function proxy(urlObj, reqInit, acehOld, rawLen, retryTimes) {
+  const res = await fetch(urlObj.href, reqInit)
+  const resHdrOld = res.headers
+  const resHdrNew = new Headers(resHdrOld)
+
+  let expose = &amp;#39;*&amp;#39;
+  
+  for (const [k, v] of resHdrOld.entries()) {
+    if (k === &amp;#39;access-control-allow-origin&amp;#39; ||
+        k === &amp;#39;access-control-expose-headers&amp;#39; ||
+        k === &amp;#39;location&amp;#39; ||
+        k === &amp;#39;set-cookie&amp;#39;
+    ) {
+      const x = &amp;#39;--&amp;#39; + k
+      resHdrNew.set(x, v)
+      if (acehOld) {
+        expose = expose + &amp;#39;,&amp;#39; + x
+      }
+      resHdrNew.delete(k)
+    }
+    else if (acehOld &amp;amp;&amp;amp;
+      k !== &amp;#39;cache-control&amp;#39; &amp;amp;&amp;amp;
+      k !== &amp;#39;content-language&amp;#39; &amp;amp;&amp;amp;
+      k !== &amp;#39;content-type&amp;#39; &amp;amp;&amp;amp;
+      k !== &amp;#39;expires&amp;#39; &amp;amp;&amp;amp;
+      k !== &amp;#39;last-modified&amp;#39; &amp;amp;&amp;amp;
+      k !== &amp;#39;pragma&amp;#39;
+    ) {
+      expose = expose + &amp;#39;,&amp;#39; + k
+    }
+  }
+
+  if (acehOld) {
+    expose = expose + &amp;#39;,--s&amp;#39;
+    resHdrNew.set(&amp;#39;--t&amp;#39;, &amp;#39;1&amp;#39;)
+  }
+
+  // verify
+  if (rawLen) {
+    const newLen = resHdrOld.get(&amp;#39;content-length&amp;#39;) || &amp;#39;&amp;#39;
+    const badLen = (rawLen !== newLen)
+
+    if (badLen) {
+      if (retryTimes &amp;lt; MAX_RETRY) {
+        urlObj = await parseYtVideoRedir(urlObj, newLen, res)
+        if (urlObj) {
+          return proxy(urlObj, reqInit, acehOld, rawLen, retryTimes + 1)
+        }
+      }
+      return makeRes(res.body, 400, {
+        &amp;#39;--error&amp;#39;: `bad len: ${newLen}, except: ${rawLen}`,
+        &amp;#39;access-control-expose-headers&amp;#39;: &amp;#39;--error&amp;#39;,
+      })
+    }
+
+    if (retryTimes &amp;gt; 1) {
+      resHdrNew.set(&amp;#39;--retry&amp;#39;, retryTimes)
+    }
+  }
+
+  let status = res.status
+
+  resHdrNew.set(&amp;#39;access-control-expose-headers&amp;#39;, expose)
+  resHdrNew.set(&amp;#39;access-control-allow-origin&amp;#39;, &amp;#39;*&amp;#39;)
+  resHdrNew.set(&amp;#39;--s&amp;#39;, status)
+  resHdrNew.set(&amp;#39;--ver&amp;#39;, JS_VER)
+
+  resHdrNew.delete(&amp;#39;content-security-policy&amp;#39;)
+  resHdrNew.delete(&amp;#39;content-security-policy-report-only&amp;#39;)
+  resHdrNew.delete(&amp;#39;clear-site-data&amp;#39;)
+
+  if (status === 301 ||
+      status === 302 ||
+      status === 303 ||
+      status === 307 ||
+      status === 308
+  ) {
+    status = status + 10
+  }
+
+  return new Response(res.body, {
+    status,
+    headers: resHdrNew,
+  })
+}
+
+
+/**
+ * @param {URL} urlObj 
+ */
+function isYtUrl(urlObj) {
+  return (
+    urlObj.host.endsWith(&amp;#39;.googlevideo.com&amp;#39;) &amp;amp;&amp;amp;
+    urlObj.pathname.startsWith(&amp;#39;/videoplayback&amp;#39;)
+  )
+}
+
+/**
+ * @param {URL} urlObj 
+ * @param {number} newLen 
+ * @param {Response} res 
+ */
+async function parseYtVideoRedir(urlObj, newLen, res) {
+  if (newLen &amp;gt; 2000) {
+    return null
+  }
+  if (!isYtUrl(urlObj)) {
+    return null
+  }
+  try {
+    const data = await res.text()
+    urlObj = new URL(data)
+  } catch (err) {
+    return null
+  }
+  if (!isYtUrl(urlObj)) {
+    return null
+  }
+  return urlObj
+}
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

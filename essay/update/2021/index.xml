@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>记事本 – 随笔</title>
-    <link>/essay/update/first/</link>
-    <description>Recent content in 随笔 on 记事本</description>
+    <title>记事本 – 2021</title>
+    <link>/essay/update/2021/</link>
+    <description>Recent content in 2021 on 记事本</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 30 Nov 2021 00:00:00 +0000</lastBuildDate>
     
-	  <atom:link href="/essay/update/first/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/essay/update/2021/index.xml" rel="self" type="application/rss+xml" />
     
     
       

@@ -179,22 +179,22 @@ enable = false
 	url = "mailto:denalon@qq.com"
 	icon = "fa fa-envelope"
         desc = "联系博主"
-[[params.links.user]]
-	name ="备用站点"
-	url = "https://denalon.js.org"
-	icon = "fa fa-paperclip"
-        desc = "海外用户可访问备用站点"
+# [[params.links.user]]
+# 	name ="备用站点"
+# 	url = "https://denalon.js.org"
+# 	icon = "fa fa-paperclip"
+#         desc = "海外用户可访问备用站点"
 # [[params.links.user]]
 	# name = "Stack Overflow"
 	# url = "https://example.org/stack"
 	# icon = "fab fa-stack-overflow"
         # desc = "Practical questions and curated answers"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
-[[params.links.developer]]
-	name = "本站源码"
-	url = "https://denalon.coding.net/public/code/note/git/files"
-	icon = "fa fa-file-text"
-        desc = "站点源码"
+# [[params.links.developer]]
+# 	name = "本站源码"
+# 	url = "https://denalon.coding.net/public/code/note/git/files"
+# 	icon = "fa fa-file-text"
+#         desc = "站点源码"
 # [[params.links.developer]]
 # 	name = "备用站点"
 # 	url = "https://denalon.js.org"

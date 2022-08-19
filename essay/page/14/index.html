@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 
 
-<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+
 <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="/css/zoomify.min.css">
 
@@ -114,7 +114,7 @@
   aria-label="站内搜索…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.24dc60d4a813021f477dcc94156dc295338244232337209d72ed580f4a4b9842c33e37f871656b56830f8ad34e4ff479fc5e1bc570b00f9146dd109ceed40310.json"
+  data-offline-search-index-json-src="/offline-search-index.0bb319cec4c6575e5bde969e3cf1c3b9d1923c9c78b150c5e6587fe42d3fd7328068f05b1d00ba9f0c497f6ab08360192ed1a4dda6a7ff26f895c75859b6ae6c.json"
   data-offline-search-base-href="/"
 >
 
@@ -144,7 +144,7 @@
   aria-label="站内搜索…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.24dc60d4a813021f477dcc94156dc295338244232337209d72ed580f4a4b9842c33e37f871656b56830f8ad34e4ff479fc5e1bc570b00f9146dd109ceed40310.json"
+  data-offline-search-index-json-src="/offline-search-index.0bb319cec4c6575e5bde969e3cf1c3b9d1923c9c78b150c5e6587fe42d3fd7328068f05b1d00ba9f0c497f6ab08360192ed1a4dda6a7ff26f895c75859b6ae6c.json"
   data-offline-search-base-href="/"
 >
 
@@ -1240,31 +1240,61 @@
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022062001html" href="/web/note/2022/2022062001.html">随笔0707</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022081901html" href="/web/note/2022/2022081901.html">关于对hexo构建的说明.md</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022070401html" href="/web/note/2022/2022070401.html">随笔0704</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022081801html" href="/web/note/2022/2022081801.html">记录</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022062001html" href="/web/note/2022/2022062001.html">随笔0620</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022081803html" href="/web/note/2022/2022081803.html">价值观问题</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022081101html" href="/web/note/2022/2022081101.html">随笔0811</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022080301html" href="/web/note/2022/2022080301.html">随笔0803</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022072601html" href="/web/note/2022/2022072601.html">windows server安装docker</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022070702html" href="/web/note/2022/2022070702.html">随笔0707</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022070401html" href="/web/note/2022/2022070401.html">点子</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022062002html" href="/web/note/2022/2022062002.html">随笔0620</a>
       
       
       
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022061001html" href="/web/note/2022/2022061001.html">随笔0610</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022052101html" href="/web/note/2022/2022052101.html">原神问题</a>
       
       
       
@@ -1602,6 +1632,97 @@
 			
 			<li class="media mb-4">
 				<div class="media-body">
+					<h5 class="mt-0 mb-1"><a href="/web/docs/2020/202006132.html">2020 06 13 资源集中</a></h5>
+					<p class="mb-2 mb-md-3"><small class="text-muted">Saturday, June 13, 2020 in 2020</small></p>
+					
+
+
+
+
+
+					<p class="pt-0 mt-0">专门用来规整文档的仓库 集中管理网站所需要的文档。
+动态服务器里，使用数据库管理大量数据，文档更新。而在静态网站里，需要一个专门用来妥善保存文档的仓库。网站的配置文件的备份等级不高，而文档的备份等级要更高一些。应该专门建设一个文档仓库保存，备份。
+文档的多项目调用 将文档从网站独有的资源库里抽离出来，单独放置。其他网站其他项目就可以快速，方便的调用文档。多个项目同时使用该文档而不用调用整个网站配置文件。
+文档的管理也是独立于网站配置文件的，必要的情况下可以设置多个版本，以使用不同项目的使用。网站 …</p>
+					<p class="pt-0"><a href="/web/docs/2020/202006132.html">更多</a></p>
+				</div>
+			</li>
+			
+			<li class="media mb-4">
+				<div class="media-body">
+					<h5 class="mt-0 mb-1"><a href="/web/docs/2020/2020072801.html">名称也成了商品</a></h5>
+					<p class="mb-2 mb-md-3"><small class="text-muted">Friday, June 12, 2020 in 2020</small></p>
+					
+
+
+
+
+
+					<p class="pt-0 mt-0">不卖水果的苹果公司 苹果作为普通的水果，被一家公司拿去注册商标。现在好了，苹果公司不是卖苹果的。
+以中国文物命名的外国公司 甲骨文指中国商朝晚期王室用于占卜记事而在龟甲或兽骨上契刻的文字，结果被一家外国公司注册商标。
+</p>
+					<p class="pt-0"><a href="/web/docs/2020/2020072801.html">更多</a></p>
+				</div>
+			</li>
+			
+			<li class="media mb-4">
+				<div class="media-body">
+					<h5 class="mt-0 mb-1"><a href="/web/deploy/2020/202006127.html">2020 06 12 随笔</a></h5>
+					<p class="mb-2 mb-md-3"><small class="text-muted">Friday, June 12, 2020 in 2020</small></p>
+					
+
+
+
+
+
+					<p class="pt-0 mt-0">部署于子模块里的内容 用来整理临时编辑的文档。位于githu子模块里。通过git submodule 命令引用
+子模块在自动构建里的操作 不同于在服务器上多种操作，在自动构建中需要固定 git submodule foreach git pull 以确保子模块都得到更新。
+较少代码复杂性 尽管随着程序功能越来越多，有限的使用各种技术，尽可能的减少单一项目的代码复杂程度。
+编程语言里的术语：函数 许多编程语言的把function 翻译为函数，尽管这个英文单词的含义已经十分明确，程序员里对函数的作用 …</p>
+					<p class="pt-0"><a href="/web/deploy/2020/202006127.html">更多</a></p>
+				</div>
+			</li>
+			
+			<li class="media mb-4">
+				<div class="media-body">
+					<h5 class="mt-0 mb-1"><a href="/web/note/2020/2020061071.html">2020 06 10 测试</a></h5>
+					<p class="mb-2 mb-md-3"><small class="text-muted">Wednesday, June 10, 2020 in 2020</small></p>
+					
+
+
+
+
+
+					<p class="pt-0 mt-0">完全由手机编辑和发布 由手机上的md编辑器编辑和保存，有Termux管理并git push
+使用termux编辑和git termux 无法使用分支切换
+index.html index.html是最著名的索引页，也往往被作为网站首页活着一个包含索引信息的完整内容页面，用来展示内容，链接不同位置的信息源。正常访问下，没有在索引页上链接的内容是很难访问的。
+index.html 也可以作为次级目录的索引，最终内容可能放置在次级目录或者次级目录之下派生的目录。index.html …</p>
+					<p class="pt-0"><a href="/web/note/2020/2020061071.html">更多</a></p>
+				</div>
+			</li>
+			
+			<li class="media mb-4">
+				<div class="media-body">
+					<h5 class="mt-0 mb-1"><a href="/web/value/2020/202006091.html">2020 06 09 功利心</a></h5>
+					<p class="mb-2 mb-md-3"><small class="text-muted">Tuesday, June 09, 2020 in 2020</small></p>
+					
+
+
+
+
+
+					<p class="pt-0 mt-0">在公司的空地里种了几株向日葵 闲来无事，4月份在公司空地种花的地方种下了几株向日葵。如今已经长出来花。
+但是让人没想到的人，公司有人说这向日葵不能种这么密集，要分开才能长的壮，结的瓜子才好吃。
+o_O，种向日葵就想着要吃瓜子？
+还必须让它长的壮？要是吃瓜子自己直接买做好的，甚至直接剥了皮的不是更方便
+更奇葩的是，有人看向日葵一株上面长了好几个花，就把底下的几个小花给掰了！！！！
+</p>
+					<p class="pt-0"><a href="/web/value/2020/202006091.html">更多</a></p>
+				</div>
+			</li>
+			
+			<li class="media mb-4">
+				<div class="media-body">
 					<h5 class="mt-0 mb-1"><a href="/web/value/2020/2020060711.html">2020 06 07 何为入侵者</a></h5>
 					<p class="mb-2 mb-md-3"><small class="text-muted">Sunday, June 07, 2020 in 2020</small></p>
 					
@@ -1685,99 +1806,6 @@
 腾讯云糟糕的使用体验 使用serverless，程序出错，配置出错无法删除。更烦的就是每次登录要么是需要微信扫码，要么是qq登录手机确认。总之在腾讯的世界离开手机就活不成。
 阿里云的业务限制 同样是serverless应用，cloudflare workers 和腾讯云的Serverless …</p>
 					<p class="pt-0"><a href="/web/blog/2020/2020051601.html">更多</a></p>
-				</div>
-			</li>
-			
-			<li class="media mb-4">
-				<div class="media-body">
-					<h5 class="mt-0 mb-1"><a href="/web/blog/2020/note/2020051405.html">2020 05 14 过于霸道的某些产品</a></h5>
-					<p class="mb-2 mb-md-3"><small class="text-muted">Thursday, May 14, 2020 in 2020</small></p>
-					
-
-
-
-
-
-					<p class="pt-0 mt-0">尽可能少使用腾讯业务 原则1 尽可能的少使用腾讯业务
-由于腾讯云在产品设计，业务运营上过于霸道，过于追求对用户的控制（微信登录捆绑手机验证，腾讯云登录需要手机验证，需要微信等多次验证）所以应尽可能的少使用腾讯业务。
-由于网站选择部署在腾讯云的serverless 上，需要在腾讯云上配置一个对象存储。
-微信 众所周知，电脑版微信必须使用手机扫码验证，如果遇到急事需要登录pc，就必须拿到手机才能登录。这是对用户习惯的绑架。也就是说，想用微信，你手机必须有摄像头，必须联网，必须安装手机版微信。其中必须 …</p>
-					<p class="pt-0"><a href="/web/blog/2020/note/2020051405.html">更多</a></p>
-				</div>
-			</li>
-			
-			<li class="media mb-4">
-				<div class="media-body">
-					<h5 class="mt-0 mb-1"><a href="/web/docs/2020/note/2020051105.html">2020 05 11 人工智能</a></h5>
-					<p class="mb-2 mb-md-3"><small class="text-muted">Monday, May 11, 2020 in 2020</small></p>
-					
-
-
-
-
-
-					<p class="pt-0 mt-0">当前信息时代的假人工智能 尽管以集成电路,无线通讯等技术产生的信息革命给人类的社会带来了翻天覆地的变化,甚至有人开始憧憬未来,高度发达的信息化和人工智能.然而信息化带来的只是人类对生产力和社会活动的方式上的变革,对智慧生命等探索远未达到具有翻天覆地的变化.
-人工智能遥不可及,仔细观察周围的电子产品,它们虽然通过网络和大规模计算,然而执行的还是简单的&quot;是&quot;&ldquo;否&quot;&ldquo;因为,所以&quot;&ldquo;当,则&quot;等简单的行为.是一 …</p>
-					<p class="pt-0"><a href="/web/docs/2020/note/2020051105.html">更多</a></p>
-				</div>
-			</li>
-			
-			<li class="media mb-4">
-				<div class="media-body">
-					<h5 class="mt-0 mb-1"><a href="/web/docs/2020/note/askquestion.html">2020-05-09 提问的智慧</a></h5>
-					<p class="mb-2 mb-md-3"><small class="text-muted">Saturday, May 09, 2020 in 2020</small></p>
-					
-
-
-
-
-
-					<p class="pt-0 mt-0">提问的智慧 How To Ask Questions The Smart Way
-Copyright © 2001,2006,2014 Eric S. Raymond, Rick Moen
-本指南英文版版权为 Eric S. Raymond, Rick Moen 所有。
-原文网址：http://www.catb.org/~esr/faqs/smart-questions.html
-Copyleft 2001 by D.H.Grand(nOBODY/Ginux), 2010 by Gasolin, …</p>
-					<p class="pt-0"><a href="/web/docs/2020/note/askquestion.html">更多</a></p>
-				</div>
-			</li>
-			
-			<li class="media mb-4">
-				<div class="media-body">
-					<h5 class="mt-0 mb-1"><a href="/web/lambda/test/2020/2020050809.html">2020 05 08 效果测试页面</a></h5>
-					<p class="mb-2 mb-md-3"><small class="text-muted">Friday, May 08, 2020 in 2020</small></p>
-					
-
-
-
-
-
-					<p class="pt-0 mt-0">在md文件里使用div做两边的分栏显示 腾讯的登录验证限制 如果满足登录需要，你不但有用户名和密码，还需要专门在手机上安装他们的应用，无意间为他们稳定了市场。 需要在结尾处做清楚浮动，这样后续的内容就不会继续位于上一个浮动的结尾处
-其他页面
-用来测试效果
-icon
-iconfont 用来给页面icon提供彩色图标.
-测试bootstrap代码 测试引用Bootstrap4 的按钮
-基本按钮 主要按钮 次要按钮 成功 信息 警告 危险 黑色 浅色 链接
-测试效果 主题无法正常使用Bootstrap …</p>
-					<p class="pt-0"><a href="/web/lambda/test/2020/2020050809.html">更多</a></p>
-				</div>
-			</li>
-			
-			<li class="media mb-4">
-				<div class="media-body">
-					<h5 class="mt-0 mb-1"><a href="/web/blog/2020/note/2020050802.html">2020 05 08 部署记录01</a></h5>
-					<p class="mb-2 mb-md-3"><small class="text-muted">Friday, May 08, 2020 in 2020</small></p>
-					
-
-
-
-
-
-					<p class="pt-0 mt-0">服务器部署记录 个人项目取消oss 由于oss的存储和访问都需要计费。最经济的情况下，使用coding pages和 jsdelivr代替之前的oss文件。原oss里文件，整天搬迁到coding pages上，域名和访问地址不变。
-后续的静态资源引用使用jsdelivr或者coding pages 的url地址。 考虑到coding pages访问速度不稳定。可以使用国内cdn加速。
-由于计费问题，取消所有oss服务。外部访问的文件全部下载下来单独保存。backup文件暂时保留。
-对服务器 …</p>
-					<p class="pt-0"><a href="/web/blog/2020/note/2020050802.html">更多</a></p>
 				</div>
 			</li>
 			

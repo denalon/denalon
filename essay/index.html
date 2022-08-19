@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 
 
-<script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
+
 <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="/css/zoomify.min.css">
 
@@ -114,7 +114,7 @@
   aria-label="站内搜索…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.24dc60d4a813021f477dcc94156dc295338244232337209d72ed580f4a4b9842c33e37f871656b56830f8ad34e4ff479fc5e1bc570b00f9146dd109ceed40310.json"
+  data-offline-search-index-json-src="/offline-search-index.0bb319cec4c6575e5bde969e3cf1c3b9d1923c9c78b150c5e6587fe42d3fd7328068f05b1d00ba9f0c497f6ab08360192ed1a4dda6a7ff26f895c75859b6ae6c.json"
   data-offline-search-base-href="/"
 >
 
@@ -144,7 +144,7 @@
   aria-label="站内搜索…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.24dc60d4a813021f477dcc94156dc295338244232337209d72ed580f4a4b9842c33e37f871656b56830f8ad34e4ff479fc5e1bc570b00f9146dd109ceed40310.json"
+  data-offline-search-index-json-src="/offline-search-index.0bb319cec4c6575e5bde969e3cf1c3b9d1923c9c78b150c5e6587fe42d3fd7328068f05b1d00ba9f0c497f6ab08360192ed1a4dda6a7ff26f895c75859b6ae6c.json"
   data-offline-search-base-href="/"
 >
 
@@ -1240,31 +1240,61 @@
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022062001html" href="/web/note/2022/2022062001.html">随笔0707</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022081901html" href="/web/note/2022/2022081901.html">关于对hexo构建的说明.md</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022070401html" href="/web/note/2022/2022070401.html">随笔0704</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022081801html" href="/web/note/2022/2022081801.html">记录</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022062001html" href="/web/note/2022/2022062001.html">随笔0620</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022081803html" href="/web/note/2022/2022081803.html">价值观问题</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022081101html" href="/web/note/2022/2022081101.html">随笔0811</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022080301html" href="/web/note/2022/2022080301.html">随笔0803</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022072601html" href="/web/note/2022/2022072601.html">windows server安装docker</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022070702html" href="/web/note/2022/2022070702.html">随笔0707</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022070401html" href="/web/note/2022/2022070401.html">点子</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022062002html" href="/web/note/2022/2022062002.html">随笔0620</a>
       
       
       
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022061001html" href="/web/note/2022/2022061001.html">随笔0610</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022052101html" href="/web/note/2022/2022052101.html">原神问题</a>
       
       
       
@@ -1603,6 +1633,96 @@
 			
 			<li class="media mb-4">
 				<div class="media-body">
+					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022081901.html">关于对hexo构建的说明.md</a></h5>
+					<p class="mb-2 mb-md-3"><small class="text-muted">Friday, August 19, 2022 in 2022</small></p>
+					
+
+
+
+
+
+					<p class="pt-0 mt-0">说明 静态部署 hexo生成后的文件本身就是静态文件，部署这些代码并不需要复杂的环境，仅仅需要一个nginx即可。可以部署到对象存储桶里，通过cdn、云服务器访问。
+构建hexo需要使用npm环境，安装git，有些项目还会使用其他的包管理器。必然需要部署许多环境，而某些用户的web环境可能并没办法部署这些工具（比如过去的虚拟主机，某些组件版本过低不符合hexo运行要求等）。这种情况使用本地电脑管理代码，测试效果后部署到对应web环境下执行简单的nginx静态部署。
+自动构建 将hexo源码部署 …</p>
+					<p class="pt-0"><a href="/web/note/2022/2022081901.html">更多</a></p>
+				</div>
+			</li>
+			
+			<li class="media mb-4">
+				<div class="media-body">
+					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022081803.html">价值观问题</a></h5>
+					<p class="mb-2 mb-md-3"><small class="text-muted">Thursday, August 18, 2022 in 2022</small></p>
+					
+
+
+
+
+
+					<p class="pt-0 mt-0">价值观冲突 愚公移山，故事里描述愚公多么艰苦，移山多么努力。但解决问题的却是“天神”，真实生活中面对绵延数十里的大山，不提升工具的情况下需要几千年才能完成。
+生产力和生产关系，在生产力低下的情况下，盲目的跃进只会适得其反。
+陋室铭里写山不在高有仙则灵水不在深，有龙则灵。但世间哪座山里有仙？哪里水里有龙！
+</p>
+					<p class="pt-0"><a href="/web/note/2022/2022081803.html">更多</a></p>
+				</div>
+			</li>
+			
+			<li class="media mb-4">
+				<div class="media-body">
+					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022081801.html">记录</a></h5>
+					<p class="mb-2 mb-md-3"><small class="text-muted">Thursday, August 18, 2022 in 2022</small></p>
+					
+
+
+
+
+
+					<p class="pt-0 mt-0">零碎记录 上海房价6万一平，厨房10平60万，有60万够吃十几年外卖。建议上海回归大锅饭时代，每家出资60万组建小区食堂，既干净又省钱，还能把厨房省出来给卧室或者客厅增加空间。
+一块地亩产800斤小麦，小麦收购价在1.5元每斤。一亩地小麦刚好购买一只帝王蟹。
+还有些人每天专门寻找核酸检测点做核酸，因为是免费的，不做的话万一去别的地方要求核酸，还得自己掏钱去做。
+友情提示，没有第二国籍无法注销母国籍。
+美国公司每年向世界制造的食品饮料里含有氢氧酸，在美国生物实验室发现大量氢氧酸。​ 氢氧酸又名二零 …</p>
+					<p class="pt-0"><a href="/web/note/2022/2022081801.html">更多</a></p>
+				</div>
+			</li>
+			
+			<li class="media mb-4">
+				<div class="media-body">
+					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022081101.html">随笔0811</a></h5>
+					<p class="mb-2 mb-md-3"><small class="text-muted">Thursday, August 11, 2022 in 2022</small></p>
+					
+
+
+
+
+
+					<p class="pt-0 mt-0">200公里 200公里建造隧道难度过大，高铁还可以考虑，高速太长了。
+房价 房价暴跌的话，让那些手握十几个房本的包租婆怎么活！
+问题 如果抗战时期，日本人闯进家中抢夺文物，是应该让日本人抢走还是当场摔碎？
+为什么有人怀疑是美国人制作的病毒？全世界其他国家有能力人为制造病毒还是有科研文章有刊登人类拥有了对病毒进行基因编辑的技术？
+疑问 资本主义，如果赚足够的资本是可以获得社会财富的，而无产阶级的国家无论怎么奋斗都是无产的，因为所有资产都不是私人的。
+</p>
+					<p class="pt-0"><a href="/web/note/2022/2022081101.html">更多</a></p>
+				</div>
+			</li>
+			
+			<li class="media mb-4">
+				<div class="media-body">
+					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022080301.html">随笔0803</a></h5>
+					<p class="mb-2 mb-md-3"><small class="text-muted">Wednesday, August 03, 2022 in 2022</small></p>
+					
+
+
+
+
+
+					<p class="pt-0 mt-0">博客构成 包括主程序，内容，主题三部分。每个部分配置一个或多个仓库。主程序只有基本的配置文件和静态资源，不负责文章和内容的更新。更新文章并不会影响主程序的代码，文章通过子模块进行更新。必要的文章还有多个仓库备份。
+</p>
+					<p class="pt-0"><a href="/web/note/2022/2022080301.html">更多</a></p>
+				</div>
+			</li>
+			
+			<li class="media mb-4">
+				<div class="media-body">
 					<h5 class="mt-0 mb-1"><a href="/web/note/2022/20220801/">202208</a></h5>
 					<p class="mb-2 mb-md-3"><small class="text-muted">Monday, August 01, 2022 in 历程</small></p>
 					
@@ -1611,14 +1731,37 @@
 
 
 
-					<p class="pt-0 mt-0">2022-08-01 </p>
+					<p class="pt-0 mt-0">2022-08-01 资源收缩 改善资料管理，对git仓库进行优化整合。使用不同的分支来管理类似的内容，删除不必要的仓库，减少仓库数量。
+</p>
 					<p class="pt-0"><a href="/web/note/2022/20220801/">更多</a></p>
 				</div>
 			</li>
 			
 			<li class="media mb-4">
 				<div class="media-body">
-					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022062001.html">随笔0707</a></h5>
+					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022072601.html">windows server安装docker</a></h5>
+					<p class="mb-2 mb-md-3"><small class="text-muted">Tuesday, July 26, 2022 in 2022</small></p>
+					
+
+
+
+
+
+					<p class="pt-0 mt-0">在Server2019上安装docker 启动powershell
+安装Docker
+首先输入以下的命令
+Install-Module -Name DockerMsftProvider -Repository PSGallery -Force
+这里系统提示安装 NuGet 提供程序，我们需要输入 Y
+接着继续输入以下命令
+Install-Package -Name docker -ProviderName DockerMsftProvider
+PowerShell 询问是否信任包 …</p>
+					<p class="pt-0"><a href="/web/note/2022/2022072601.html">更多</a></p>
+				</div>
+			</li>
+			
+			<li class="media mb-4">
+				<div class="media-body">
+					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022070702.html">随笔0707</a></h5>
 					<p class="mb-2 mb-md-3"><small class="text-muted">Thursday, July 07, 2022 in 2022</small></p>
 					
 
@@ -1628,14 +1771,14 @@
 
 					<p class="pt-0 mt-0">做完核酸手上盖章 近期无锡一街道“为了避免人员聚集”给黄码转绿码做完核酸检测的群众手上盖章。还要求在炎炎夏日“保持三天”
 古代对犯人脸上刻字印章，二战时某组织对犹太人手臂上纹字标识，当代对质检猪肉进行盖章
-</p>
-					<p class="pt-0"><a href="/web/note/2022/2022062001.html">更多</a></p>
+疫情各类奇葩事 </p>
+					<p class="pt-0"><a href="/web/note/2022/2022070702.html">更多</a></p>
 				</div>
 			</li>
 			
 			<li class="media mb-4">
 				<div class="media-body">
-					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022070401.html">随笔0704</a></h5>
+					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022070401.html">点子</a></h5>
 					<p class="mb-2 mb-md-3"><small class="text-muted">Monday, July 04, 2022 in 2022</small></p>
 					
 
@@ -1643,11 +1786,10 @@
 
 
 
-					<p class="pt-0 mt-0">美洲新大陆 阿兹特克帝国灭亡于1520年，印加帝国灭亡于1572年。1597年最后一个玛雅城邦在西班牙人的炮火中灰飞烟灭。
-1620年五月花号到达美洲，1776年美国建国，1783年美国人允许开发西部印第安人地区
-1620年五月花号到达美洲之前，天花已经在美洲肆虐一百多年。至于这一百年来的天花怎么来的，那跟美国建国和发展有关系吗？
-印第安人文明和国家均是西班牙人消灭的，天花、伤寒、麻疹等病菌也是西班牙人带过去的。一百多年西班牙的暴行怎么算到一百年后才到来的人身上？
-尽管西班牙殖民地多数都在中美洲 …</p>
+					<p class="pt-0 mt-0">备用资料库 建立一个妥善的包罗万象的资料库，用来存放之前的相片、文章、手机截图、音乐等等人生痕迹型资料。一时兴起写的短文、使用过期的加密口令、作废的项目源码等等。
+github千年计划使用的QR编码 github千年计划，将程序代码编码成QR，然后打印到防锈防腐的特殊材料上。需要时扫描QR码。如何获得这种QR编码方式，将文章、源码编码成QR打印后保存。
+使用 Ed25519 算法生成 SSH 密钥 创建Ed25519算法的ssh密钥，
+ssh-keygen -t ed25519 -C …</p>
 					<p class="pt-0"><a href="/web/note/2022/2022070401.html">更多</a></p>
 				</div>
 			</li>
@@ -1667,112 +1809,6 @@
 2077-07-04 全州县“超生子女社会调剂”
 </p>
 					<p class="pt-0"><a href="/web/note/2022/20220701/">更多</a></p>
-				</div>
-			</li>
-			
-			<li class="media mb-4">
-				<div class="media-body">
-					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022062001.html">随笔0620</a></h5>
-					<p class="mb-2 mb-md-3"><small class="text-muted">Monday, June 20, 2022 in 2022</small></p>
-					
-
-
-
-
-
-					<p class="pt-0 mt-0">精准红码 6月13日，很多网友在社交平台反馈，多名扫码进入“取款难”储户维权群而欲前往郑州沟通村镇银行沟通取款事宜的储户，其健康码都被赋红码，这其中既包含已达到郑州即发现健康码变红的储户，还包括多位尚未前往郑州，仅在填报完信息后就被神奇赋予“红码”的储户。
-离奇的是，被赋红码的均是该维权群的储户，而无论是一同前往郑州的储户朋友，还是行踪轨迹几乎一致的储户家人，其健康码依旧是绿码。因为赋码原因显示为“正在实施集中或居家医学隔离观察的入境人员”，很多储户在达到郑州后就被带去集中隔离。更有赴河南的储户 …</p>
-					<p class="pt-0"><a href="/web/note/2022/2022062001.html">更多</a></p>
-				</div>
-			</li>
-			
-			<li class="media mb-4">
-				<div class="media-body">
-					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022061001.html">随笔0610</a></h5>
-					<p class="mb-2 mb-md-3"><small class="text-muted">Friday, June 10, 2022 in 2022</small></p>
-					
-
-
-
-
-
-					<p class="pt-0 mt-0">美国枪击案 枪击案并不会导致美国社会控枪，反倒是越来越严峻的形势导致平民为了避免禁枪以后的影响而提前买枪。大多数案件里，凶手所持的自动枪支和改装枪支本身就是非法持有的。完全禁枪只会导致原本合法持枪保卫自己的人被迫放弃枪支。那些通过走私黑市获得的非法未被追踪的枪支不会受影响。
-</p>
-					<p class="pt-0"><a href="/web/note/2022/2022061001.html">更多</a></p>
-				</div>
-			</li>
-			
-			<li class="media mb-4">
-				<div class="media-body">
-					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022052101.html">原神问题</a></h5>
-					<p class="mb-2 mb-md-3"><small class="text-muted">Saturday, May 21, 2022 in 2022</small></p>
-					
-
-
-
-
-
-					<p class="pt-0 mt-0">原神问题 1新手跟老玩家观念不同
-老玩家追求的是高输出，队伍搭配，资源利用 新玩家是上手难度，游戏体验，
-2 新玩家 老玩家的价值观 同样是20树脂，满45级刷圣遗物，一次一个橙色。不满45级刷只有蓝色紫色甚至绿色。 但是，对于新手玩家来说，不升级圣遗物游戏体验明显不佳。20级有满级蓝色圣遗物就能打怪效率，如果没有，玩家甚至玩不到45级就离开了。
-同样道理 世界宝箱 地脉
-3 角色 获取角色成本过高，角色养成门槛，包括武器，圣遗物，天赋
-4 游戏操作
-，操作绑架（进入地区自动触发）npc锁定，强 …</p>
-					<p class="pt-0"><a href="/web/note/2022/2022052101.html">更多</a></p>
-				</div>
-			</li>
-			
-			<li class="media mb-4">
-				<div class="media-body">
-					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022052001.html">随笔0520</a></h5>
-					<p class="mb-2 mb-md-3"><small class="text-muted">Friday, May 20, 2022 in 2022</small></p>
-					
-
-
-
-
-
-					<p class="pt-0 mt-0">路牌 首先要明确一点，为什么要学英语，英语到底是作为外语还是国际交流语言？举个例子，如果我学一门小语种，比如 匈牙利语，那学完以后是要用于跟匈牙利人沟通的，如果我学完以后压根不去匈牙利，压根不找关于匈牙利人的工作。那学匈牙利语简直就是浪费。但英语不同，目前许多网站、出版物、论文、国际贸易、船舶航空等等。也就是说现在人学英语压根不是为了只跟英国人沟通和贸易的。 其次你的路牌标志的作用？辅助汉语读音？比如堡的pu和bao读音。面向国际沟通的拉丁字母转写。如果目标是辅助汉语对象是国内的说汉语民众，那路 …</p>
-					<p class="pt-0"><a href="/web/note/2022/2022052001.html">更多</a></p>
-				</div>
-			</li>
-			
-			<li class="media mb-4">
-				<div class="media-body">
-					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022050901.html">疫情防控</a></h5>
-					<p class="mb-2 mb-md-3"><small class="text-muted">Monday, May 09, 2022 in 2022</small></p>
-					
-
-
-
-
-
-					<p class="pt-0 mt-0">疫情防控 每天核酸检测，投入过大，效果没有。一些没有接触外部人员的老人孩子，还要去排队做核酸检测，增加受感染风险
-学生一天上课都要戴口罩，造成呼吸困难，肺部受损。而防护效果几乎没有，学校环境有感染着，一天之内就可以传播开来，戴口罩根本没有效果。
-健康码 行程码 健康码 场所码 疫苗记录 核酸检测健康码
-健康码用途有被扩大化的嫌疑，
-</p>
-					<p class="pt-0"><a href="/web/note/2022/2022050901.html">更多</a></p>
-				</div>
-			</li>
-			
-			<li class="media mb-4">
-				<div class="media-body">
-					<h5 class="mt-0 mb-1"><a href="/web/note/2022/2022050601.html">随笔0506</a></h5>
-					<p class="mb-2 mb-md-3"><small class="text-muted">Friday, May 06, 2022 in 2022</small></p>
-					
-
-
-
-
-
-					<p class="pt-0 mt-0">奇异博士2 奇异博士2：疯狂多元宇宙是山姆·雷米执导的奇幻电影，由本尼迪克特·康伯巴奇、伊丽莎白·奥尔森主演，定于2022年5月6日在北美上映。
-评价 多元宇宙、触手、魔法、僵尸、更多剧情。整部电影什么都想有，搅和在一起大杂烩。
-漫威 欧美影视政治正确，宣传有色人种、变性、残疾人。只遣的电影永恒族，高科技的外星人居然还有聋哑人。
-垃圾短信 凌晨1点，收到10000垃圾短信，“守护职业健康，同享幸福人生”
-</p>
-					<p class="pt-0"><a href="/web/note/2022/2022050601.html">更多</a></p>
 				</div>
 			</li>
 			

@@ -2,8 +2,8 @@ name: github pages
 
 on:
   push:
-    branches:
-      - blog # Set a branch to deploy
+    tags:
+      - deploy
 
 jobs:
   deploy:

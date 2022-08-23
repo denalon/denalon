@@ -4,12 +4,12 @@
 [submodule "content/tech/develop"]
 	path = content/tech/develop
 	url = https://e.coding.net/elsatar/doc/develop.git
-[submodule "content/essay/essay"]
-	path = content/essay/essay
-	url = https://e.coding.net/elsatar/doc/essay.git
 [submodule "content/essay/update"]
 	path = content/essay/update
 	url = https://e.coding.net/frednab/content/update.git
 [submodule "content/tech/extend"]
 	path = content/tech/extend
 	url = https://e.coding.net/frednab/content/extend.git
+[submodule "content/essay/essay"]
+	path = content/essay/essay
+	url = https://e.coding.net/elsatar/doc/essay.git

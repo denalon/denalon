@@ -4,7 +4,7 @@
     <link>/tech/test/test/</link>
     <description>Recent content in 测试代码 on 记事本</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Aug 2022 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="/tech/test/test/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,6 +13,349 @@
         
       
     
+    
+    <item>
+      <title>Tech: mirrors</title>
+      <link>/mirrors/</link>
+      <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/mirrors/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;开源镜像索引&#34;&gt;开源镜像索引&lt;/h2&gt;
+&lt;h3 id=&#34;大学镜像&#34;&gt;大学镜像&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;清华大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;北京外国语大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.bfsu.edu.cn/&#34;&gt;https://mirrors.bfsu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;北京大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.pku.edu.cn/&#34;&gt;https://mirrors.pku.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;中国科学技术大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.ustc.edu.cn/&#34;&gt;https://mirrors.ustc.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;兰州大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirror.lzu.edu.cn/&#34;&gt;http://mirror.lzu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;浙江大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.zju.edu.cn/&#34;&gt;http://mirrors.zju.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;东北大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirror.neu.edu.cn/&#34;&gt;http://mirror.neu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;华中科技大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.hust.edu.cn/&#34;&gt;http://mirrors.hust.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;重庆大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.cqu.edu.cn/&#34;&gt;http://mirrors.cqu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大连东软信息学院&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.neusoft.edu.cn/&#34;&gt;http://mirrors.neusoft.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大连理工大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirror.dlut.edu.cn/&#34;&gt;http://mirror.dlut.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;上海交通大学FTP&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://ftp.sjtu.edu.cn/&#34;&gt;http://ftp.sjtu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;上海交通大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/&#34;&gt;https://mirrors.sjtug.sjtu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;山东女子学院&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sdwu.edu.cn/&#34;&gt;https://mirrors.sdwu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;哈尔滨工业大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.hit.edu.cn/&#34;&gt;http://mirrors.hit.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;北京理工大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirror.bit.edu.cn/&#34;&gt;http://mirror.bit.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;云南大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.ynu.edu.cn/&#34;&gt;https://mirrors.ynu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;高能物理研究所&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirror.ihep.ac.cn/&#34;&gt;http://mirror.ihep.ac.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;南京大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.nju.edu.cn/&#34;&gt;https://mirrors.nju.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;南阳理工学院&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirror.nyist.edu.cn/&#34;&gt;https://mirror.nyist.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;山东大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sdu.edu.cn/&#34;&gt;https://mirrors.sdu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;西北农林科技大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.nwafu.edu.cn/&#34;&gt;https://mirrors.nwafu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;企业镜像&#34;&gt;企业镜像&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;阿里&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.aliyun.com/&#34;&gt;http://mirrors.aliyun.com/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;腾讯&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.cloud.tencent.com/&#34;&gt;https://mirrors.cloud.tencent.com/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;搜狐&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.sohu.com/&#34;&gt;http://mirrors.sohu.com/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;网易&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.163.com/&#34;&gt;https://mirrors.163.com/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;首都在线&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.yun-idc.com/&#34;&gt;http://mirrors.yun-idc.com/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;公云&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.pubyun.com/&#34;&gt;http://mirrors.pubyun.com/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;华为&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.huaweicloud.com/&#34;&gt;https://mirrors.huaweicloud.com/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;docker-hub-镜像&#34;&gt;Docker Hub 镜像&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;网易&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://hub-mirror.c.163.com&#34;&gt;https://hub-mirror.c.163.com&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;百度&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirror.baidubce.com&#34;&gt;https://mirror.baidubce.com&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;阿里&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://ustc-edu-cn.mirror.aliyuncs.com&#34;&gt;https://ustc-edu-cn.mirror.aliyuncs.com&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Github (国外)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://ghcr.io/&#34;&gt;https://ghcr.io/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;npm-镜像&#34;&gt;NPM 镜像&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;中国科学技术大学(反代)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://npmreg.proxy.ustclug.org/&#34;&gt;https://npmreg.proxy.ustclug.org/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;浙江大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.zju.edu.cn/npm/&#34;&gt;http://mirrors.zju.edu.cn/npm/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;淘宝&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://registry.npmmirror.com&#34;&gt;https://registry.npmmirror.com&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CNPM&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://r.cnpmjs.org/&#34;&gt;http://r.cnpmjs.org/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;腾讯&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.cloud.tencent.com/npm/&#34;&gt;http://mirrors.cloud.tencent.com/npm/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;华为&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://repo.huaweicloud.com/repository/npm/&#34;&gt;https://repo.huaweicloud.com/repository/npm/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm config set registry https://npmreg.proxy.ustclug.org/
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;yarn config set registry https://npmreg.proxy.ustclug.org/
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pnpm config set registry https://npmreg.proxy.ustclug.org/
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;pip-镜像&#34;&gt;pip 镜像&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;清华大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://pypi.tuna.tsinghua.edu.cn/simple&#34;&gt;https://pypi.tuna.tsinghua.edu.cn/simple&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;北京外国语大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.bfsu.edu.cn/pypi/web/simple&#34;&gt;https://mirrors.bfsu.edu.cn/pypi/web/simple&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大连东软信息学院&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.neusoft.edu.cn/pypi/web/simple/&#34;&gt;http://mirrors.neusoft.edu.cn/pypi/web/simple/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;重庆大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.cqu.edu.cn/pypi/web/simple&#34;&gt;https://mirrors.cqu.edu.cn/pypi/web/simple&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;浙江大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.zju.edu.cn/pypi/simple&#34;&gt;https://mirrors.zju.edu.cn/pypi/simple&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;中国科学技术大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://pypi.mirrors.ustc.edu.cn/simple/&#34;&gt;http://pypi.mirrors.ustc.edu.cn/simple/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;豆瓣&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://pypi.douban.com/simple/&#34;&gt;http://pypi.douban.com/simple/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;阿里&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.aliyun.com/pypi/simple/&#34;&gt;http://mirrors.aliyun.com/pypi/simple/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;网易&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.163.com/pypi/simple/&#34;&gt;https://mirrors.163.com/pypi/simple/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;临时使用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip install -i https://pypi.tuna.tsinghua.edu.cn/simple [包名]
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;永久使用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;	Unix、Linux、Mac OS: ~/.pip/pip.conf Windows: %HOME%\pip\pip.ini 文件中写入			
+				
+	[global]			
+	trusted-host=pypi.tuna.tsinghua.edu.cn			
+	timeout=6000			
+	index-url=https://pypi.tuna.tsinghua.edu.cn/simple	
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;cargo-镜像&#34;&gt;Cargo 镜像&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;清华大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;北京外国语大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.bfsu.edu.cn/git/crates.io-index.git&#34;&gt;https://mirrors.bfsu.edu.cn/git/crates.io-index.git&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;中国科学技术大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.ustc.edu.cn/crates.io-index&#34;&gt;https://mirrors.ustc.edu.cn/crates.io-index&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;上海交通大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/&#34;&gt;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;阿里云 Rustcc 社区&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://code.aliyun.com/rustcc/crates.io-index.git&#34;&gt;https://code.aliyun.com/rustcc/crates.io-index.git&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Unix、Linux、Mac OS ~/.cargo/config 写入文件中&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;	# 指定镜像			
+	# replace-with = &amp;#39;源镜像名&amp;#39;			
+	replace-with = &amp;#39;ustc&amp;#39;			
+	[source.ustc]			
+	registry = &amp;#34;https://mirrors.ustc.edu.cn/crates.io-index&amp;#34;		
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;gem-镜像&#34;&gt;Gem 镜像&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;清华大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/rubygems/&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/rubygems/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;北京外国语大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.bfsu.edu.cn/rubygems/&#34;&gt;https://mirrors.bfsu.edu.cn/rubygems/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;gem&#34;&gt;Gem&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;	# 添加 TUNA 源并移除默认源			
+	gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/			
+	# 列出已有源			
+	gem sources -l			
+	# 应该只有 TUNA 一个			
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;bundle&#34;&gt;Bundle&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
     
     <item>
       <title>Tech: test001</title>
@@ -25,7 +368,148 @@
         
         &lt;h3 id=&#34;test&#34;&gt;test&lt;/h3&gt;
 &lt;p&gt;该仓库是作为脱离于博客存档文章以外的额外更新包。平时针对该仓库进行管理和更新，当年末时，这些文章将转移到存档目录下，文章的url地址不变&lt;/p&gt;
+&lt;h3 id=&#34;新增样式&#34;&gt;新增样式&lt;/h3&gt;
+&lt;p&gt;加粗字体的&lt;strong&gt;彩色效果&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;b, strong {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    --strong-gradient: linear-gradient(62deg,#188bfd,#a03bff)!important;
+    background-image: var(--strong-gradient);
+    font-weight: bolder;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;扩展内容&#34;&gt;扩展内容&lt;/h3&gt;
 
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 测试20220822</title>
+      <link>/web/test/2022082201.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/web/test/2022082201.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;在md文件里使用div做两边的分栏显示&#34;&gt;在md文件里使用div做两边的分栏显示&lt;/h3&gt;
+&lt;div  style=&#34;float:left; width:100%;&#34;&gt;
+        &lt;div style=&#34;float:left; width:70%;&#34;&gt;
+        &lt;img src=&#34;https://base.oribos.city/images/20200604.png&#34;  alt=&#34;种类繁多的前端技术&#34; /&gt;
+        &lt;/div&gt;
+        &lt;div  style=&#34;float:right; width:28%;&#34;&gt;
+                &lt;h3&gt;种类繁多的前端技术&lt;/h3&gt;
+                &lt;p&gt;
+                    相较于后端技术使用某一个流行的编程语言和专业数据库就可以完成大多数工作，前端技术简直就是技术大杂烩，最基础的html，css，js，各类大大小小的框架，各类包，模块等等。种类繁多，眼花缭乱。
+                &lt;/p&gt;
+                &lt;p  class=&#34;text-warning&#34;&gt;
+                这些技术有些是叠加的，即第三步的内容可能需要第二步和第一步的基础知识。
+                &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&#34;clear:both;&#34;&gt;
+        &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;br&gt;
+&lt;/div&gt;
+&lt;div style=&#34;clear:both;&#34;&gt;
+&lt;h3 id=&#34;前端产品属于消耗品&#34;&gt;前端产品属于消耗品&lt;/h3&gt;
+&lt;div style=&#34;float:left;  width:100%&#34;&gt;
+        &lt;div style=&#34;float:left; width:25%&#34;&gt;
+                &lt;h3&gt;宽度25%&lt;/h3&gt;
+                &lt;p&gt;
+                    相较于后端技术使用某一个流行的编程语言和专业数据库就可以完成大多数工作，前端技术简直就是技术大杂烩，最基础的html，css，js，各类大大小小的框架，各类包，模块等等。种类繁多，眼花缭乱。
+                &lt;/p&gt;
+                &lt;p  class=&#34;text-warning&#34;&gt;
+                这些技术有些是叠加的，即第三步的内容可能需要第二步和第一步的基础知识。
+                &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&#34;float:left; width:25%&#34;&gt;
+                &lt;h3&gt;宽度25%&lt;/h3&gt;
+                &lt;p&gt;
+                    相较于后端技术使用某一个流行的编程语言和专业数据库就可以完成大多数工作，前端技术简直就是技术大杂烩，最基础的html，css，js，各类大大小小的框架，各类包，模块等等。种类繁多，眼花缭乱。
+                &lt;/p&gt;
+                &lt;p  class=&#34;text-warning&#34;&gt;
+                这些技术有些是叠加的，即第三步的内容可能需要第二步和第一步的基础知识。
+                &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&#34;float:left; width:25%&#34;&gt;
+                &lt;h3&gt;宽度25%&lt;/h3&gt;
+                &lt;p&gt;
+                    相较于后端技术使用某一个流行的编程语言和专业数据库就可以完成大多数工作，前端技术简直就是技术大杂烩，最基础的html，css，js，各类大大小小的框架，各类包，模块等等。种类繁多，眼花缭乱。
+                &lt;/p&gt;
+                &lt;p  class=&#34;text-warning&#34;&gt;
+                这些技术有些是叠加的，即第三步的内容可能需要第二步和第一步的基础知识。
+                &lt;/p&gt;
+        &lt;/div&gt;
+                &lt;div style=&#34;float:left; width:25%&#34;&gt;
+                &lt;h3&gt;宽度25%&lt;/h3&gt;
+                &lt;p&gt;
+                    相较于后端技术使用某一个流行的编程语言和专业数据库就可以完成大多数工作，前端技术简直就是技术大杂烩，最基础的html，css，js，各类大大小小的框架，各类包，模块等等。种类繁多，眼花缭乱。
+                &lt;/p&gt;
+                &lt;p  class=&#34;text-warning&#34;&gt;
+                这些技术有些是叠加的，即第三步的内容可能需要第二步和第一步的基础知识。
+                &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&#34;float:left; &#34;&gt;
+                &lt;h3&gt;未定义宽度的一行&lt;/h3&gt;
+                &lt;p&gt;
+                    相较于后端技术使用某一个流行的编程语言和专业数据库就可以完成大多数工作，前端技术简直就是技术大杂烩，最基础的html，css，js，各类大大小小的框架，各类包，模块等等。种类繁多，眼花缭乱。
+                &lt;/p&gt;
+                &lt;p  class=&#34;text-warning&#34;&gt;
+                这些技术有些是叠加的，即第三步的内容可能需要第二步和第一步的基础知识。
+                &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&#34;float:left;  width:33% &#34;&gt;
+                &lt;h3&gt;宽度33%&lt;/h3&gt;
+                &lt;p&gt;
+                    相较于后端技术使用某一个流行的编程语言和专业数据库就可以完成大多数工作，前端技术简直就是技术大杂烩，最基础的html，css，js，各类大大小小的框架，各类包，模块等等。种类繁多，眼花缭乱。
+                &lt;/p&gt;
+                &lt;p  class=&#34;text-warning&#34;&gt;
+                这些技术有些是叠加的，即第三步的内容可能需要第二步和第一步的基础知识。
+                &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&#34;float:left;  width:33% &#34;&gt;
+                &lt;h3&gt;宽度33%&lt;/h3&gt;
+                &lt;p&gt;
+                    相较于后端技术使用某一个流行的编程语言和专业数据库就可以完成大多数工作，前端技术简直就是技术大杂烩，最基础的html，css，js，各类大大小小的框架，各类包，模块等等。种类繁多，眼花缭乱。
+                &lt;/p&gt;
+                &lt;p  class=&#34;text-warning&#34;&gt;
+                这些技术有些是叠加的，即第三步的内容可能需要第二步和第一步的基础知识。
+                &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&#34;float:left;  width:33%&#34;&gt;
+                &lt;h3&gt;宽度33%&lt;/h3&gt;
+                &lt;p&gt;
+                    相较于后端技术使用某一个流行的编程语言和专业数据库就可以完成大多数工作，前端技术简直就是技术大杂烩，最基础的html，css，js，各类大大小小的框架，各类包，模块等等。种类繁多，眼花缭乱。
+                &lt;/p&gt;
+                &lt;p  class=&#34;text-warning&#34;&gt;
+                这些技术有些是叠加的，即第三步的内容可能需要第二步和第一步的基础知识。
+                &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&#34;float:left;  width:70%&#34;&gt;
+                &lt;h3&gt;宽度70%&lt;/h3&gt;
+                &lt;p&gt;
+                    相较于后端技术使用某一个流行的编程语言和专业数据库就可以完成大多数工作，前端技术简直就是技术大杂烩，最基础的html，css，js，各类大大小小的框架，各类包，模块等等。种类繁多，眼花缭乱。
+                &lt;/p&gt;
+                &lt;p  class=&#34;text-warning&#34;&gt;
+                这些技术有些是叠加的，即第三步的内容可能需要第二步和第一步的基础知识。
+                &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&#34;float:left;  width:30%&#34;&gt;
+                &lt;h3&gt;宽度30%&lt;/h3&gt;
+                &lt;p&gt;
+                    相较于后端技术使用某一个流行的编程语言和专业数据库就可以完成大多数工作，前端技术简直就是技术大杂烩，最基础的html，css，js，各类大大小小的框架，各类包，模块等等。种类繁多，眼花缭乱。
+                &lt;/p&gt;
+                &lt;p  class=&#34;text-warning&#34;&gt;
+                这些技术有些是叠加的，即第三步的内容可能需要第二步和第一步的基础知识。
+                &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div style=&#34;clear:both;&#34;&gt;
+        &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&#34;clear:both;&#34;&gt;
+&lt;/div&gt;
       </description>
     </item>
     

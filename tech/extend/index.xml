@@ -4,7 +4,7 @@
     <link>/tech/extend/</link>
     <description>Recent content in extend on 记事本</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 09 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Aug 2022 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="/tech/extend/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,13 +17,27 @@
     <item>
       <title>Tech: 2022</title>
       <link>/tech/extend/2022/</link>
-      <pubDate>Sun, 09 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>/tech/extend/2022/</guid>
       <description>
         
         
         &lt;h2 id=&#34;2022年发布的随笔&#34;&gt;2022年发布的随笔&lt;/h2&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 2021</title>
+      <link>/tech/extend/2021/</link>
+      <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tech/extend/2021/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;2021发布的技术类文章&#34;&gt;2021发布的技术类文章&lt;/h2&gt;
 
       </description>
     </item>

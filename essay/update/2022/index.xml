@@ -15,7 +15,375 @@
     
     
     <item>
-      <title>Essay: 关于对hexo构建的说明.md</title>
+      <title>Essay: hexo记录</title>
+      <link>/web/note/2022/2022081902.html</link>
+      <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2022/2022081902.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;触发条件修改&#34;&gt;触发条件修改&lt;/h3&gt;
+&lt;p&gt;将自动构建的触发条件由推送代码到推送tags触发&lt;/p&gt;
+&lt;h3 id=&#34;新增样式&#34;&gt;新增样式&lt;/h3&gt;
+&lt;p&gt;加粗字体的&lt;strong&gt;彩色效果&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;b, strong {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    --strong-gradient: linear-gradient(62deg,#188bfd,#a03bff)!important;
+    background-image: var(--strong-gradient);
+    font-weight: bolder;
+}
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: mirrors</title>
+      <link>/web/note/2022/2022081917.html</link>
+      <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2022/2022081917.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;开源镜像索引&#34;&gt;开源镜像索引&lt;/h2&gt;
+&lt;p&gt;源自 &lt;a href=&#34;https://ecodemo.top/2022/08/19/%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%BA%90%E5%A4%A7%E5%85%A8/&#34;&gt;Moieo 开源镜像索引站&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;大学镜像&#34;&gt;大学镜像&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;清华大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;北京外国语大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.bfsu.edu.cn/&#34;&gt;https://mirrors.bfsu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;北京大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.pku.edu.cn/&#34;&gt;https://mirrors.pku.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;中国科学技术大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.ustc.edu.cn/&#34;&gt;https://mirrors.ustc.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;兰州大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirror.lzu.edu.cn/&#34;&gt;http://mirror.lzu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;浙江大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.zju.edu.cn/&#34;&gt;http://mirrors.zju.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;东北大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirror.neu.edu.cn/&#34;&gt;http://mirror.neu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;华中科技大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.hust.edu.cn/&#34;&gt;http://mirrors.hust.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;重庆大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.cqu.edu.cn/&#34;&gt;http://mirrors.cqu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大连东软信息学院&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.neusoft.edu.cn/&#34;&gt;http://mirrors.neusoft.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大连理工大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirror.dlut.edu.cn/&#34;&gt;http://mirror.dlut.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;上海交通大学FTP&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://ftp.sjtu.edu.cn/&#34;&gt;http://ftp.sjtu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;上海交通大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/&#34;&gt;https://mirrors.sjtug.sjtu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;山东女子学院&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sdwu.edu.cn/&#34;&gt;https://mirrors.sdwu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;哈尔滨工业大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.hit.edu.cn/&#34;&gt;http://mirrors.hit.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;北京理工大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirror.bit.edu.cn/&#34;&gt;http://mirror.bit.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;云南大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.ynu.edu.cn/&#34;&gt;https://mirrors.ynu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;高能物理研究所&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirror.ihep.ac.cn/&#34;&gt;http://mirror.ihep.ac.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;南京大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.nju.edu.cn/&#34;&gt;https://mirrors.nju.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;南阳理工学院&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirror.nyist.edu.cn/&#34;&gt;https://mirror.nyist.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;山东大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sdu.edu.cn/&#34;&gt;https://mirrors.sdu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;西北农林科技大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.nwafu.edu.cn/&#34;&gt;https://mirrors.nwafu.edu.cn/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;企业镜像&#34;&gt;企业镜像&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;阿里&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.aliyun.com/&#34;&gt;http://mirrors.aliyun.com/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;腾讯&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.cloud.tencent.com/&#34;&gt;https://mirrors.cloud.tencent.com/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;搜狐&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.sohu.com/&#34;&gt;http://mirrors.sohu.com/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;网易&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.163.com/&#34;&gt;https://mirrors.163.com/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;首都在线&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.yun-idc.com/&#34;&gt;http://mirrors.yun-idc.com/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;公云&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.pubyun.com/&#34;&gt;http://mirrors.pubyun.com/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;华为&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.huaweicloud.com/&#34;&gt;https://mirrors.huaweicloud.com/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;docker-hub-镜像&#34;&gt;Docker Hub 镜像&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;网易&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://hub-mirror.c.163.com&#34;&gt;https://hub-mirror.c.163.com&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;百度&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirror.baidubce.com&#34;&gt;https://mirror.baidubce.com&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;阿里&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://ustc-edu-cn.mirror.aliyuncs.com&#34;&gt;https://ustc-edu-cn.mirror.aliyuncs.com&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Github (国外)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://ghcr.io/&#34;&gt;https://ghcr.io/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;npm-镜像&#34;&gt;NPM 镜像&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;中国科学技术大学(反代)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://npmreg.proxy.ustclug.org/&#34;&gt;https://npmreg.proxy.ustclug.org/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;浙江大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.zju.edu.cn/npm/&#34;&gt;http://mirrors.zju.edu.cn/npm/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;淘宝&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://registry.npmmirror.com&#34;&gt;https://registry.npmmirror.com&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CNPM&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://r.cnpmjs.org/&#34;&gt;http://r.cnpmjs.org/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;腾讯&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.cloud.tencent.com/npm/&#34;&gt;http://mirrors.cloud.tencent.com/npm/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;华为&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://repo.huaweicloud.com/repository/npm/&#34;&gt;https://repo.huaweicloud.com/repository/npm/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm config set registry https://npmreg.proxy.ustclug.org/
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;yarn config set registry https://npmreg.proxy.ustclug.org/
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pnpm config set registry https://npmreg.proxy.ustclug.org/
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;pip-镜像&#34;&gt;pip 镜像&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;清华大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://pypi.tuna.tsinghua.edu.cn/simple&#34;&gt;https://pypi.tuna.tsinghua.edu.cn/simple&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;北京外国语大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.bfsu.edu.cn/pypi/web/simple&#34;&gt;https://mirrors.bfsu.edu.cn/pypi/web/simple&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;大连东软信息学院&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.neusoft.edu.cn/pypi/web/simple/&#34;&gt;http://mirrors.neusoft.edu.cn/pypi/web/simple/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;重庆大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.cqu.edu.cn/pypi/web/simple&#34;&gt;https://mirrors.cqu.edu.cn/pypi/web/simple&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;浙江大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.zju.edu.cn/pypi/simple&#34;&gt;https://mirrors.zju.edu.cn/pypi/simple&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;中国科学技术大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://pypi.mirrors.ustc.edu.cn/simple/&#34;&gt;http://pypi.mirrors.ustc.edu.cn/simple/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;豆瓣&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://pypi.douban.com/simple/&#34;&gt;http://pypi.douban.com/simple/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;阿里&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://mirrors.aliyun.com/pypi/simple/&#34;&gt;http://mirrors.aliyun.com/pypi/simple/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;网易&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.163.com/pypi/simple/&#34;&gt;https://mirrors.163.com/pypi/simple/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;临时使用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip install -i https://pypi.tuna.tsinghua.edu.cn/simple [包名]
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;永久使用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;	Unix、Linux、Mac OS: ~/.pip/pip.conf Windows: %HOME%\pip\pip.ini 文件中写入			
+				
+	[global]			
+	trusted-host=pypi.tuna.tsinghua.edu.cn			
+	timeout=6000			
+	index-url=https://pypi.tuna.tsinghua.edu.cn/simple	
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;cargo-镜像&#34;&gt;Cargo 镜像&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;清华大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;北京外国语大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.bfsu.edu.cn/git/crates.io-index.git&#34;&gt;https://mirrors.bfsu.edu.cn/git/crates.io-index.git&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;中国科学技术大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.ustc.edu.cn/crates.io-index&#34;&gt;https://mirrors.ustc.edu.cn/crates.io-index&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;上海交通大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/&#34;&gt;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;阿里云 Rustcc 社区&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://code.aliyun.com/rustcc/crates.io-index.git&#34;&gt;https://code.aliyun.com/rustcc/crates.io-index.git&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Unix、Linux、Mac OS ~/.cargo/config 写入文件中&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;	# 指定镜像			
+	# replace-with = &amp;#39;源镜像名&amp;#39;			
+	replace-with = &amp;#39;ustc&amp;#39;			
+	[source.ustc]			
+	registry = &amp;#34;https://mirrors.ustc.edu.cn/crates.io-index&amp;#34;		
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;gem-镜像&#34;&gt;Gem 镜像&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;清华大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/rubygems/&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/rubygems/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;北京外国语大学&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.bfsu.edu.cn/rubygems/&#34;&gt;https://mirrors.bfsu.edu.cn/rubygems/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;gem&#34;&gt;Gem&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;	# 添加 TUNA 源并移除默认源			
+	gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/			
+	# 列出已有源			
+	gem sources -l			
+	# 应该只有 TUNA 一个			
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;bundle&#34;&gt;Bundle&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Essay: 关于对hexo构建的说明</title>
       <link>/web/note/2022/2022081901.html</link>
       <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
       
@@ -109,6 +477,8 @@
 &lt;p&gt;为什么有人怀疑是美国人制作的病毒？全世界其他国家有能力人为制造病毒还是有科研文章有刊登人类拥有了对病毒进行基因编辑的技术？&lt;/p&gt;
 &lt;h3 id=&#34;疑问&#34;&gt;疑问&lt;/h3&gt;
 &lt;p&gt;资本主义，如果赚足够的资本是可以获得社会财富的，而无产阶级的国家无论怎么奋斗都是无产的，因为所有资产都不是私人的。&lt;/p&gt;
+&lt;h3 id=&#34;红绿灯&#34;&gt;红绿灯&lt;/h3&gt;
+&lt;p&gt;九宫格红绿灯，故障时会出现红灯绿灯均亮起的情况。&lt;/p&gt;
 
       </description>
     </item>
@@ -124,33 +494,6 @@
         
         &lt;h3 id=&#34;博客构成&#34;&gt;博客构成&lt;/h3&gt;
 &lt;p&gt;包括主程序，内容，主题三部分。每个部分配置一个或多个仓库。主程序只有基本的配置文件和静态资源，不负责文章和内容的更新。更新文章并不会影响主程序的代码，文章通过子模块进行更新。必要的文章还有多个仓库备份。&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Essay: windows server安装docker</title>
-      <link>/web/note/2022/2022072601.html</link>
-      <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/web/note/2022/2022072601.html</guid>
-      <description>
-        
-        
-        &lt;h3 id=&#34;在server2019上安装docker&#34;&gt;在Server2019上安装docker&lt;/h3&gt;
-&lt;p&gt;启动powershell&lt;/p&gt;
-&lt;p&gt;安装Docker&lt;/p&gt;
-&lt;p&gt;首先输入以下的命令&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Install-Module -Name DockerMsftProvider -Repository PSGallery -Force&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;这里系统提示安装 NuGet 提供程序，我们需要输入 Y&lt;/p&gt;
-&lt;p&gt;接着继续输入以下命令&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Install-Package -Name docker -ProviderName DockerMsftProvider&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;PowerShell 询问是否信任包源“DockerDefault”时，键入 A 以继续进行安装&lt;/p&gt;
-&lt;p&gt;这一步会等得比较久，因为需要下载docker文件，耐心等待。网上也有离线安装的方式，有兴趣的可以去试试。&lt;/p&gt;
-&lt;p&gt;安装完成后，执行重启计算机的命令&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Restart-Computer -Force&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;重启之后，再次打开powershell，输入&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;docker version&lt;/code&gt;&lt;/p&gt;
 
       </description>
     </item>

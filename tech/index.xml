@@ -4,7 +4,7 @@
     <link>/tech/</link>
     <description>Recent content in tech on 记事本</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 09 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Aug 2022 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="/tech/index.xml" rel="self" type="application/rss+xml" />
     
@@ -224,7 +224,180 @@ git push命令用于将本地分支的更新，推送到远程主机。它的格
     </item>
     
     <item>
-      <title>Tech: 测试</title>
+      <title>Tech: hexo模板</title>
+      <link>/web/note/2022/2022082301.html</link>
+      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2022/2022082301.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;简述&#34;&gt;简述&lt;/h2&gt;
+&lt;p&gt;下载本仓库代码，修改CNAME文件，添加自己的文章，将本仓库代码推送github，即可访问自己的博客。&lt;/p&gt;
+&lt;h2 id=&#34;使用步骤&#34;&gt;使用步骤&lt;/h2&gt;
+&lt;h4 id=&#34;第一步-获取源码-下载这个hexo模板的代码&#34;&gt;第一步 &lt;em&gt;获取源码&lt;/em&gt; 下载这个hexo模板的代码&lt;/h4&gt;
+&lt;p&gt;git 下载代码&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://e.coding.net/frednab/dev/blog-mould.git&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;未安装git可通过下载github源码获得该项目&lt;a href=&#34;https://github.com/denalon/hexo-mould&#34;&gt;源码&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;下载完毕后删除.git文件夹&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rm -rf .git&lt;/code&gt; 或在windows平台显示隐藏文件，删除隐藏的.git文件夹。&lt;/p&gt;
+&lt;h4 id=&#34;第二步-修改配置-修改hexo的配置&#34;&gt;第二步 &lt;em&gt;修改配置&lt;/em&gt; 修改hexo的配置&lt;/h4&gt;
+&lt;p&gt;修改 &lt;strong&gt;source/CNAME&lt;/strong&gt;文件里的域名&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;此仓库已经预置butterfly主题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通过修改_config.butterfly.yml来改变主题的配置，如主题颜色，样式，插件等。&lt;/p&gt;
+&lt;p&gt;通过修改_config.yml来改变hexo站点的配置，如站点标题，语言，目录等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;其他文件不需要配置&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第三步-更新文章-撰写或者将之前的文章复制到source_posts目录下&#34;&gt;第三步 &lt;em&gt;更新文章&lt;/em&gt; 撰写或者将之前的文章复制到source/_posts目录下&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;hexo new page 文章.md&lt;/code&gt;新建文档&lt;/p&gt;
+&lt;p&gt;或者在source/_posts目录下撰写自己的文章&lt;/p&gt;
+&lt;h4 id=&#34;第四步-发布博客-通过多种方式发布博客&#34;&gt;第四步 &lt;em&gt;发布博客&lt;/em&gt; 通过多种方式发布博客&lt;/h4&gt;
+&lt;h5 id=&#34;方式一-本地运行hexo的http服务来浏览博客&#34;&gt;方式一 本地运行hexo的http服务来浏览博客&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要本地服务器安装nodejs和npm&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;执行如下命令安装hexo&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm install -g hexo-cli
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行如下命令安装该项目的依赖&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm ci
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行如下命令来运行hexo的http服务&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hexo server
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;方式二-生成静态文件部署到nginx或iis&#34;&gt;方式二 生成静态文件,部署到nginx或IIS&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要本地服务器安装nodejs和npm&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;执行如下命令安装hexo&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm install -g hexo-cli
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行如下命令安装该项目的依赖&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm ci
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行如下命令生成html静态文件&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hexo g
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;生成html静态文件夹public，配合nginx或iis来部署静态网站。或者上传到虚拟主机，云服务器上部署。&lt;/p&gt;
+&lt;h5 id=&#34;方式三-将源码推送到github触发github-actions自动构建&#34;&gt;方式三 将源码推送到github，触发github actions自动构建&lt;/h5&gt;
+&lt;p&gt;通过以下命令将该仓库里的源码推送到github仓库&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;删掉目录下的.git目录再执行如下操作&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git init //初始化仓库。
+git add . //添加文件到暂存区。(注意有点号.)
+git commit -m &amp;#34;更新说明&amp;#34; //将暂存区内容添加到仓库中。标识“更新说明”
+git remote add origin XXXX.git  //添加到远程仓库操作，将xxxx.git设置为远程仓库origin
+git push -u origin main  //推送main分支到origin仓库
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;以上代码推送到远程分支的main分支，如果本地是master分支可以执行&lt;code&gt;git push origin master:main&lt;/code&gt;推送本地master分支代码到远程main分支。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;提示操作成功后，代码将推送到github上的main分支，github自动部署将启动，将hexo文件自动部署到gh-pages分支&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由于该仓库含有github自动构建文件，上传到github将触发自动部署&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;github自动构建文件为 &lt;code&gt;.github/workflows/pages.yml&lt;/code&gt;文件&lt;/p&gt;
+&lt;h4 id=&#34;第五步-开启pages-登录github-设置界面配置pages服务&#34;&gt;第五步 &lt;em&gt;开启pages&lt;/em&gt; 登录github 设置界面配置pages服务&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;请确保仓库里source/CNAME文件域名已经正确修改&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在github仓库 “Settings”选择“GitHub Pages” source项选择Branch:gh-pages
+如图：&lt;img src=&#34;https://base.oribos.city/images/2020/10/20201022095332.png&#34; alt=&#34;github pages设置&#34;&gt;&lt;/p&gt;
+&lt;p&gt;即可使用由github自动部署的 pages 服务。&lt;/p&gt;
+&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;p&gt;尽管&lt;code&gt;.github/workflows/pages.yml&lt;/code&gt;文件里可以配置CNAME文件，但不建议修改自动构建文件的内容。&lt;/p&gt;
+&lt;p&gt;Node.js v16.x:安装&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Using Debian, as root
+curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+apt-get install -y nodejs
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: ACME v2证书自动化快速入门</title>
+      <link>/web/note/2022/2022082213.html</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2022/2022082213.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;安装acmesh&#34;&gt;安装acme.sh&lt;/h3&gt;
+&lt;p&gt;建议切换到root模式，可以减少证书安装时的问题&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo su&lt;/code&gt; 注意：MacOS 不用切换到root更简单。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl https://get.acme.sh | sh -s email=my@example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果上面官方下载地址失败 或者 太慢，可以选用国内的备用地址&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl https://gitcode.net/cert/cn-acme.sh/-/raw/master/install.sh?inline=false | sh -s email=my@example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;对域名授权&#34;&gt;对域名授权&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.freessl.cn/acme-quick-start/&#34;&gt;参见步骤&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;证书申请--部署&#34;&gt;证书申请 &amp;amp; 部署&lt;/h3&gt;
+&lt;p&gt;使用获得的部署命令进行证书申请&lt;/p&gt;
+&lt;p&gt;下载的证书文件中，应该含以下证书文件：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ca.cer&lt;/code&gt; &lt;code&gt;域名.cer&lt;/code&gt; &lt;code&gt;fullchain.cer&lt;/code&gt; 证书私钥 &lt;code&gt;private.key&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;在-nginx-上安装-ssl-证书&#34;&gt;在 NGINX 上安装 SSL 证书&lt;/h3&gt;
+&lt;p&gt;在本文中，介绍如何在 NGINX Web 服务器上安装 SSL 证书并设置 HTTPS 重定向。
+准备工&lt;/p&gt;
+&lt;p&gt;已下载包含证书文件的 ZIP 压缩文件。&lt;/p&gt;
+&lt;p&gt;下载的证书文件中，应该含以下证书文件：&lt;/p&gt;
+&lt;p&gt;domain-ca.pem&lt;/p&gt;
+&lt;p&gt;domain-chain.pem&lt;/p&gt;
+&lt;p&gt;domain-root.pem&lt;/p&gt;
+&lt;p&gt;证书私钥 private.key。&lt;/p&gt;
+&lt;h4 id=&#34;步骤1-上传文件到网站服务器&#34;&gt;步骤1. 上传文件到网站服务器&lt;/h4&gt;
+&lt;p&gt;登录网站的 Nginx 服务器，选择一个需要存放证书文件的目录，将下载的证书文件（domain-ca.pem，domain-chain.pem，domain-root.pem ）和 私钥 （private.key） 上传到选择的目录中。&lt;/p&gt;
+&lt;h4 id=&#34;步骤2-将证书文件重命名为-crt-结尾的文件&#34;&gt;步骤2. 将证书文件重命名为 .crt 结尾的文件&lt;/h4&gt;
+&lt;p&gt;Nginx 要求合并所有 .crt 文件，以便允许 SSL 安装，需要执行以下命令将 domain-ca.pem 、domain-chain.pem 和 domain-root.pem 合并为一个文件 .crt 文件。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ cat domain-ca.pem domain-chain.pem domain-root.pem &amp;gt;&amp;gt; certificate.crt
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;如果存在fullchain.cer 是合并后的证书，可直接在nginx使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;步骤3-更新-nginx-的配置信息&#34;&gt;步骤3. 更新 Nginx 的配置信息&lt;/h4&gt;
+&lt;p&gt;找到 Nginx 域名配置文件并打开，如果您要更新证书，修改域名配置文件中网站新证书路径 网站新私钥路径 即可；如果您要安装新证书，根据实际情况修改 HTTPS 需要使用的端口 开启 Nginx SSL 模块 网站新证书路径 网站新私钥路径 域名 域名映射根路径 信息，粘贴到域名配置文件下方，保存文件。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;server {
+
+    listen   443; # HTTPS 需要使用的端口
+    
+    ssl    on; # 开启 Nginx SSL 模块
+    ssl_certificate    /etc/ssl/certificate.crt; # 网站新证书路径
+    ssl_certificate_key    /etc/ssl/private.key; # 网站新私钥路径
+    
+    server_name your.domain.com; # 域名
+    access_log /var/log/nginx/nginx.vhost.access.log;
+    error_log /var/log/nginx/nginx.vhost.error.log;
+    location / {
+    root   /home/www/public_html/your.domain.com/public/; # 域名映射根路径
+    index  index.html;
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;步骤4-重启-nginx-服务&#34;&gt;步骤4. 重启 Nginx 服务&lt;/h4&gt;
+&lt;p&gt;重新启动 Nginx 服务，使配置文件生效。可以运行以下命令来重新启动 Nginx 服务：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ sudo /etc/init.d/nginx restart
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;检查是否生效&lt;/p&gt;
+&lt;p&gt;使用 HTTPS 访问网站，即 https://域名。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: windows server安装docker</title>
+      <link>/web/note/2022/2022072601.html</link>
+      <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2022/2022072601.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;在server2019上安装docker&#34;&gt;在Server2019上安装docker&lt;/h3&gt;
+&lt;p&gt;启动powershell&lt;/p&gt;
+&lt;p&gt;安装Docker&lt;/p&gt;
+&lt;p&gt;首先输入以下的命令&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Install-Module -Name DockerMsftProvider -Repository PSGallery -Force&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这里系统提示安装 NuGet 提供程序，我们需要输入 Y&lt;/p&gt;
+&lt;p&gt;接着继续输入以下命令&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Install-Package -Name docker -ProviderName DockerMsftProvider&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;PowerShell 询问是否信任包源“DockerDefault”时，键入 A 以继续进行安装&lt;/p&gt;
+&lt;p&gt;这一步会等得比较久，因为需要下载docker文件，耐心等待。网上也有离线安装的方式，有兴趣的可以去试试。&lt;/p&gt;
+&lt;p&gt;安装完成后，执行重启计算机的命令&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Restart-Computer -Force&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;重启之后，再次打开powershell，输入&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker version&lt;/code&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: tag与release</title>
       <link>/web/dev/2022/2022010903.html</link>
       <pubDate>Sun, 09 Jan 2022 00:00:00 +0000</pubDate>
       
@@ -232,7 +405,177 @@ git push命令用于将本地分支的更新，推送到远程主机。它的格
       <description>
         
         
+        &lt;p&gt;本文源自 &lt;a href=&#34;https://www.jianshu.com/p/79ecf4fe5079&#34;&gt;作者：Hustlion&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;定义&#34;&gt;定义&lt;/h3&gt;
+&lt;p&gt;标签（tag）是特定提交（commit)一个指针，也就是每个tag对应一个特定的commit。&lt;/p&gt;
+&lt;p&gt;Release是具有changelogs和二进制文件的一级对象，它可以代表超出Git架构本身的一个特定时间点之前的所有项目历史。也就是通过release，不但能够通过源码体现出项目历史，还能通过已经编译好的二进制文件来进一步描述此时的项目状态。“超出Git架构本身“的意思则在于，git本身只能记录项目修改，本质上不适合将编译好的项目二进制文件记录下来。而通过release则把项目二进制文件保存了下来，方便用户下载，也方便查找特定版本的二进制文件。&lt;/p&gt;
+&lt;h4 id=&#34;以下是github-official-announcement所定义原文&#34;&gt;以下是Github official announcement所定义原文：&lt;/h4&gt;
+&lt;p&gt;Releases are first-class objects with changelogs and binary assets that present a full project history beyond Git artifacts.&lt;/p&gt;
+&lt;h4 id=&#34;创建方法&#34;&gt;创建方法&lt;/h4&gt;
+&lt;p&gt;Release分为两种：lightweight and annotated.&lt;/p&gt;
+&lt;p&gt;创建lightweight类型的tag：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git tag v1.4-lw
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;创建annotated类型的tag：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git tag -a v1.4 -m &amp;#34;my version 1.4&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;通过tag可以返回到项目的特定状态下，所以可以将tag看作是在大量commit中设定的书签。&lt;/p&gt;
+&lt;p&gt;创建release，则需要通过源码托管商的网页操作界面来进行，一般会要求填写tag名、分支以及相应的发布说明，还可上传编译好的程序、打包好的文件等。&lt;/p&gt;
+&lt;h3 id=&#34;比较&#34;&gt;比较&lt;/h3&gt;
+&lt;p&gt;标签是git中的概念，而release则是Github、码云等源码托管商所提供的更高层的概念。也就是说git本身是没有release这个概念的，只有tag。&lt;/p&gt;
+&lt;p&gt;两者之间的关系则是，release基于tag，为tag添加更丰富的信息，一般是编译好的文件。&lt;/p&gt;
+&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
+&lt;p&gt;Release是源码托管商对git的tag功能的增强。通过git提供的tag功能，我们可以给项目进行版本标识，以识别特定的版本，如v0.1.0、v1.0.0等。而通过源码托管商提供的release功能，在tag的基础上我们可以添加编译好的二进制文件等，如.deb、.exe等给特定的版本提供更多的信息，方便用户，也方便后期查找特定版本的程序。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 测试</title>
+      <link>/web/dev/2022/2022010907.html</link>
+      <pubDate>Sun, 09 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/web/dev/2022/2022010907.html</guid>
+      <description>
+        
+        
         &lt;h3 id=&#34;测试&#34;&gt;测试&lt;/h3&gt;
+&lt;h3 id=&#34;使用-ed25519-算法生成-ssh-密钥&#34;&gt;使用 Ed25519 算法生成 SSH 密钥&lt;/h3&gt;
+&lt;p&gt;创建Ed25519算法的ssh密钥，&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh-keygen -t ed25519 -C &amp;quot;denalon@qq.com&amp;quot; &lt;/code&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: docker运行qbittorrent</title>
+      <link>/web/note/2021/2021110801.html</link>
+      <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021110801.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;说明&#34;&gt;说明&lt;/h3&gt;
+&lt;p&gt;之所以使用docker运行qbittorrent是为了针对型的配置qbittorrent，修改默认下载位置，使用端口号等操作。&lt;/p&gt;
+&lt;h3 id=&#34;第一步-准备服务器&#34;&gt;第一步 准备服务器&lt;/h3&gt;
+&lt;h4 id=&#34;登录云服务器&#34;&gt;登录云服务器&lt;/h4&gt;
+&lt;p&gt;通过ssh命令使用购买服务器后提供的用户名和密码登录服务器，如果你是使用的Hetzner服务器需要自行配置RAID0，##先不要急着登录服务器##&lt;/p&gt;
+&lt;h4 id=&#34;配置raid&#34;&gt;配置RAID&lt;/h4&gt;
+&lt;p&gt;第一步 进入Hetzner的控制后台，找到服务器，选择Rescue (救援模式)，设置完成后重启服务器&lt;/p&gt;
+&lt;p&gt;第二步 登陆云服务器，进入救援模式，使用&lt;code&gt;installimage&lt;/code&gt;配置服务器初始化&lt;/p&gt;
+&lt;p&gt;其他使用默认配置，只需要根据下图，修改服务器的RAID 为&lt;code&gt;0&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/11/1554730489.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;RAID设置区分
+NO RIAD：一般情况建议不设置RAID，这样既保证空间大小，也保证了安全性.；
+RIAD 0：好处：速度快，合并容量，缺点：两个硬盘只要挂一个，那么文件全都挂了；
+RIAD 1：好处：同时把文件写入到两个硬盘，坏一个也没事，缺点：浪费空间，读写速度稍微有降低；&lt;/p&gt;
+&lt;p&gt;编辑完成后按F10 保存配置文件；&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt; 登录救援模式后本地会保存服务器的验证信息，重新登录服务器需要先删除之前的验证信息，避免出现验证信息修改的报错。&lt;/p&gt;
+&lt;h4 id=&#34;配置磁盘空间&#34;&gt;配置磁盘空间&lt;/h4&gt;
+&lt;p&gt;使用&lt;code&gt;fdisk -l&lt;/code&gt;查看服务器的硬盘，将未挂载的硬盘挂载的目录，对于配置永久挂载的请参考其他文章编辑磁盘配置文件。这里的挂载只是临时性的。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mount /dev/md3 /denalon/downloads&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;挂载&lt;code&gt;/dev/md3&lt;/code&gt;的硬盘空间为目录&lt;code&gt;/denalon/downloads&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第二步-准备docker环境&#34;&gt;第二步 准备docker环境&lt;/h3&gt;
+&lt;h4 id=&#34;一键安装docker&#34;&gt;一键安装docker&lt;/h4&gt;
+&lt;p&gt;对于大多数服务器使用一键安装脚本即可安装docker&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;如果安装时报错，意味着服务器上某些应用未正确安装和配置，可以参考自定义安装docker&lt;/p&gt;
+&lt;h4 id=&#34;自定义安装docker&#34;&gt;自定义安装docker&lt;/h4&gt;
+&lt;p&gt;为没有安装sudo的机器安装&lt;code&gt;sudo&lt;/code&gt;，避免抄一下代码运行时报错&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt-get install sudo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;卸载旧版docker&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get remove docker docker-engine docker.io containerd runc
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;更新包&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装必要组件&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; sudo apt-get update
+ sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;设置官方 GPG 密钥&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; echo \
+  &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
+  $(lsb_release -cs) stable&amp;#34; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装docker&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get install docker-ce docker-ce-cli containerd.io
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;安装docker-compose&#34;&gt;安装docker-compose&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo chmod +x /usr/local/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;第三步-部署qbittorrent&#34;&gt;第三步 部署qbittorrent&lt;/h3&gt;
+&lt;h4 id=&#34;qbittorrent的配置文件&#34;&gt;qbittorrent的配置文件&lt;/h4&gt;
+&lt;p&gt;docker-compose.yml内容&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;version: &amp;#34;3.9&amp;#34;
+services:
+  qbittorrent:
+    image: linuxserver/qbittorrent
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - WEBUI_PORT=8080
+    volumes:
+      - ./config:/config
+      - ./downloads:/downloads
+    ports:
+      - 6881:6881
+      - 6881:6881/udp
+      - 17010:17010
+      - 17010:17010/udp
+      - 8080:8080
+    restart: unless-stopped
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;运行docker-compose-up--d&#34;&gt;运行docker-compose up -d&lt;/h4&gt;
+&lt;p&gt;直接在目录下运行docker-compose up -d即可&lt;/p&gt;
+&lt;h4 id=&#34;登录qbittorrent&#34;&gt;登录qbittorrent&lt;/h4&gt;
+&lt;p&gt;用户名 admin&lt;/p&gt;
+&lt;p&gt;密码 adminadmin&lt;/p&gt;
+&lt;h4 id=&#34;配置qbittorrent参数&#34;&gt;配置qbittorrent参数&lt;/h4&gt;
+&lt;p&gt;根据需要修改下载和上传的连接数和流量控制，中文界面，登录端口号和密码&lt;/p&gt;
+&lt;h3 id=&#34;第四步-优化&#34;&gt;第四步 优化&lt;/h3&gt;
+&lt;h3 id=&#34;其他-安装quickbox&#34;&gt;其他 安装quickbox&lt;/h3&gt;
+&lt;p&gt;1安装Ubuntu     &lt;a href=&#34;https://cn.wiki.ptbox.dev/hetzner-onekey/&#34;&gt;https://cn.wiki.ptbox.dev/hetzner-onekey/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;echo x | installimage -p /boot:ext3:1G,/:ext4:all -l 0 -r yes -i images/Ubuntu-1804-bionic-64-minimal.tar.gz -a -n Hz &amp;amp;&amp;amp; reboot&lt;/p&gt;
+&lt;p&gt;2你需要首先以 root 身份登录，运行以下指令来抓取最新的代码 … &lt;a href=&#34;https://www.qiuvps.com/1382.html&#34;&gt;https://www.qiuvps.com/1382.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;apt-get -yqq update
+apt-get -yqq upgrade
+apt-get -yqq install git lsb-release dos2unix
+git clone &lt;a href=&#34;https://github.com/amefs/quickbox-lite.git&#34;&gt;https://github.com/amefs/quickbox-lite.git&lt;/a&gt; /etc/QuickBox
+dos2unix /etc/QuickBox/setup.sh
+bash /etc/QuickBox/setup.sh&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 随笔2021-11-04</title>
+      <link>/web/note/2021/2021110401.html</link>
+      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021110401.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;hexo糟糕的使用&#34;&gt;hexo糟糕的使用&lt;/h3&gt;
+&lt;p&gt;我部署了一个hexo&lt;a href=&#34;https://frednab.coding.net/public/dev/hexo-blog/git/files&#34;&gt;主题模板&lt;/a&gt; ，当今天无意间想增加一些有趣的主题时发现许多问题。一些主题使用了五花八门的依赖，这些依赖要么对hexo版本有要求要么对nodejs环境有要求，导致在本机运行hexo init 以后生成的项目，部署新主题时，要么依赖低，要么依赖高，要么组件下载404错误。&lt;/p&gt;
+&lt;p&gt;一些主题并没有按照hexo官方指导的方式，使用_config.主题名.yml和_config.yml分开的方法，而是采用npm安装，然后将主题移动到themes目录下的奇葩操作。有些则是在hexo init生成的环境安装其主题后显示&lt;code&gt;  err: TypeError: Cannot read property &#39;path&#39; of undefined&lt;/code&gt;等各类错误。&lt;/p&gt;
+&lt;p&gt;总之，hexo的各类乱七八糟的主题要求参差不齐，组件五花八门，有些甚至需要更改nodejs环境，代理连接等等操作导致部署失败率太高。&lt;/p&gt;
+&lt;h3 id=&#34;hexo报错机制&#34;&gt;hexo报错机制&lt;/h3&gt;
+&lt;p&gt;hexo使用nodejs环境，npm包管理器，各类涉及依赖和组件的版本要求五花八门，而报错信息几乎一点用都没有。&lt;/p&gt;
+&lt;p&gt;如下图铺天盖地的报错和提示&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/11/110401.png&#34; alt=&#34;提示1&#34;&gt;
+&lt;img src=&#34;https://base.oribos.city/images/2021/11/110402.png&#34; alt=&#34;提示2&#34;&gt;
+&lt;img src=&#34;https://base.oribos.city/images/2021/11/110403.png&#34; alt=&#34;提示3&#34;&gt;
+&lt;img src=&#34;https://base.oribos.city/images/2021/11/110404.png&#34; alt=&#34;提示4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;不知道的还以为拿hexo做什么复杂的高科技研发工作&lt;/p&gt;
+&lt;h3 id=&#34;hetzner奇葩的登录方式&#34;&gt;Hetzner奇葩的登录方式&lt;/h3&gt;
+&lt;p&gt;在使用Hetzner云服务时发现一个奇葩的现象：登录服务需要使用一个“Client number”的客户码&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2021/11/110405.png&#34; alt=&#34;hetzner登录界面&#34;&gt;&lt;/p&gt;
+&lt;p&gt;问题时这个客户码不是用户自定义有意义的号码或者id，而是hetzner随机生成的，这个客户码可以在&lt;strong&gt;登录以后找到&lt;/strong&gt;，也就是说用户第一次注册时必须牢记这个客户码，以后续登录。如果忘记或者压根就不知道自己有什么客户码，那不好意思，无法登录。而且hetzner并没有通过用户注册时的邮箱或其他用户id的方式快捷的找回客户码，也没有使用用户id，邮箱地址来登录的备用方式。&lt;/p&gt;
+&lt;p&gt;着实是商家狠狠的教用户怎么用产品&lt;/p&gt;
+&lt;h3 id=&#34;改变的成本&#34;&gt;改变的成本&lt;/h3&gt;
 
       </description>
     </item>
@@ -311,6 +654,46 @@ MIXED_CONTENT_COMPATIBILITY_MODE：在这种模式下，当涉及到混合式内
 &lt;p&gt;磁盘上的虚拟磁盘、LUN存储、hyper-V、bitlocker配合使用可以提升资料安全。&lt;/p&gt;
 &lt;p&gt;将硬盘接入电脑，在磁盘管理里将硬盘脱机，打开hyper-V&lt;/p&gt;
 
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 分享</title>
+      <link>/web/note/2021/2021071001/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2021/2021071001/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;hexo&#34;&gt;hexo&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://frednab.coding.net/public/dev/hexo-blog/git/files&#34;&gt;普通部署&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://frednab.coding.net/public/dev/hexo-pre-install/git/files&#34;&gt;使用npm部署&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;docker&#34;&gt;docker&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://denalon.coding.net/public/asset/docker-app/git/files&#34;&gt;docker模板&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://frednab.coding.net/public/build/docker-build/git/files&#34;&gt;一些docker项目代码&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;树莓派更新软件源&#34;&gt;树莓派更新软件源&lt;/h3&gt;
+&lt;p&gt;1、当前树莓派4b基于debian10&lt;/p&gt;
+&lt;p&gt;一、国内源说明
+1、先到https://tvtv.fun/ping测一下速度，看看哪个比较快，这里以电子科技大学为例&lt;/p&gt;
+&lt;p&gt;2、需要改的源有两个：Raspbian 和 Raspberrypi。可以看镜像站的使用说明如科技大学说明&lt;/p&gt;
+&lt;p&gt;二、改&lt;/p&gt;
+&lt;p&gt;1.系统源
+备份原文件&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一键修改&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo sed -i &amp;#39;s|raspbian.raspberrypi.org|mirrors.ustc.edu.cn/raspbian|g&amp;#39; /etc/apt/sources.list
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;也可以用nano手动把raspbian.raspberrypi.org/替换成mirrors.ustc.edu.cn/raspbian/&lt;/p&gt;
+&lt;p&gt;2.软件源
+备份原文件&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo cp /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一键修改&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo sed -i &amp;#39;s|//archive.raspberrypi.org|//mirrors.ustc.edu.cn/archive.raspberrypi.org|g&amp;#39; /etc/apt/sources.list.d/raspi.list
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;3.更新索引（修改源后必做）&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;4.更新软件包（建议）&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get upgrade 
+&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     
@@ -2945,252 +3328,6 @@ RUN sed -i s@/deb.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
     &amp;amp;&amp;amp; apt-get install -y git
     
 &lt;/code&gt;&lt;/pre&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Tech: ssh</title>
-      <link>/web/note/2021/2021070101.html</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/web/note/2021/2021070101.html</guid>
-      <description>
-        
-        
-        &lt;h3 id=&#34;安装ssh服务&#34;&gt;安装ssh服务&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$sudo apt-get update  #更新软件源
-$sudo apt-get install ssh #安装
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;配置文件：/etc/ssh/sshd_config&lt;/p&gt;
-&lt;h3 id=&#34;修改配置文件&#34;&gt;修改配置文件&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;PasswordAuthentication yes
-PermitRootLogin yes
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;重启服务&#34;&gt;重启服务：&lt;/h3&gt;
-&lt;p&gt;/etc/init.d/ssh restart&lt;/p&gt;
-&lt;p&gt;此时我们就可以使用ssh对服务器进行远程连接，但也不排除无法连接的情况。&lt;/p&gt;
-&lt;p&gt;一般ssh无法连接的场景排查&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ping xxx.xxx.xxx.xxx
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;检查网络
-很多情况下无法ssh，都是因为网络或者iptables限制导致。所以我们可以先通过ping命令来检查网络的连通性。当然有时候也会遇见防火墙拦截了ICMP和SSH，所以检查网络的最好是在需要ssh连接的服务器下进行&lt;/p&gt;
-&lt;p&gt;检查端口&lt;/p&gt;
-&lt;p&gt;ssh使用的是22端口，所以我们可以使用telnet命令检测该端口。&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;telnet xxx.xxx.xxx.xxx 22
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果正常能通，一般情况下ssh服务器也就没问题了；如果不能通，检查iptables。因为为了保证服务器的安全性，我们经常会通过iptables去限制特定的网段才允许ssh连接服务器。&lt;/p&gt;
-&lt;p&gt;检查服务
-如果网络能通，且端口未被屏蔽。依旧无法ssh到服务器，那么检查ssh服务，以及配置文件是否正确配置。&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/init.d/ssh status
-&lt;/code&gt;&lt;/pre&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Tech: https协议</title>
-      <link>/web/note/2020120317.html</link>
-      <pubDate>Thu, 03 Dec 2020 10:20:45 +0800</pubDate>
-      
-      <guid>/web/note/2020120317.html</guid>
-      <description>
-        
-        
-        &lt;h1 id=&#34;httphttps协议&#34;&gt;http&amp;amp;https协议&lt;/h1&gt;
-&lt;p&gt;参考博客：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/xiaoming100001/article/details/81109617&#34;&gt;HTTP和HTTPS协议，看一篇就够了&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;什么是http&#34;&gt;什么是http&lt;/h2&gt;
-&lt;p&gt;超文本传输协议，是一个基于请求与响应，&lt;strong&gt;无状态的&lt;/strong&gt;，应用层的协议，常基于TCP/IP协议传输数据，互联网上应用最为广泛的一种网络协议,所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种发布和接收HTML页面的方法。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;默认端口80， 如果 一台主机上有多个服务器呢?&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;http报文格式&#34;&gt;http报文格式&lt;/h2&gt;
-&lt;p&gt;http的请求报文由：请求行、首部、空行、主体四个部分组成。
-其中请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔
-&lt;img src=&#34;https://base.oribos.city/images/2020/12/https/1.png&#34; alt=&#34;报文格式&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;http通信流程&#34;&gt;http通信流程&lt;/h2&gt;
-&lt;p&gt;web客户端tcp连接到Web服务器-&amp;gt;发送Http请求-&amp;gt;服务器接受请求并返回HTTP响应-&amp;gt;释放连接TCP连接-&amp;gt;客户端浏览器解析HTML内容&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD
-A(web客户端tcp连接到Web服务器) --&amp;gt;B(发送Http请求)
-B --&amp;gt;C(服务器接受请求并返回HTTP响应)
-C--&amp;gt;D(释放连接TCP连接)
-D--&amp;gt;E(客户端浏览器解析HTML内容)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/12/https/2.png&#34; alt=&#34;http通信流程&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;什么是https&#34;&gt;什么是https&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;图解HTTP》这本书中曾提过HTTPS是身披SSL外壳的HTTP。HTTPS是一种通过计算机网络进行安全通信的传输协议，&lt;strong&gt;经由HTTP进行通信，利用SSL/TLS建立全信道，加密数据包&lt;/strong&gt;。&lt;strong&gt;HTTPS使用的主要目的是提供对网站服务器的身份认证，同时保护交换数据的隐私与完整性&lt;/strong&gt;。PS:TLS是传输层加密协议，前身是SSL协议，由网景公司1995年发布，有时候两者不区分。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;成本考虑&#34;&gt;成本考虑&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;SSL证书需要购买申请，功能越强大的证书费用越高&lt;/li&gt;
-&lt;li&gt;SSL证书通常需要绑定IP，不能在同一IP上绑定多个域名，IPv4资源不可能支撑这个消耗（SSL有扩展可以部分解决这个问题，但是比较麻烦，而且要求浏览器、操作系统支持，Windows XP就不支持这个扩展，考虑到XP的装机量，这个特性几乎没用）。&lt;/li&gt;
-&lt;li&gt;根据ACM CoNEXT数据显示，使用HTTPS协议会使页面的加载时间延长近50%，增加10%到20%的耗电。&lt;/li&gt;
-&lt;li&gt;HTTPS连接缓存不如HTTP高效，流量成本高。&lt;/li&gt;
-&lt;li&gt;HTTPS连接服务器端资源占用高很多，支持访客多的网站需要投入更大的成本。&lt;/li&gt;
-&lt;li&gt;HTTPS协议握手阶段比较费时，对网站的响应速度有影响，影响用户体验。比较好的方式是采用分而治之，类似12306网站的主页使用HTTP协议，有关于用户信息等方面使用HTTPS。&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Tech: 前后端分离架构</title>
-      <link>/web/note/2020112873.html</link>
-      <pubDate>Sat, 28 Nov 2020 09:55:45 +0800</pubDate>
-      
-      <guid>/web/note/2020112873.html</guid>
-      <description>
-        
-        
-        &lt;blockquote&gt;
-&lt;p&gt;引用自&lt;a href=&#34;https://gitee.com/Meloor/blog&#34;&gt;meloor&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;参考：
-&lt;a href=&#34;https://www.zhihu.com/answer/547205270&#34;&gt;到底什么是前后端分离 1&lt;/a&gt;
-&lt;a href=&#34;https://www.zhihu.com/answer/557406666&#34;&gt;到底什么是前后端分离 2&lt;/a&gt;
-&lt;a href=&#34;https://www.zhihu.com/answer/542961677&#34;&gt;到底什么是前后端分离 3&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;前后端分离是个&lt;strong&gt;架构设计问题&lt;/strong&gt;。所谓架构设计，实际上是如何合理的对现实的人力架构进行系统映射，以便最大限度的提高整个公司的运行效率。&lt;/p&gt;
-&lt;h2 id=&#34;前后端的定义&#34;&gt;前后端的定义&lt;/h2&gt;
-&lt;p&gt;前后端定义，不应该是以语言来定义，而是应该以它的&lt;strong&gt;运行环境&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Html+CSS+JS，都是&lt;strong&gt;在浏览器端执行，统一称之为前端&lt;/strong&gt;。(用户能看到)&lt;/li&gt;
-&lt;li&gt;Java，C，Python，PHP 这些&lt;strong&gt;在服务器端运行，统一称之为后端&lt;/strong&gt;。(用户看不到）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;前后端不分离&#34;&gt;前后端不分离&lt;/h2&gt;
-&lt;h3 id=&#34;架构设计&#34;&gt;架构设计&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/fabs/1.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;交互方式&#34;&gt;交互方式&lt;/h3&gt;
-&lt;p&gt;浏览器发请求，服务器端给出一个完整的网页，浏览器再发请求，服务器端再给出一个完整的网页
-&lt;img src=&#34;https://base.oribos.city/images/2020/11/fabs/3.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;缺点&#34;&gt;缺点&lt;/h3&gt;
-&lt;p&gt;传输的重复数据比较多，网络又会有延迟。所以有没有办法，只传送必要的数据？这是 Ajax 的起源。&lt;/p&gt;
-&lt;h3 id=&#34;ajax&#34;&gt;Ajax&lt;/h3&gt;
-&lt;p&gt;Ajax 就是只传递数据，不传递整个网页。这也是被用来在翻页，注册，发送验证码等场景，但也仅仅止布于此了。&lt;/p&gt;
-&lt;h2 id=&#34;前后端分离&#34;&gt;前后端分离&lt;/h2&gt;
-&lt;h3 id=&#34;架构设计-1&#34;&gt;架构设计&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/fabs/2.png&#34; alt=&#34;图片&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;交互方式通过浏览器测试&#34;&gt;交互方式(通过浏览器测试)&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;页面跳转(浏览器地址栏 url 会变)时浏览器先发送请求给前端服务器&lt;/li&gt;
-&lt;li&gt;浏览器得到响应数据前端代码(html+css+js, 响应数据)并渲染。(地址栏输入后端服务器的 url 会直接显示 json 格式数据, 是 html 就会渲染)&lt;/li&gt;
-&lt;li&gt;渲染时会执行 js 代码，这时 js 代码向后端服务器发送请求得到数据并动态更新 html 元素得到最终页面。
-&lt;img src=&#34;https://base.oribos.city/images/2020/11/fabs/4.png&#34; alt=&#34;图片&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;区分前后端的原因&#34;&gt;区分前后端的原因&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;第一个，是可以并行开发。前后端的进度互不影响，在过去，前后端不分离的情况下，前端的工作量相对较少，一个前端可以对四个后端。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;第二个，是成本问题。在过去，后端的成本还是比前端要高一些。同样的工作，如果能拆给两个人做，一个成本高一点，一个成本低一点，能接受。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;第三个，CSS 太难了。JS 还好，和后端语言在对技能的训练上相差不大，可是。。CSS 是什么鬼？记住那么多的属性，和 Hash 算法有关系吗？&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;优点&#34;&gt;优点&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;前端人员和后端人员只需约定好接口，大大降低了前后端耦合性&lt;/li&gt;
-&lt;li&gt;前端人员彻底不用再关心业务处理是怎么回事，他只需要把界面做好就可以了&lt;/li&gt;
-&lt;li&gt;后端人员也不用再关系前端界面是什么样的，他只需要做好业务逻辑处理即可。&lt;/li&gt;
-&lt;li&gt;服务的切离，代码管理，服务部署也都独立出来分别管理，系统的灵活性也获得了极大的提升。&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Tech: 日记2020-11-18</title>
-      <link>/web/note/2020111808.html</link>
-      <pubDate>Wed, 18 Nov 2020 09:01:40 +0800</pubDate>
-      
-      <guid>/web/note/2020111808.html</guid>
-      <description>
-        
-        
-        &lt;h3 id=&#34;同样的代码不同的效果&#34;&gt;同样的代码，不同的效果&lt;/h3&gt;
-&lt;p&gt;在国内服务器上，由于以下内容的下载和安装问题，执行&lt;code&gt;npm install&lt;/code&gt;会出现错误。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/20201118160831.png&#34; alt=&#34;libvips&#34;&gt;&lt;/p&gt;
-&lt;p&gt;而同样的代码，在香港服务器上，执行&lt;code&gt;npm install&lt;/code&gt;尽管依然需要下载，但速度相对快，也没有文件丢失或无法访问。&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Tech: 日记2020-11-17</title>
-      <link>/web/note/2020111714html/</link>
-      <pubDate>Tue, 17 Nov 2020 09:01:40 +0800</pubDate>
-      
-      <guid>/web/note/2020111714html/</guid>
-      <description>
-        
-        
-        &lt;h3 id=&#34;cloudflare的kv存储免费计划&#34;&gt;cloudflare的kv存储免费计划&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/2020111701.png&#34; alt=&#34;kv存储免费计划&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Cloudflare Workers简单地说就是一个可以让你运行Javascript的平台，因为它免费，不需要域名，不需要维护服务器，在线率高。最简单的例子就是通过使用以下代码显示一个普通html页面&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;const html = `&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;body&amp;gt;
-  &amp;lt;h1&amp;gt;Hello World&amp;lt;/h1&amp;gt;
-  &amp;lt;p&amp;gt;This markup was generated by a Cloudflare Worker.&amp;lt;/p&amp;gt;
-&amp;lt;/body&amp;gt;`
-
-async function handleRequest(request) {
-  return new Response(html, {
-    headers: {
-      &amp;#34;content-type&amp;#34;: &amp;#34;text/html;charset=UTF-8&amp;#34;,
-    },
-  })
-}
-
-addEventListener(&amp;#34;fetch&amp;#34;, event =&amp;gt; {
-  return event.respondWith(handleRequest(event.request))
-})
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;其他使用workers的方法可以通过&lt;a href=&#34;https://developers.cloudflare.com/workers/examples&#34;&gt;Examples&lt;/a&gt; 获得。&lt;/p&gt;
-&lt;p&gt;workers有免费计划，包括 100,000 个请求/天 。然后令人意外的是，cloudflare也将kv存储加入免费计划（之前使用kv存储需要5美元/月)。这样workers可以做的事情就多了。&lt;/p&gt;
-&lt;p&gt;比如使用workers不但可以部署一个静态页面，还能部署一个静态网站。&lt;/p&gt;
-&lt;h3 id=&#34;wrangler&#34;&gt;wrangler&lt;/h3&gt;
-&lt;p&gt;npm安装wrangler&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm i @cloudflare/wrangler -g
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后使用&lt;code&gt;wrangler login&lt;/code&gt; 登录，&lt;code&gt;wrangler config&lt;/code&gt;配置api-key，通过&lt;code&gt;wrangler publish&lt;/code&gt;部署&lt;/p&gt;
-&lt;p&gt;通过&lt;a href=&#34;https://developers.cloudflare.com/workers/cli-wrangler&#34;&gt;教程&lt;/a&gt;进一步了解使用wrangler&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Tech: 日记20201115</title>
-      <link>/web/note/2020111305.html</link>
-      <pubDate>Sun, 15 Nov 2020 09:01:40 +0800</pubDate>
-      
-      <guid>/web/note/2020111305.html</guid>
-      <description>
-        
-        
-        &lt;h3 id=&#34;使用gatsby错误提示&#34;&gt;使用gatsby错误提示&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/20201115154223.png&#34; alt=&#34;gatsby错误提示&#34;&gt;&lt;/p&gt;
-&lt;p&gt;原本在hugo使用的html代码，在gatsby上并不识别，导致出现错误提示。但问题是这是数百个旧文件中的一个，可以识别的md文档先渲染出来显示，不能识别的md文档不显示不就可以了。如此到每个错误就停下来，不进行渲染部署。那我需要将hugo的数百个文章转而使用gatsby生成，需要多长时间？&lt;/p&gt;
-&lt;p&gt;由于过于繁多的不兼容，识别问题，阻碍了使用gatsby。导致想变换静态部署工具的想法无法实现。&lt;/p&gt;
-&lt;h3 id=&#34;gatsby的博客模板&#34;&gt;gatsby的博客模板&lt;/h3&gt;
-&lt;p&gt;没有配置分页，由于gatsby的配置过于复杂，而且对于主题的支持并没有使用完善的git子模块，导致主题更新复杂。&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Tech: 腾讯云函数计算备案</title>
-      <link>/web/note/2020111005.html</link>
-      <pubDate>Tue, 10 Nov 2020 09:01:40 +0800</pubDate>
-      
-      <guid>/web/note/2020111005.html</guid>
-      <description>
-        
-        
-        &lt;h3 id=&#34;云开发域名备案服务&#34;&gt;云开发域名备案服务&lt;/h3&gt;
-&lt;p&gt;腾讯云上使用云函数，需要申请备案，备案本身并没有问题，但是在云函数上没有固定的服务器和ip，就无法安装一般的云服务器申请备案。事实上，在其他平台上申请的备案本应该完全可以在腾讯云上使用，只要你在腾讯云上接入备案。奈何云函数的特殊性，没有服务器和ip无从接入备案。&lt;/p&gt;
-&lt;p&gt;如果按照规定，正常在腾讯云上使用云函数的话，你需要在腾讯云上购买云服务器。然后通过服务器，接入备案。而如果你只是使用腾讯云的云函数的，就会需要一个空壳的云服务器提供备案申请。当然，你可以使用备案授权码而使用其他用户的服务器，但是2019年10月20日起，仅企业实名认证的腾讯云账号可生成备案授权码。&lt;/p&gt;
-&lt;p&gt;如此麻烦，腾讯云“人性化”的提供了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://base.oribos.city/images/2020/11/2020111101.png&#34; alt=&#34;云开发域名备案服务&#34;&gt;&lt;/p&gt;
-&lt;p&gt;即：提供一个环境和ip方便用户备案。&lt;/p&gt;
-&lt;h3 id=&#34;其实&#34;&gt;其实&lt;/h3&gt;
-&lt;p&gt;早期的云函数是可以使用已经备案的域名的，后来腾讯云撤销了未在腾讯云上接入备案的域名访问云函数，然后不久提供了专用的云函数备案付费服务。即，通过政策赚钱。&lt;/p&gt;
-
       </description>
     </item>
     

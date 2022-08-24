@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="zh-Hans-CN" class="no-js">
+  <head>
+    <!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.101.0" />
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+
+<link rel="shortcut icon" href="/favicon.ico" >
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<title>mirrors | 记事本</title><meta property="og:title" content="mirrors" />
+<meta property="og:description" content="开源镜像索引 大学镜像 名称 地址 清华大学 https://mirrors.tuna.tsinghua.edu.cn/ 北京外国语大学 https://mirrors.bfsu.edu.cn/ 北京大学 https://mirrors.pku.edu.cn/ 中国科学技术大学 https://mirrors.ustc.edu.cn/ 兰州大学 http://mirror.lzu.edu.cn/ 浙江大学 http://mirrors.zju.edu.cn/ 东北大学 http://mirror.neu.edu.cn/ 华中科技大学 http://mirrors.hust.edu.cn/ 重庆大学 http://mirrors.cqu.edu.cn/ 大连东软信息学院 http://mirrors.neusoft.edu.cn/ 大连理工大学 http://mirror.dlut.edu.cn/ 上海交通大学FTP http://ftp.sjtu.edu.cn/ 上海交通大学 https://mirrors.sjtug.sjtu.edu.cn/ 山东女子学院 https://mirrors.sdwu.edu.cn/ 哈尔滨工业大学 http://mirrors.hit.edu.cn/ 北京理工大学 http://mirror.bit.edu.cn/ 云南大学 https://mirrors.ynu.edu.cn/ 高能物理研究所 http://mirror.ihep.ac.cn/ 南京大学 https://mirrors.nju.edu.cn/ 南阳理工学院 https://mirror.nyist.edu.cn/ 山东大学 https://mirrors.sdu.edu.cn/ 西北农林科技大学 https://mirrors.nwafu.edu.cn/ 企业镜像 名称 地址 阿里 http://mirrors.aliyun.com/ 腾讯 https://mirrors.cloud.tencent.com/ 搜狐 http://mirrors.sohu.com/ 网易 https://mirrors.163.com/ 首都在线 http://mirrors.yun-idc.com/ 公云 http://mirrors.pubyun.com/ 华为 https://mirrors.huaweicloud.com/ Docker Hub 镜像 名称 地址 网易 https://hub-mirror." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/mirrors/" /><meta property="article:section" content="tech" />
+<meta property="article:published_time" content="2022-08-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-08-19T00:00:00+00:00" /><meta property="og:site_name" content="记事本" />
+
+<meta itemprop="name" content="mirrors">
+<meta itemprop="description" content="开源镜像索引 大学镜像 名称 地址 清华大学 https://mirrors.tuna.tsinghua.edu.cn/ 北京外国语大学 https://mirrors.bfsu.edu.cn/ 北京大学 https://mirrors.pku.edu.cn/ 中国科学技术大学 https://mirrors.ustc.edu.cn/ 兰州大学 http://mirror.lzu.edu.cn/ 浙江大学 http://mirrors.zju.edu.cn/ 东北大学 http://mirror.neu.edu.cn/ 华中科技大学 http://mirrors.hust.edu.cn/ 重庆大学 http://mirrors.cqu.edu.cn/ 大连东软信息学院 http://mirrors.neusoft.edu.cn/ 大连理工大学 http://mirror.dlut.edu.cn/ 上海交通大学FTP http://ftp.sjtu.edu.cn/ 上海交通大学 https://mirrors.sjtug.sjtu.edu.cn/ 山东女子学院 https://mirrors.sdwu.edu.cn/ 哈尔滨工业大学 http://mirrors.hit.edu.cn/ 北京理工大学 http://mirror.bit.edu.cn/ 云南大学 https://mirrors.ynu.edu.cn/ 高能物理研究所 http://mirror.ihep.ac.cn/ 南京大学 https://mirrors.nju.edu.cn/ 南阳理工学院 https://mirror.nyist.edu.cn/ 山东大学 https://mirrors.sdu.edu.cn/ 西北农林科技大学 https://mirrors.nwafu.edu.cn/ 企业镜像 名称 地址 阿里 http://mirrors.aliyun.com/ 腾讯 https://mirrors.cloud.tencent.com/ 搜狐 http://mirrors.sohu.com/ 网易 https://mirrors.163.com/ 首都在线 http://mirrors.yun-idc.com/ 公云 http://mirrors.pubyun.com/ 华为 https://mirrors.huaweicloud.com/ Docker Hub 镜像 名称 地址 网易 https://hub-mirror."><meta itemprop="datePublished" content="2022-08-19T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-08-19T00:00:00+00:00" />
+<meta itemprop="wordCount" content="215">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="mirrors"/>
+<meta name="twitter:description" content="开源镜像索引 大学镜像 名称 地址 清华大学 https://mirrors.tuna.tsinghua.edu.cn/ 北京外国语大学 https://mirrors.bfsu.edu.cn/ 北京大学 https://mirrors.pku.edu.cn/ 中国科学技术大学 https://mirrors.ustc.edu.cn/ 兰州大学 http://mirror.lzu.edu.cn/ 浙江大学 http://mirrors.zju.edu.cn/ 东北大学 http://mirror.neu.edu.cn/ 华中科技大学 http://mirrors.hust.edu.cn/ 重庆大学 http://mirrors.cqu.edu.cn/ 大连东软信息学院 http://mirrors.neusoft.edu.cn/ 大连理工大学 http://mirror.dlut.edu.cn/ 上海交通大学FTP http://ftp.sjtu.edu.cn/ 上海交通大学 https://mirrors.sjtug.sjtu.edu.cn/ 山东女子学院 https://mirrors.sdwu.edu.cn/ 哈尔滨工业大学 http://mirrors.hit.edu.cn/ 北京理工大学 http://mirror.bit.edu.cn/ 云南大学 https://mirrors.ynu.edu.cn/ 高能物理研究所 http://mirror.ihep.ac.cn/ 南京大学 https://mirrors.nju.edu.cn/ 南阳理工学院 https://mirror.nyist.edu.cn/ 山东大学 https://mirrors.sdu.edu.cn/ 西北农林科技大学 https://mirrors.nwafu.edu.cn/ 企业镜像 名称 地址 阿里 http://mirrors.aliyun.com/ 腾讯 https://mirrors.cloud.tencent.com/ 搜狐 http://mirrors.sohu.com/ 网易 https://mirrors.163.com/ 首都在线 http://mirrors.yun-idc.com/ 公云 http://mirrors.pubyun.com/ 华为 https://mirrors.huaweicloud.com/ Docker Hub 镜像 名称 地址 网易 https://hub-mirror."/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.27f3bb03a2b4c467fea18d07559cd79e1e8f7c7142019b070d768a99cd64f7a4.css" as="style">
+<link href="/scss/main.min.27f3bb03a2b4c467fea18d07559cd79e1e8f7c7142019b070d768a99cd64f7a4.css" rel="stylesheet" integrity="">
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<link href="/css/custom-style.css" rel="stylesheet">
+
+
+
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/css/zoomify.min.css">
+
+
+
+
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  crossorigin="anonymous"></script>
+
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+<meta itemprop="name" content="云上记事本" />	
+
+<meta itemprop="image" content="https://base.oribos.city/images/avatar.png" />
+
+<meta name="description" itemprop="description" content="存放各类网络资源，素材，模板" />
+
+
+
+  </head>
+  <body class="td-page td-blog">
+    <header>
+      
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+            <main class="col-12  pl-md-5 pr-md-4" role="main">
+            
+<div class="td-content">
+	<h2 id="开源镜像索引">开源镜像索引</h2>
+<h3 id="大学镜像">大学镜像</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>清华大学</td>
+<td><a href="https://mirrors.tuna.tsinghua.edu.cn/">https://mirrors.tuna.tsinghua.edu.cn/</a></td>
+</tr>
+<tr>
+<td>北京外国语大学</td>
+<td><a href="https://mirrors.bfsu.edu.cn/">https://mirrors.bfsu.edu.cn/</a></td>
+</tr>
+<tr>
+<td>北京大学</td>
+<td><a href="https://mirrors.pku.edu.cn/">https://mirrors.pku.edu.cn/</a></td>
+</tr>
+<tr>
+<td>中国科学技术大学</td>
+<td><a href="https://mirrors.ustc.edu.cn/">https://mirrors.ustc.edu.cn/</a></td>
+</tr>
+<tr>
+<td>兰州大学</td>
+<td><a href="http://mirror.lzu.edu.cn/">http://mirror.lzu.edu.cn/</a></td>
+</tr>
+<tr>
+<td>浙江大学</td>
+<td><a href="http://mirrors.zju.edu.cn/">http://mirrors.zju.edu.cn/</a></td>
+</tr>
+<tr>
+<td>东北大学</td>
+<td><a href="http://mirror.neu.edu.cn/">http://mirror.neu.edu.cn/</a></td>
+</tr>
+<tr>
+<td>华中科技大学</td>
+<td><a href="http://mirrors.hust.edu.cn/">http://mirrors.hust.edu.cn/</a></td>
+</tr>
+<tr>
+<td>重庆大学</td>
+<td><a href="http://mirrors.cqu.edu.cn/">http://mirrors.cqu.edu.cn/</a></td>
+</tr>
+<tr>
+<td>大连东软信息学院</td>
+<td><a href="http://mirrors.neusoft.edu.cn/">http://mirrors.neusoft.edu.cn/</a></td>
+</tr>
+<tr>
+<td>大连理工大学</td>
+<td><a href="http://mirror.dlut.edu.cn/">http://mirror.dlut.edu.cn/</a></td>
+</tr>
+<tr>
+<td>上海交通大学FTP</td>
+<td><a href="http://ftp.sjtu.edu.cn/">http://ftp.sjtu.edu.cn/</a></td>
+</tr>
+<tr>
+<td>上海交通大学</td>
+<td><a href="https://mirrors.sjtug.sjtu.edu.cn/">https://mirrors.sjtug.sjtu.edu.cn/</a></td>
+</tr>
+<tr>
+<td>山东女子学院</td>
+<td><a href="https://mirrors.sdwu.edu.cn/">https://mirrors.sdwu.edu.cn/</a></td>
+</tr>
+<tr>
+<td>哈尔滨工业大学</td>
+<td><a href="http://mirrors.hit.edu.cn/">http://mirrors.hit.edu.cn/</a></td>
+</tr>
+<tr>
+<td>北京理工大学</td>
+<td><a href="http://mirror.bit.edu.cn/">http://mirror.bit.edu.cn/</a></td>
+</tr>
+<tr>
+<td>云南大学</td>
+<td><a href="https://mirrors.ynu.edu.cn/">https://mirrors.ynu.edu.cn/</a></td>
+</tr>
+<tr>
+<td>高能物理研究所</td>
+<td><a href="http://mirror.ihep.ac.cn/">http://mirror.ihep.ac.cn/</a></td>
+</tr>
+<tr>
+<td>南京大学</td>
+<td><a href="https://mirrors.nju.edu.cn/">https://mirrors.nju.edu.cn/</a></td>
+</tr>
+<tr>
+<td>南阳理工学院</td>
+<td><a href="https://mirror.nyist.edu.cn/">https://mirror.nyist.edu.cn/</a></td>
+</tr>
+<tr>
+<td>山东大学</td>
+<td><a href="https://mirrors.sdu.edu.cn/">https://mirrors.sdu.edu.cn/</a></td>
+</tr>
+<tr>
+<td>西北农林科技大学</td>
+<td><a href="https://mirrors.nwafu.edu.cn/">https://mirrors.nwafu.edu.cn/</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="企业镜像">企业镜像</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>阿里</td>
+<td><a href="http://mirrors.aliyun.com/">http://mirrors.aliyun.com/</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td><a href="https://mirrors.cloud.tencent.com/">https://mirrors.cloud.tencent.com/</a></td>
+</tr>
+<tr>
+<td>搜狐</td>
+<td><a href="http://mirrors.sohu.com/">http://mirrors.sohu.com/</a></td>
+</tr>
+<tr>
+<td>网易</td>
+<td><a href="https://mirrors.163.com/">https://mirrors.163.com/</a></td>
+</tr>
+<tr>
+<td>首都在线</td>
+<td><a href="http://mirrors.yun-idc.com/">http://mirrors.yun-idc.com/</a></td>
+</tr>
+<tr>
+<td>公云</td>
+<td><a href="http://mirrors.pubyun.com/">http://mirrors.pubyun.com/</a></td>
+</tr>
+<tr>
+<td>华为</td>
+<td><a href="https://mirrors.huaweicloud.com/">https://mirrors.huaweicloud.com/</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="docker-hub-镜像">Docker Hub 镜像</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>网易</td>
+<td><a href="https://hub-mirror.c.163.com">https://hub-mirror.c.163.com</a></td>
+</tr>
+<tr>
+<td>百度</td>
+<td><a href="https://mirror.baidubce.com">https://mirror.baidubce.com</a></td>
+</tr>
+<tr>
+<td>阿里</td>
+<td><a href="https://ustc-edu-cn.mirror.aliyuncs.com">https://ustc-edu-cn.mirror.aliyuncs.com</a></td>
+</tr>
+<tr>
+<td>Github (国外)</td>
+<td><a href="https://ghcr.io/">https://ghcr.io/</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="npm-镜像">NPM 镜像</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中国科学技术大学(反代)</td>
+<td><a href="https://npmreg.proxy.ustclug.org/">https://npmreg.proxy.ustclug.org/</a></td>
+</tr>
+<tr>
+<td>浙江大学</td>
+<td><a href="http://mirrors.zju.edu.cn/npm/">http://mirrors.zju.edu.cn/npm/</a></td>
+</tr>
+<tr>
+<td>淘宝</td>
+<td><a href="https://registry.npmmirror.com">https://registry.npmmirror.com</a></td>
+</tr>
+<tr>
+<td>CNPM</td>
+<td><a href="http://r.cnpmjs.org/">http://r.cnpmjs.org/</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td><a href="http://mirrors.cloud.tencent.com/npm/">http://mirrors.cloud.tencent.com/npm/</a></td>
+</tr>
+<tr>
+<td>华为</td>
+<td><a href="https://repo.huaweicloud.com/repository/npm/">https://repo.huaweicloud.com/repository/npm/</a></td>
+</tr>
+</tbody>
+</table>
+<pre tabindex="0"><code>npm config set registry https://npmreg.proxy.ustclug.org/
+</code></pre><pre tabindex="0"><code>yarn config set registry https://npmreg.proxy.ustclug.org/
+</code></pre><pre tabindex="0"><code>pnpm config set registry https://npmreg.proxy.ustclug.org/
+</code></pre><h3 id="pip-镜像">pip 镜像</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>清华大学</td>
+<td><a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></td>
+</tr>
+<tr>
+<td>北京外国语大学</td>
+<td><a href="https://mirrors.bfsu.edu.cn/pypi/web/simple">https://mirrors.bfsu.edu.cn/pypi/web/simple</a></td>
+</tr>
+<tr>
+<td>大连东软信息学院</td>
+<td><a href="http://mirrors.neusoft.edu.cn/pypi/web/simple/">http://mirrors.neusoft.edu.cn/pypi/web/simple/</a></td>
+</tr>
+<tr>
+<td>重庆大学</td>
+<td><a href="https://mirrors.cqu.edu.cn/pypi/web/simple">https://mirrors.cqu.edu.cn/pypi/web/simple</a></td>
+</tr>
+<tr>
+<td>浙江大学</td>
+<td><a href="https://mirrors.zju.edu.cn/pypi/simple">https://mirrors.zju.edu.cn/pypi/simple</a></td>
+</tr>
+<tr>
+<td>中国科学技术大学</td>
+<td><a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a></td>
+</tr>
+<tr>
+<td>豆瓣</td>
+<td><a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a></td>
+</tr>
+<tr>
+<td>阿里</td>
+<td><a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a></td>
+</tr>
+<tr>
+<td>网易</td>
+<td><a href="https://mirrors.163.com/pypi/simple/">https://mirrors.163.com/pypi/simple/</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>临时使用</p>
+</blockquote>
+<pre tabindex="0"><code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple [包名]
+</code></pre><blockquote>
+<p>永久使用</p>
+</blockquote>
+<pre tabindex="0"><code>	Unix、Linux、Mac OS: ~/.pip/pip.conf Windows: %HOME%\pip\pip.ini 文件中写入			
+				
+	[global]			
+	trusted-host=pypi.tuna.tsinghua.edu.cn			
+	timeout=6000			
+	index-url=https://pypi.tuna.tsinghua.edu.cn/simple	
+</code></pre><h3 id="cargo-镜像">Cargo 镜像</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>清华大学</td>
+<td><a href="https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git">https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git</a></td>
+</tr>
+<tr>
+<td>北京外国语大学</td>
+<td><a href="https://mirrors.bfsu.edu.cn/git/crates.io-index.git">https://mirrors.bfsu.edu.cn/git/crates.io-index.git</a></td>
+</tr>
+<tr>
+<td>中国科学技术大学</td>
+<td><a href="https://mirrors.ustc.edu.cn/crates.io-index">https://mirrors.ustc.edu.cn/crates.io-index</a></td>
+</tr>
+<tr>
+<td>上海交通大学</td>
+<td><a href="https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/">https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/</a></td>
+</tr>
+<tr>
+<td>阿里云 Rustcc 社区</td>
+<td><a href="https://code.aliyun.com/rustcc/crates.io-index.git">https://code.aliyun.com/rustcc/crates.io-index.git</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Unix、Linux、Mac OS ~/.cargo/config 写入文件中</p>
+</blockquote>
+<pre tabindex="0"><code>	# 指定镜像			
+	# replace-with = &#39;源镜像名&#39;			
+	replace-with = &#39;ustc&#39;			
+	[source.ustc]			
+	registry = &#34;https://mirrors.ustc.edu.cn/crates.io-index&#34;		
+</code></pre><h3 id="gem-镜像">Gem 镜像</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>清华大学</td>
+<td><a href="https://mirrors.tuna.tsinghua.edu.cn/rubygems/">https://mirrors.tuna.tsinghua.edu.cn/rubygems/</a></td>
+</tr>
+<tr>
+<td>北京外国语大学</td>
+<td><a href="https://mirrors.bfsu.edu.cn/rubygems/">https://mirrors.bfsu.edu.cn/rubygems/</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="gem">Gem</h3>
+<pre tabindex="0"><code>	# 添加 TUNA 源并移除默认源			
+	gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/			
+	# 列出已有源			
+	gem sources -l			
+	# 应该只有 TUNA 一个			
+</code></pre><h3 id="bundle">Bundle</h3>
+<pre tabindex="0"><code>bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
+</code></pre>
+	
+
+
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <div class="container-fluid">
+    <div class="shareBtn">
+            <a  id="upBtn"  href="javascript:topFunction()" title="向上"> <i class="fa fa-arrow-up fa-2x text-warning"></i></a>
+    </div>
+</div>
+
+      
+    </div>
+    <script src="/js/zoomify.min.js"></script>
+<script src="/js/app.js"></script>
+<link rel="stylesheet" href="https://base.oribos.city/css/monokai_sublime.min.css">
+<script src="https://style.oribos.city/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.3bff53fa2e8d9a2c4d0b3eeea5987ff2f2cc9a0f4eccb730274827d5e7cd5538.js" integrity="sha256-O/9T&#43;i6NmixNCz7upZh/8vLMmg9OzLcwJ0gn1efNVTg=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

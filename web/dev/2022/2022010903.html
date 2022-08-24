@@ -15,28 +15,61 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 
-<title>测试 | 记事本</title><meta property="og:title" content="测试" />
-<meta property="og:description" content="测试 " />
+<title>tag与release | 记事本</title><meta property="og:title" content="tag与release" />
+<meta property="og:description" content="本文源自 作者：Hustlion
+定义 标签（tag）是特定提交（commit)一个指针，也就是每个tag对应一个特定的commit。
+Release是具有changelogs和二进制文件的一级对象，它可以代表超出Git架构本身的一个特定时间点之前的所有项目历史。也就是通过release，不但能够通过源码体现出项目历史，还能通过已经编译好的二进制文件来进一步描述此时的项目状态。“超出Git架构本身“的意思则在于，git本身只能记录项目修改，本质上不适合将编译好的项目二进制文件记录下来。而通过release则把项目二进制文件保存了下来，方便用户下载，也方便查找特定版本的二进制文件。
+以下是Github official announcement所定义原文： Releases are first-class objects with changelogs and binary assets that present a full project history beyond Git artifacts.
+创建方法 Release分为两种：lightweight and annotated.
+创建lightweight类型的tag：
+git tag v1.4-lw 创建annotated类型的tag：
+git tag -a v1.4 -m &#34;my version 1.4&#34; 通过tag可以返回到项目的特定状态下，所以可以将tag看作是在大量commit中设定的书签。
+创建release，则需要通过源码托管商的网页操作界面来进行，一般会要求填写tag名、分支以及相应的发布说明，还可上传编译好的程序、打包好的文件等。
+比较 标签是git中的概念，而release则是Github、码云等源码托管商所提供的更高层的概念。也就是说git本身是没有release这个概念的，只有tag。
+两者之间的关系则是，release基于tag，为tag添加更丰富的信息，一般是编译好的文件。
+总结 Release是源码托管商对git的tag功能的增强。通过git提供的tag功能，我们可以给项目进行版本标识，以识别特定的版本，如v0.1.0、v1.0.0等。而通过源码托管商提供的release功能，在tag的基础上我们可以添加编译好的二进制文件等，如.deb、.exe等给特定的版本提供更多的信息，方便用户，也方便后期查找特定版本的程序。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/web/dev/2022/2022010903.html" /><meta property="article:section" content="tech" />
 <meta property="article:published_time" content="2022-01-09T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-01-09T00:00:00+00:00" /><meta property="og:site_name" content="记事本" />
 
-<meta itemprop="name" content="测试">
-<meta itemprop="description" content="测试 "><meta itemprop="datePublished" content="2022-01-09T00:00:00+00:00" />
+<meta itemprop="name" content="tag与release">
+<meta itemprop="description" content="本文源自 作者：Hustlion
+定义 标签（tag）是特定提交（commit)一个指针，也就是每个tag对应一个特定的commit。
+Release是具有changelogs和二进制文件的一级对象，它可以代表超出Git架构本身的一个特定时间点之前的所有项目历史。也就是通过release，不但能够通过源码体现出项目历史，还能通过已经编译好的二进制文件来进一步描述此时的项目状态。“超出Git架构本身“的意思则在于，git本身只能记录项目修改，本质上不适合将编译好的项目二进制文件记录下来。而通过release则把项目二进制文件保存了下来，方便用户下载，也方便查找特定版本的二进制文件。
+以下是Github official announcement所定义原文： Releases are first-class objects with changelogs and binary assets that present a full project history beyond Git artifacts.
+创建方法 Release分为两种：lightweight and annotated.
+创建lightweight类型的tag：
+git tag v1.4-lw 创建annotated类型的tag：
+git tag -a v1.4 -m &#34;my version 1.4&#34; 通过tag可以返回到项目的特定状态下，所以可以将tag看作是在大量commit中设定的书签。
+创建release，则需要通过源码托管商的网页操作界面来进行，一般会要求填写tag名、分支以及相应的发布说明，还可上传编译好的程序、打包好的文件等。
+比较 标签是git中的概念，而release则是Github、码云等源码托管商所提供的更高层的概念。也就是说git本身是没有release这个概念的，只有tag。
+两者之间的关系则是，release基于tag，为tag添加更丰富的信息，一般是编译好的文件。
+总结 Release是源码托管商对git的tag功能的增强。通过git提供的tag功能，我们可以给项目进行版本标识，以识别特定的版本，如v0.1.0、v1.0.0等。而通过源码托管商提供的release功能，在tag的基础上我们可以添加编译好的二进制文件等，如.deb、.exe等给特定的版本提供更多的信息，方便用户，也方便后期查找特定版本的程序。"><meta itemprop="datePublished" content="2022-01-09T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-01-09T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1">
+<meta itemprop="wordCount" content="50">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="测试"/>
-<meta name="twitter:description" content="测试 "/>
+<meta name="twitter:title" content="tag与release"/>
+<meta name="twitter:description" content="本文源自 作者：Hustlion
+定义 标签（tag）是特定提交（commit)一个指针，也就是每个tag对应一个特定的commit。
+Release是具有changelogs和二进制文件的一级对象，它可以代表超出Git架构本身的一个特定时间点之前的所有项目历史。也就是通过release，不但能够通过源码体现出项目历史，还能通过已经编译好的二进制文件来进一步描述此时的项目状态。“超出Git架构本身“的意思则在于，git本身只能记录项目修改，本质上不适合将编译好的项目二进制文件记录下来。而通过release则把项目二进制文件保存了下来，方便用户下载，也方便查找特定版本的二进制文件。
+以下是Github official announcement所定义原文： Releases are first-class objects with changelogs and binary assets that present a full project history beyond Git artifacts.
+创建方法 Release分为两种：lightweight and annotated.
+创建lightweight类型的tag：
+git tag v1.4-lw 创建annotated类型的tag：
+git tag -a v1.4 -m &#34;my version 1.4&#34; 通过tag可以返回到项目的特定状态下，所以可以将tag看作是在大量commit中设定的书签。
+创建release，则需要通过源码托管商的网页操作界面来进行，一般会要求填写tag名、分支以及相应的发布说明，还可上传编译好的程序、打包好的文件等。
+比较 标签是git中的概念，而release则是Github、码云等源码托管商所提供的更高层的概念。也就是说git本身是没有release这个概念的，只有tag。
+两者之间的关系则是，release基于tag，为tag添加更丰富的信息，一般是编译好的文件。
+总结 Release是源码托管商对git的tag功能的增强。通过git提供的tag功能，我们可以给项目进行版本标识，以识别特定的版本，如v0.1.0、v1.0.0等。而通过源码托管商提供的release功能，在tag的基础上我们可以添加编译好的二进制文件等，如.deb、.exe等给特定的版本提供更多的信息，方便用户，也方便后期查找特定版本的程序。"/>
 
 
 
 
-
-<link rel="preload" href="/scss/main.min.28aa4922e8ae847f1ecbecae8cddbf3c30796c8f9960b342e8d3ab9fd1fc7bea.css" as="style">
-<link href="/scss/main.min.28aa4922e8ae847f1ecbecae8cddbf3c30796c8f9960b342e8d3ab9fd1fc7bea.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.27f3bb03a2b4c467fea18d07559cd79e1e8f7c7142019b070d768a99cd64f7a4.css" as="style">
+<link href="/scss/main.min.27f3bb03a2b4c467fea18d07559cd79e1e8f7c7142019b070d768a99cd64f7a4.css" rel="stylesheet" integrity="">
 <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<link href="/css/custom-style.css" rel="stylesheet">
 
 
 
@@ -118,7 +151,7 @@
   aria-label="站内搜索…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0bb319cec4c6575e5bde969e3cf1c3b9d1923c9c78b150c5e6587fe42d3fd7328068f05b1d00ba9f0c497f6ab08360192ed1a4dda6a7ff26f895c75859b6ae6c.json"
+  data-offline-search-index-json-src="/offline-search-index.812196c4cdbb20d8b6ad1b54c05bab429746417a99f2deca942620295588f963411a33ae9ce71ff9eefeea40ab4550c2e9af7b6a906043b1252178ac91ff4535.json"
   data-offline-search-base-href="/"
 >
 
@@ -148,7 +181,7 @@
   aria-label="站内搜索…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0bb319cec4c6575e5bde969e3cf1c3b9d1923c9c78b150c5e6587fe42d3fd7328068f05b1d00ba9f0c497f6ab08360192ed1a4dda6a7ff26f895c75859b6ae6c.json"
+  data-offline-search-index-json-src="/offline-search-index.812196c4cdbb20d8b6ad1b54c05bab429746417a99f2deca942620295588f963411a33ae9ce71ff9eefeea40ab4550c2e9af7b6a906043b1252178ac91ff4535.json"
   data-offline-search-base-href="/"
 >
 
@@ -212,7 +245,19 @@
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-mirrors" href="/mirrors/">mirrors</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-webtest2021010191html" href="/web/test/2021010191.html">test001</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webtest2022082201html" href="/web/test/2022082201.html">测试20220822</a>
       
       
     </li>
@@ -1573,7 +1618,78 @@
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-webdev20222022010903html" href="/web/dev/2022/2022010903.html">测试</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022082301html" href="/web/note/2022/2022082301.html">hexo模板</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022082213html" href="/web/note/2022/2022082213.html">ACME v2证书自动化快速入门</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022072601html" href="/web/note/2022/2022072601.html">windows server安装docker</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-webdev20222022010903html" href="/web/dev/2022/2022010903.html">tag与release</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webdev20222022010907html" href="/web/dev/2022/2022010907.html">测试</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/tech/extend/2021/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">2021</a>
+  </li>
+  <ul>
+    <li class="collapse " id="techextend2021">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021110801html" href="/web/note/2021/2021110801.html">docker运行qbittorrent</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021110401html" href="/web/note/2021/2021110401.html">随笔2021-11-04</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021071001" href="/web/note/2021/2021071001/">分享</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021010117html" href="/web/note/2021/2021010117.html">博客内容更新包</a>
       
       
     </li>
@@ -1612,6 +1728,18 @@
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#定义">定义</a></li>
+        <li><a href="#比较">比较</a></li>
+        <li><a href="#总结">总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
 
 
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
@@ -1624,14 +1752,32 @@
             
             
 <div class="td-content">
-	<h2 class="text-uppercase">测试</h2>
+	<h2 class="text-uppercase">tag与release</h2>
 	<hr class="hr-colorful">
 	
 	<div class="td-byline mb-4">
 		By <b>denalon</b> |
 		<time datetime="2022-01-09" class="text-muted">Sunday, January 09, 2022</time>
 	</div>
-	<h3 id="测试">测试</h3>
+	<p>本文源自 <a href="https://www.jianshu.com/p/79ecf4fe5079">作者：Hustlion</a></p>
+<h3 id="定义">定义</h3>
+<p>标签（tag）是特定提交（commit)一个指针，也就是每个tag对应一个特定的commit。</p>
+<p>Release是具有changelogs和二进制文件的一级对象，它可以代表超出Git架构本身的一个特定时间点之前的所有项目历史。也就是通过release，不但能够通过源码体现出项目历史，还能通过已经编译好的二进制文件来进一步描述此时的项目状态。“超出Git架构本身“的意思则在于，git本身只能记录项目修改，本质上不适合将编译好的项目二进制文件记录下来。而通过release则把项目二进制文件保存了下来，方便用户下载，也方便查找特定版本的二进制文件。</p>
+<h4 id="以下是github-official-announcement所定义原文">以下是Github official announcement所定义原文：</h4>
+<p>Releases are first-class objects with changelogs and binary assets that present a full project history beyond Git artifacts.</p>
+<h4 id="创建方法">创建方法</h4>
+<p>Release分为两种：lightweight and annotated.</p>
+<p>创建lightweight类型的tag：</p>
+<pre tabindex="0"><code>git tag v1.4-lw
+</code></pre><p>创建annotated类型的tag：</p>
+<pre tabindex="0"><code>git tag -a v1.4 -m &#34;my version 1.4&#34;
+</code></pre><p>通过tag可以返回到项目的特定状态下，所以可以将tag看作是在大量commit中设定的书签。</p>
+<p>创建release，则需要通过源码托管商的网页操作界面来进行，一般会要求填写tag名、分支以及相应的发布说明，还可上传编译好的程序、打包好的文件等。</p>
+<h3 id="比较">比较</h3>
+<p>标签是git中的概念，而release则是Github、码云等源码托管商所提供的更高层的概念。也就是说git本身是没有release这个概念的，只有tag。</p>
+<p>两者之间的关系则是，release基于tag，为tag添加更丰富的信息，一般是编译好的文件。</p>
+<h3 id="总结">总结</h3>
+<p>Release是源码托管商对git的tag功能的增强。通过git提供的tag功能，我们可以给项目进行版本标识，以识别特定的版本，如v0.1.0、v1.0.0等。而通过源码托管商提供的release功能，在tag的基础上我们可以添加编译好的二进制文件等，如.deb、.exe等给特定的版本提供更多的信息，方便用户，也方便后期查找特定版本的程序。</p>
 
 
 	

@@ -15,28 +15,34 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 
-<title>博客内容更新包 | 记事本</title><meta property="og:title" content="博客内容更新包" />
-<meta property="og:description" content="博客内容更新包" />
+<title>hexo记录 | 记事本</title><meta property="og:title" content="hexo记录" />
+<meta property="og:description" content="触发条件修改 将自动构建的触发条件由推送代码到推送tags触发
+新增样式 加粗字体的彩色效果
+b, strong { -webkit-background-clip: text; -webkit-text-fill-color: transparent; --strong-gradient: linear-gradient(62deg,#188bfd,#a03bff)!important; background-image: var(--strong-gradient); font-weight: bolder; } " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/web/note/2021/2021010101.html" /><meta property="article:section" content="essay" />
-<meta property="article:published_time" content="2021-01-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-01-01T00:00:00+00:00" /><meta property="og:site_name" content="记事本" />
+<meta property="og:url" content="/web/note/2022/2022081902.html" /><meta property="article:section" content="essay" />
+<meta property="article:published_time" content="2022-08-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-08-19T00:00:00+00:00" /><meta property="og:site_name" content="记事本" />
 
-<meta itemprop="name" content="博客内容更新包">
-<meta itemprop="description" content="博客内容更新包"><meta itemprop="datePublished" content="2021-01-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-01-01T00:00:00+00:00" />
-<meta itemprop="wordCount" content="745">
+<meta itemprop="name" content="hexo记录">
+<meta itemprop="description" content="触发条件修改 将自动构建的触发条件由推送代码到推送tags触发
+新增样式 加粗字体的彩色效果
+b, strong { -webkit-background-clip: text; -webkit-text-fill-color: transparent; --strong-gradient: linear-gradient(62deg,#188bfd,#a03bff)!important; background-image: var(--strong-gradient); font-weight: bolder; } "><meta itemprop="datePublished" content="2022-08-19T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-08-19T00:00:00+00:00" />
+<meta itemprop="wordCount" content="18">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="博客内容更新包"/>
-<meta name="twitter:description" content="博客内容更新包"/>
+<meta name="twitter:title" content="hexo记录"/>
+<meta name="twitter:description" content="触发条件修改 将自动构建的触发条件由推送代码到推送tags触发
+新增样式 加粗字体的彩色效果
+b, strong { -webkit-background-clip: text; -webkit-text-fill-color: transparent; --strong-gradient: linear-gradient(62deg,#188bfd,#a03bff)!important; background-image: var(--strong-gradient); font-weight: bolder; } "/>
 
 
 
 
-
-<link rel="preload" href="/scss/main.min.28aa4922e8ae847f1ecbecae8cddbf3c30796c8f9960b342e8d3ab9fd1fc7bea.css" as="style">
-<link href="/scss/main.min.28aa4922e8ae847f1ecbecae8cddbf3c30796c8f9960b342e8d3ab9fd1fc7bea.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.27f3bb03a2b4c467fea18d07559cd79e1e8f7c7142019b070d768a99cd64f7a4.css" as="style">
+<link href="/scss/main.min.27f3bb03a2b4c467fea18d07559cd79e1e8f7c7142019b070d768a99cd64f7a4.css" rel="stylesheet" integrity="">
 <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<link href="/css/custom-style.css" rel="stylesheet">
 
 
 
@@ -118,7 +124,7 @@
   aria-label="站内搜索…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0bb319cec4c6575e5bde969e3cf1c3b9d1923c9c78b150c5e6587fe42d3fd7328068f05b1d00ba9f0c497f6ab08360192ed1a4dda6a7ff26f895c75859b6ae6c.json"
+  data-offline-search-index-json-src="/offline-search-index.812196c4cdbb20d8b6ad1b54c05bab429746417a99f2deca942620295588f963411a33ae9ce71ff9eefeea40ab4550c2e9af7b6a906043b1252178ac91ff4535.json"
   data-offline-search-base-href="/"
 >
 
@@ -148,7 +154,7 @@
   aria-label="站内搜索…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0bb319cec4c6575e5bde969e3cf1c3b9d1923c9c78b150c5e6587fe42d3fd7328068f05b1d00ba9f0c497f6ab08360192ed1a4dda6a7ff26f895c75859b6ae6c.json"
+  data-offline-search-index-json-src="/offline-search-index.812196c4cdbb20d8b6ad1b54c05bab429746417a99f2deca942620295588f963411a33ae9ce71ff9eefeea40ab4550c2e9af7b6a906043b1252178ac91ff4535.json"
   data-offline-search-base-href="/"
 >
 
@@ -1234,17 +1240,29 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/essay/update/2022/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">2022</a>
+    <a  href="/essay/update/2022/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">2022</a>
   </li>
   <ul>
-    <li class="collapse " id="essayupdate2022">
+    <li class="collapse show" id="essayupdate2022">
       
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022081901html" href="/web/note/2022/2022081901.html">关于对hexo构建的说明.md</a>
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-webnote20222022081902html" href="/web/note/2022/2022081902.html">hexo记录</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022081917html" href="/web/note/2022/2022081917.html">mirrors</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022081901html" href="/web/note/2022/2022081901.html">关于对hexo构建的说明</a>
       
       
       
@@ -1269,12 +1287,6 @@
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022080301html" href="/web/note/2022/2022080301.html">随笔0803</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20222022072601html" href="/web/note/2022/2022072601.html">windows server安装docker</a>
       
       
       
@@ -1442,10 +1454,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/essay/update/2021/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">2021</a>
+    <a  href="/essay/update/2021/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">2021</a>
   </li>
   <ul>
-    <li class="collapse show" id="essayupdate2021">
+    <li class="collapse " id="essayupdate2021">
       
       
       
@@ -1453,12 +1465,6 @@
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021113001html" href="/web/note/2021/2021113001.html">文章继续更新</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021110801html" href="/web/note/2021/2021110801.html">docker运行qbittorrent</a>
       
       
       
@@ -1483,12 +1489,6 @@
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021102901html" href="/web/note/2021/2021102901.html">随笔2021-10-29</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021110401html" href="/web/note/2021/2021110401.html">随笔2021-11-04</a>
       
       
       
@@ -1560,19 +1560,7 @@
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021071001" href="/web/note/2021/2021071001/">分享</a>
-      
-      
-      
-      
-      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-webnote20212021070601" href="/web/note/2021/2021070601/">随笔0706</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-webnote20212021010101html" href="/web/note/2021/2021010101.html">博客内容更新包</a>
       
       
     </li>
@@ -1615,8 +1603,8 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#博客内容更新包">博客内容更新包</a></li>
-        <li><a href="#cloudflare-内容代理">cloudflare 内容代理</a></li>
+        <li><a href="#触发条件修改">触发条件修改</a></li>
+        <li><a href="#新增样式">新增样式</a></li>
       </ul>
     </li>
   </ul>
@@ -1634,305 +1622,23 @@
             
             
 <div class="td-content">
-	<h2 class="text-uppercase">博客内容更新包</h2>
+	<h2 class="text-uppercase">hexo记录</h2>
 	<hr class="hr-colorful">
-	<div class="lead">博客内容更新包</div>
+	
 	<div class="td-byline mb-4">
 		By <b>denalon</b> |
-		<time datetime="2021-01-01" class="text-muted">Friday, January 01, 2021</time>
+		<time datetime="2022-08-19" class="text-muted">Friday, August 19, 2022</time>
 	</div>
-	<h3 id="博客内容更新包">博客内容更新包</h3>
-<p>该仓库是作为脱离于博客存档文章以外的额外更新包。平时针对该仓库进行管理和更新，当年末时，这些文章将转移到存档目录下，文章的url地址不变</p>
-<h3 id="cloudflare-内容代理">cloudflare 内容代理</h3>
-<pre tabindex="0"><code>&#39;use strict&#39;
-
-/**
- * static files (404.html, sw.js, conf.js)
- */
-const ASSET_URL = &#39;http://fly.oribos.cn&#39;
-
-const JS_VER = 10
-const MAX_RETRY = 1
-
-/** @type {RequestInit} */
-const PREFLIGHT_INIT = {
-  status: 204,
-  headers: new Headers({
-    &#39;access-control-allow-origin&#39;: &#39;*&#39;,
-    &#39;access-control-allow-methods&#39;: &#39;GET,POST,PUT,PATCH,TRACE,DELETE,HEAD,OPTIONS&#39;,
-    &#39;access-control-max-age&#39;: &#39;1728000&#39;,
-  }),
-}
-
-/**
- * @param {any} body
- * @param {number} status
- * @param {Object&lt;string, string&gt;} headers
- */
-function makeRes(body, status = 200, headers = {}) {
-  headers[&#39;--ver&#39;] = JS_VER
-  headers[&#39;access-control-allow-origin&#39;] = &#39;*&#39;
-  return new Response(body, {status, headers})
-}
-
-
-/**
- * @param {string} urlStr 
- */
-function newUrl(urlStr) {
-  try {
-    return new URL(urlStr)
-  } catch (err) {
-    return null
-  }
-}
-
-
-addEventListener(&#39;fetch&#39;, e =&gt; {
-  const ret = fetchHandler(e)
-    .catch(err =&gt; makeRes(&#39;cfworker error:\n&#39; + err.stack, 502))
-  e.respondWith(ret)
-})
-
-
-/**
- * @param {FetchEvent} e 
- */
-async function fetchHandler(e) {
-  const req = e.request
-  const urlStr = req.url
-  const urlObj = new URL(urlStr)
-  const path = urlObj.href.substr(urlObj.origin.length)
-
-  if (urlObj.protocol === &#39;http:&#39;) {
-    urlObj.protocol = &#39;https:&#39;
-    return makeRes(&#39;&#39;, 301, {
-      &#39;strict-transport-security&#39;: &#39;max-age=99999999; includeSubDomains; preload&#39;,
-      &#39;location&#39;: urlObj.href,
-    })
-  }
-
-  if (path.startsWith(&#39;/http/&#39;)) {
-    return httpHandler(req, path.substr(6))
-  }
-
-  switch (path) {
-  case &#39;/http&#39;:
-    return makeRes(&#39;请更新 cfworker 到最新版本!&#39;)
-  case &#39;/ws&#39;:
-    return makeRes(&#39;not support&#39;, 400)
-  case &#39;/works&#39;:
-    return makeRes(&#39;it works&#39;)
-  default:
-    // static files
-    return fetch(ASSET_URL + path)
-  }
-}
-
-
-/**
- * @param {Request} req
- * @param {string} pathname
- */
-function httpHandler(req, pathname) {
-  const reqHdrRaw = req.headers
-  if (reqHdrRaw.has(&#39;x-jsproxy&#39;)) {
-    return Response.error()
-  }
-
-  // preflight
-  if (req.method === &#39;OPTIONS&#39; &amp;&amp;
-      reqHdrRaw.has(&#39;access-control-request-headers&#39;)
-  ) {
-    return new Response(null, PREFLIGHT_INIT)
-  }
-
-  let acehOld = false
-  let rawSvr = &#39;&#39;
-  let rawLen = &#39;&#39;
-  let rawEtag = &#39;&#39;
-
-  const reqHdrNew = new Headers(reqHdrRaw)
-  reqHdrNew.set(&#39;x-jsproxy&#39;, &#39;1&#39;)
-
-  // 此处逻辑和 http-dec-req-hdr.lua 大致相同
-  // https://github.com/EtherDream/jsproxy/blob/master/lua/http-dec-req-hdr.lua
-  const refer = reqHdrNew.get(&#39;referer&#39;)
-  const query = refer.substr(refer.indexOf(&#39;?&#39;) + 1)
-  if (!query) {
-    return makeRes(&#39;missing params&#39;, 403)
-  }
-  const param = new URLSearchParams(query)
-
-  for (const [k, v] of Object.entries(param)) {
-    if (k.substr(0, 2) === &#39;--&#39;) {
-      // 系统信息
-      switch (k.substr(2)) {
-      case &#39;aceh&#39;:
-        acehOld = true
-        break
-      case &#39;raw-info&#39;:
-        [rawSvr, rawLen, rawEtag] = v.split(&#39;|&#39;)
-        break
-      }
-    } else {
-      // 还原 HTTP 请求头
-      if (v) {
-        reqHdrNew.set(k, v)
-      } else {
-        reqHdrNew.delete(k)
-      }
-    }
-  }
-  if (!param.has(&#39;referer&#39;)) {
-    reqHdrNew.delete(&#39;referer&#39;)
-  }
-
-  // cfworker 会把路径中的 `//` 合并成 `/`
-  const urlStr = pathname.replace(/^(https?):\/+/, &#39;$1://&#39;)
-  const urlObj = newUrl(urlStr)
-  if (!urlObj) {
-    return makeRes(&#39;invalid proxy url: &#39; + urlStr, 403)
-  }
-
-  /** @type {RequestInit} */
-  const reqInit = {
-    method: req.method,
-    headers: reqHdrNew,
-    redirect: &#39;manual&#39;,
-  }
-  if (req.method === &#39;POST&#39;) {
-    reqInit.body = req.body
-  }
-  return proxy(urlObj, reqInit, acehOld, rawLen, 0)
-}
-
-
-/**
- * 
- * @param {URL} urlObj 
- * @param {RequestInit} reqInit 
- * @param {number} retryTimes 
- */
-async function proxy(urlObj, reqInit, acehOld, rawLen, retryTimes) {
-  const res = await fetch(urlObj.href, reqInit)
-  const resHdrOld = res.headers
-  const resHdrNew = new Headers(resHdrOld)
-
-  let expose = &#39;*&#39;
-  
-  for (const [k, v] of resHdrOld.entries()) {
-    if (k === &#39;access-control-allow-origin&#39; ||
-        k === &#39;access-control-expose-headers&#39; ||
-        k === &#39;location&#39; ||
-        k === &#39;set-cookie&#39;
-    ) {
-      const x = &#39;--&#39; + k
-      resHdrNew.set(x, v)
-      if (acehOld) {
-        expose = expose + &#39;,&#39; + x
-      }
-      resHdrNew.delete(k)
-    }
-    else if (acehOld &amp;&amp;
-      k !== &#39;cache-control&#39; &amp;&amp;
-      k !== &#39;content-language&#39; &amp;&amp;
-      k !== &#39;content-type&#39; &amp;&amp;
-      k !== &#39;expires&#39; &amp;&amp;
-      k !== &#39;last-modified&#39; &amp;&amp;
-      k !== &#39;pragma&#39;
-    ) {
-      expose = expose + &#39;,&#39; + k
-    }
-  }
-
-  if (acehOld) {
-    expose = expose + &#39;,--s&#39;
-    resHdrNew.set(&#39;--t&#39;, &#39;1&#39;)
-  }
-
-  // verify
-  if (rawLen) {
-    const newLen = resHdrOld.get(&#39;content-length&#39;) || &#39;&#39;
-    const badLen = (rawLen !== newLen)
-
-    if (badLen) {
-      if (retryTimes &lt; MAX_RETRY) {
-        urlObj = await parseYtVideoRedir(urlObj, newLen, res)
-        if (urlObj) {
-          return proxy(urlObj, reqInit, acehOld, rawLen, retryTimes + 1)
-        }
-      }
-      return makeRes(res.body, 400, {
-        &#39;--error&#39;: `bad len: ${newLen}, except: ${rawLen}`,
-        &#39;access-control-expose-headers&#39;: &#39;--error&#39;,
-      })
-    }
-
-    if (retryTimes &gt; 1) {
-      resHdrNew.set(&#39;--retry&#39;, retryTimes)
-    }
-  }
-
-  let status = res.status
-
-  resHdrNew.set(&#39;access-control-expose-headers&#39;, expose)
-  resHdrNew.set(&#39;access-control-allow-origin&#39;, &#39;*&#39;)
-  resHdrNew.set(&#39;--s&#39;, status)
-  resHdrNew.set(&#39;--ver&#39;, JS_VER)
-
-  resHdrNew.delete(&#39;content-security-policy&#39;)
-  resHdrNew.delete(&#39;content-security-policy-report-only&#39;)
-  resHdrNew.delete(&#39;clear-site-data&#39;)
-
-  if (status === 301 ||
-      status === 302 ||
-      status === 303 ||
-      status === 307 ||
-      status === 308
-  ) {
-    status = status + 10
-  }
-
-  return new Response(res.body, {
-    status,
-    headers: resHdrNew,
-  })
-}
-
-
-/**
- * @param {URL} urlObj 
- */
-function isYtUrl(urlObj) {
-  return (
-    urlObj.host.endsWith(&#39;.googlevideo.com&#39;) &amp;&amp;
-    urlObj.pathname.startsWith(&#39;/videoplayback&#39;)
-  )
-}
-
-/**
- * @param {URL} urlObj 
- * @param {number} newLen 
- * @param {Response} res 
- */
-async function parseYtVideoRedir(urlObj, newLen, res) {
-  if (newLen &gt; 2000) {
-    return null
-  }
-  if (!isYtUrl(urlObj)) {
-    return null
-  }
-  try {
-    const data = await res.text()
-    urlObj = new URL(data)
-  } catch (err) {
-    return null
-  }
-  if (!isYtUrl(urlObj)) {
-    return null
-  }
-  return urlObj
+	<h3 id="触发条件修改">触发条件修改</h3>
+<p>将自动构建的触发条件由推送代码到推送tags触发</p>
+<h3 id="新增样式">新增样式</h3>
+<p>加粗字体的<strong>彩色效果</strong></p>
+<pre tabindex="0"><code>b, strong {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    --strong-gradient: linear-gradient(62deg,#188bfd,#a03bff)!important;
+    background-image: var(--strong-gradient);
+    font-weight: bolder;
 }
 </code></pre>
 

@@ -4,7 +4,7 @@
     <link>/tech/extend/2022/</link>
     <description>Recent content in 2022 on 记事本</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 09 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Aug 2022 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="/tech/extend/2022/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,180 @@
     
     
     <item>
-      <title>Tech: 测试</title>
+      <title>Tech: hexo模板</title>
+      <link>/web/note/2022/2022082301.html</link>
+      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2022/2022082301.html</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;简述&#34;&gt;简述&lt;/h2&gt;
+&lt;p&gt;下载本仓库代码，修改CNAME文件，添加自己的文章，将本仓库代码推送github，即可访问自己的博客。&lt;/p&gt;
+&lt;h2 id=&#34;使用步骤&#34;&gt;使用步骤&lt;/h2&gt;
+&lt;h4 id=&#34;第一步-获取源码-下载这个hexo模板的代码&#34;&gt;第一步 &lt;em&gt;获取源码&lt;/em&gt; 下载这个hexo模板的代码&lt;/h4&gt;
+&lt;p&gt;git 下载代码&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://e.coding.net/frednab/dev/blog-mould.git&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;未安装git可通过下载github源码获得该项目&lt;a href=&#34;https://github.com/denalon/hexo-mould&#34;&gt;源码&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;下载完毕后删除.git文件夹&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rm -rf .git&lt;/code&gt; 或在windows平台显示隐藏文件，删除隐藏的.git文件夹。&lt;/p&gt;
+&lt;h4 id=&#34;第二步-修改配置-修改hexo的配置&#34;&gt;第二步 &lt;em&gt;修改配置&lt;/em&gt; 修改hexo的配置&lt;/h4&gt;
+&lt;p&gt;修改 &lt;strong&gt;source/CNAME&lt;/strong&gt;文件里的域名&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;此仓库已经预置butterfly主题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通过修改_config.butterfly.yml来改变主题的配置，如主题颜色，样式，插件等。&lt;/p&gt;
+&lt;p&gt;通过修改_config.yml来改变hexo站点的配置，如站点标题，语言，目录等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;其他文件不需要配置&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第三步-更新文章-撰写或者将之前的文章复制到source_posts目录下&#34;&gt;第三步 &lt;em&gt;更新文章&lt;/em&gt; 撰写或者将之前的文章复制到source/_posts目录下&lt;/h4&gt;
+&lt;p&gt;通过&lt;code&gt;hexo new page 文章.md&lt;/code&gt;新建文档&lt;/p&gt;
+&lt;p&gt;或者在source/_posts目录下撰写自己的文章&lt;/p&gt;
+&lt;h4 id=&#34;第四步-发布博客-通过多种方式发布博客&#34;&gt;第四步 &lt;em&gt;发布博客&lt;/em&gt; 通过多种方式发布博客&lt;/h4&gt;
+&lt;h5 id=&#34;方式一-本地运行hexo的http服务来浏览博客&#34;&gt;方式一 本地运行hexo的http服务来浏览博客&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要本地服务器安装nodejs和npm&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;执行如下命令安装hexo&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm install -g hexo-cli
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行如下命令安装该项目的依赖&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm ci
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行如下命令来运行hexo的http服务&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hexo server
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;方式二-生成静态文件部署到nginx或iis&#34;&gt;方式二 生成静态文件,部署到nginx或IIS&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要本地服务器安装nodejs和npm&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;执行如下命令安装hexo&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm install -g hexo-cli
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行如下命令安装该项目的依赖&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm ci
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行如下命令生成html静态文件&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hexo g
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;生成html静态文件夹public，配合nginx或iis来部署静态网站。或者上传到虚拟主机，云服务器上部署。&lt;/p&gt;
+&lt;h5 id=&#34;方式三-将源码推送到github触发github-actions自动构建&#34;&gt;方式三 将源码推送到github，触发github actions自动构建&lt;/h5&gt;
+&lt;p&gt;通过以下命令将该仓库里的源码推送到github仓库&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;删掉目录下的.git目录再执行如下操作&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git init //初始化仓库。
+git add . //添加文件到暂存区。(注意有点号.)
+git commit -m &amp;#34;更新说明&amp;#34; //将暂存区内容添加到仓库中。标识“更新说明”
+git remote add origin XXXX.git  //添加到远程仓库操作，将xxxx.git设置为远程仓库origin
+git push -u origin main  //推送main分支到origin仓库
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;以上代码推送到远程分支的main分支，如果本地是master分支可以执行&lt;code&gt;git push origin master:main&lt;/code&gt;推送本地master分支代码到远程main分支。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;提示操作成功后，代码将推送到github上的main分支，github自动部署将启动，将hexo文件自动部署到gh-pages分支&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由于该仓库含有github自动构建文件，上传到github将触发自动部署&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;github自动构建文件为 &lt;code&gt;.github/workflows/pages.yml&lt;/code&gt;文件&lt;/p&gt;
+&lt;h4 id=&#34;第五步-开启pages-登录github-设置界面配置pages服务&#34;&gt;第五步 &lt;em&gt;开启pages&lt;/em&gt; 登录github 设置界面配置pages服务&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;请确保仓库里source/CNAME文件域名已经正确修改&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在github仓库 “Settings”选择“GitHub Pages” source项选择Branch:gh-pages
+如图：&lt;img src=&#34;https://base.oribos.city/images/2020/10/20201022095332.png&#34; alt=&#34;github pages设置&#34;&gt;&lt;/p&gt;
+&lt;p&gt;即可使用由github自动部署的 pages 服务。&lt;/p&gt;
+&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;p&gt;尽管&lt;code&gt;.github/workflows/pages.yml&lt;/code&gt;文件里可以配置CNAME文件，但不建议修改自动构建文件的内容。&lt;/p&gt;
+&lt;p&gt;Node.js v16.x:安装&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Using Debian, as root
+curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+apt-get install -y nodejs
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: ACME v2证书自动化快速入门</title>
+      <link>/web/note/2022/2022082213.html</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2022/2022082213.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;安装acmesh&#34;&gt;安装acme.sh&lt;/h3&gt;
+&lt;p&gt;建议切换到root模式，可以减少证书安装时的问题&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo su&lt;/code&gt; 注意：MacOS 不用切换到root更简单。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl https://get.acme.sh | sh -s email=my@example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果上面官方下载地址失败 或者 太慢，可以选用国内的备用地址&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl https://gitcode.net/cert/cn-acme.sh/-/raw/master/install.sh?inline=false | sh -s email=my@example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;对域名授权&#34;&gt;对域名授权&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.freessl.cn/acme-quick-start/&#34;&gt;参见步骤&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;证书申请--部署&#34;&gt;证书申请 &amp;amp; 部署&lt;/h3&gt;
+&lt;p&gt;使用获得的部署命令进行证书申请&lt;/p&gt;
+&lt;p&gt;下载的证书文件中，应该含以下证书文件：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ca.cer&lt;/code&gt; &lt;code&gt;域名.cer&lt;/code&gt; &lt;code&gt;fullchain.cer&lt;/code&gt; 证书私钥 &lt;code&gt;private.key&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;在-nginx-上安装-ssl-证书&#34;&gt;在 NGINX 上安装 SSL 证书&lt;/h3&gt;
+&lt;p&gt;在本文中，介绍如何在 NGINX Web 服务器上安装 SSL 证书并设置 HTTPS 重定向。
+准备工&lt;/p&gt;
+&lt;p&gt;已下载包含证书文件的 ZIP 压缩文件。&lt;/p&gt;
+&lt;p&gt;下载的证书文件中，应该含以下证书文件：&lt;/p&gt;
+&lt;p&gt;domain-ca.pem&lt;/p&gt;
+&lt;p&gt;domain-chain.pem&lt;/p&gt;
+&lt;p&gt;domain-root.pem&lt;/p&gt;
+&lt;p&gt;证书私钥 private.key。&lt;/p&gt;
+&lt;h4 id=&#34;步骤1-上传文件到网站服务器&#34;&gt;步骤1. 上传文件到网站服务器&lt;/h4&gt;
+&lt;p&gt;登录网站的 Nginx 服务器，选择一个需要存放证书文件的目录，将下载的证书文件（domain-ca.pem，domain-chain.pem，domain-root.pem ）和 私钥 （private.key） 上传到选择的目录中。&lt;/p&gt;
+&lt;h4 id=&#34;步骤2-将证书文件重命名为-crt-结尾的文件&#34;&gt;步骤2. 将证书文件重命名为 .crt 结尾的文件&lt;/h4&gt;
+&lt;p&gt;Nginx 要求合并所有 .crt 文件，以便允许 SSL 安装，需要执行以下命令将 domain-ca.pem 、domain-chain.pem 和 domain-root.pem 合并为一个文件 .crt 文件。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ cat domain-ca.pem domain-chain.pem domain-root.pem &amp;gt;&amp;gt; certificate.crt
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;如果存在fullchain.cer 是合并后的证书，可直接在nginx使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;步骤3-更新-nginx-的配置信息&#34;&gt;步骤3. 更新 Nginx 的配置信息&lt;/h4&gt;
+&lt;p&gt;找到 Nginx 域名配置文件并打开，如果您要更新证书，修改域名配置文件中网站新证书路径 网站新私钥路径 即可；如果您要安装新证书，根据实际情况修改 HTTPS 需要使用的端口 开启 Nginx SSL 模块 网站新证书路径 网站新私钥路径 域名 域名映射根路径 信息，粘贴到域名配置文件下方，保存文件。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;server {
+
+    listen   443; # HTTPS 需要使用的端口
+    
+    ssl    on; # 开启 Nginx SSL 模块
+    ssl_certificate    /etc/ssl/certificate.crt; # 网站新证书路径
+    ssl_certificate_key    /etc/ssl/private.key; # 网站新私钥路径
+    
+    server_name your.domain.com; # 域名
+    access_log /var/log/nginx/nginx.vhost.access.log;
+    error_log /var/log/nginx/nginx.vhost.error.log;
+    location / {
+    root   /home/www/public_html/your.domain.com/public/; # 域名映射根路径
+    index  index.html;
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;步骤4-重启-nginx-服务&#34;&gt;步骤4. 重启 Nginx 服务&lt;/h4&gt;
+&lt;p&gt;重新启动 Nginx 服务，使配置文件生效。可以运行以下命令来重新启动 Nginx 服务：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ sudo /etc/init.d/nginx restart
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;检查是否生效&lt;/p&gt;
+&lt;p&gt;使用 HTTPS 访问网站，即 https://域名。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: windows server安装docker</title>
+      <link>/web/note/2022/2022072601.html</link>
+      <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/web/note/2022/2022072601.html</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;在server2019上安装docker&#34;&gt;在Server2019上安装docker&lt;/h3&gt;
+&lt;p&gt;启动powershell&lt;/p&gt;
+&lt;p&gt;安装Docker&lt;/p&gt;
+&lt;p&gt;首先输入以下的命令&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Install-Module -Name DockerMsftProvider -Repository PSGallery -Force&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这里系统提示安装 NuGet 提供程序，我们需要输入 Y&lt;/p&gt;
+&lt;p&gt;接着继续输入以下命令&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Install-Package -Name docker -ProviderName DockerMsftProvider&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;PowerShell 询问是否信任包源“DockerDefault”时，键入 A 以继续进行安装&lt;/p&gt;
+&lt;p&gt;这一步会等得比较久，因为需要下载docker文件，耐心等待。网上也有离线安装的方式，有兴趣的可以去试试。&lt;/p&gt;
+&lt;p&gt;安装完成后，执行重启计算机的命令&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Restart-Computer -Force&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;重启之后，再次打开powershell，输入&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker version&lt;/code&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: tag与release</title>
       <link>/web/dev/2022/2022010903.html</link>
       <pubDate>Sun, 09 Jan 2022 00:00:00 +0000</pubDate>
       
@@ -23,7 +196,42 @@
       <description>
         
         
+        &lt;p&gt;本文源自 &lt;a href=&#34;https://www.jianshu.com/p/79ecf4fe5079&#34;&gt;作者：Hustlion&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;定义&#34;&gt;定义&lt;/h3&gt;
+&lt;p&gt;标签（tag）是特定提交（commit)一个指针，也就是每个tag对应一个特定的commit。&lt;/p&gt;
+&lt;p&gt;Release是具有changelogs和二进制文件的一级对象，它可以代表超出Git架构本身的一个特定时间点之前的所有项目历史。也就是通过release，不但能够通过源码体现出项目历史，还能通过已经编译好的二进制文件来进一步描述此时的项目状态。“超出Git架构本身“的意思则在于，git本身只能记录项目修改，本质上不适合将编译好的项目二进制文件记录下来。而通过release则把项目二进制文件保存了下来，方便用户下载，也方便查找特定版本的二进制文件。&lt;/p&gt;
+&lt;h4 id=&#34;以下是github-official-announcement所定义原文&#34;&gt;以下是Github official announcement所定义原文：&lt;/h4&gt;
+&lt;p&gt;Releases are first-class objects with changelogs and binary assets that present a full project history beyond Git artifacts.&lt;/p&gt;
+&lt;h4 id=&#34;创建方法&#34;&gt;创建方法&lt;/h4&gt;
+&lt;p&gt;Release分为两种：lightweight and annotated.&lt;/p&gt;
+&lt;p&gt;创建lightweight类型的tag：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git tag v1.4-lw
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;创建annotated类型的tag：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git tag -a v1.4 -m &amp;#34;my version 1.4&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;通过tag可以返回到项目的特定状态下，所以可以将tag看作是在大量commit中设定的书签。&lt;/p&gt;
+&lt;p&gt;创建release，则需要通过源码托管商的网页操作界面来进行，一般会要求填写tag名、分支以及相应的发布说明，还可上传编译好的程序、打包好的文件等。&lt;/p&gt;
+&lt;h3 id=&#34;比较&#34;&gt;比较&lt;/h3&gt;
+&lt;p&gt;标签是git中的概念，而release则是Github、码云等源码托管商所提供的更高层的概念。也就是说git本身是没有release这个概念的，只有tag。&lt;/p&gt;
+&lt;p&gt;两者之间的关系则是，release基于tag，为tag添加更丰富的信息，一般是编译好的文件。&lt;/p&gt;
+&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
+&lt;p&gt;Release是源码托管商对git的tag功能的增强。通过git提供的tag功能，我们可以给项目进行版本标识，以识别特定的版本，如v0.1.0、v1.0.0等。而通过源码托管商提供的release功能，在tag的基础上我们可以添加编译好的二进制文件等，如.deb、.exe等给特定的版本提供更多的信息，方便用户，也方便后期查找特定版本的程序。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tech: 测试</title>
+      <link>/web/dev/2022/2022010907.html</link>
+      <pubDate>Sun, 09 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/web/dev/2022/2022010907.html</guid>
+      <description>
+        
+        
         &lt;h3 id=&#34;测试&#34;&gt;测试&lt;/h3&gt;
+&lt;h3 id=&#34;使用-ed25519-算法生成-ssh-密钥&#34;&gt;使用 Ed25519 算法生成 SSH 密钥&lt;/h3&gt;
+&lt;p&gt;创建Ed25519算法的ssh密钥，&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh-keygen -t ed25519 -C &amp;quot;denalon@qq.com&amp;quot; &lt;/code&gt;&lt;/p&gt;
 
       </description>
     </item>

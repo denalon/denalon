@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自动跳转服务</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        .go {
+            margin: 20px auto;
+            padding: 15px 30px 18px 30px;
+            background: rgba(0, 0, 0, 0.025);
+            border-radius: 15px;
+        }
+        .go span {
+            opacity: 0.7;
+        }
+        .go p {
+            font-weight: 500;
+        }
+        #log {
+            padding-left: 0.5rem;
+        }
+        #btnGroup button {
+            margin-top: 10px;
+            height: 46px;
+            margin-right: 8px;
+            margin-left: 8px;
+            padding: 0 24px;
+            color: #1a73e8;
+            font-size: 16px;
+            line-height: 46px;
+            border: 1px solid #1a73e8;
+            background-color: white;
+            border-radius: 3px;
+        }
+        #btnGroup button:hover {
+            background-color: rgba(0,0,0,.1);
+        }
+        #btnGroup {
+            padding-bottom: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2 id="log"></h2>
+        <div class="go">
+            <p>您当前的 User Agent: <span id="ua"></span></p>
+            <p>跳转 URL: <span id="url"></span></p>
+        </div>
+        <div class="go" id="btnGroup"></div>
+        <div class="go google-ad">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="fluid"
+                 data-ad-layout-key="-gw-3+1f-3d+2z"
+                 data-ad-client="ca-pub-5902069866611465"
+                 data-ad-slot="6231833175"></ins>
+        </div>
+    </div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5902069866611465"
+     crossorigin="anonymous"></script>
+     <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <script>
+        /**
+         * ?u= 子域名
+         * ?i= 路径
+         * ?d= 主域名
+         */
+        function getParam(reqParam) {
+            reqParam = reqParam.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            const paraReg = new RegExp('[\\?&]' + reqParam + '=([^&#]*)');
+            const results = paraReg.exec(window.location);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+        var isD = false;
+        var ssl = "https://";
+        var ua = navigator.userAgent;
+        const d = getParam("d");
+        const i = getParam("i");
+        var u = getParam("u");
+        const s = getParam("s");
+        const domainWhiteList = ["blog.oribos.cn", "oribos.cn", "awa"];
+
+        for (let i = 0; i < domainWhiteList.length; i++) {
+            if (domainWhiteList[i] == d) {
+                isD = true;
+            }
+        }
+
+        if (s == "f") {
+            ssl = "http://";
+        }
+        if (u && u!=null) {
+            u = u+".";
+        }
+        if (isD == false) {
+            document.getElementById("log").innerText = "主域名传入数据不正确。";
+            document.getElementsByClassName("go")[0].innerText = "您目前还无法使用此页面，请检查当前链接信息传入的数据是否正确后重试。"
+        } else {
+            var url = `${ssl}${u}${d}${i}`;
+            if (u=="never."&&d=="awa") url="https://www.bilibili.com/video/BV1GJ411x7h7";
+            document.getElementById("ua").innerText = navigator.userAgent;
+            document.getElementById("url").innerHTML = `<a href="${url}" style="color: black;">${url}</a>`;
+            if (ua.includes("MicroMessenger") || ua.includes("QBWebView") || ua.includes("TIM") || ua.includes("QQTheme")) {
+                document.getElementById("log").innerText = "您当前的浏览器暂不支持访问。";
+                document.getElementById("btnGroup").innerHTML = `
+                    <button onclick="preview('${url}');">在当前浏览器中预览</button>
+                `
+            } else {
+                document.getElementById("log").innerText = "即将在 3s 后跳转";
+                setTimeout(() => {
+                    window.location.href = url;
+                }, 3000);
+            }
+        }
+        if (!document.getElementById("btnGroup").innerHTML) {
+            document.getElementById("btnGroup").remove();
+        }
+        const preview = (url) => {
+            var width = document.body.clientWidth;
+            var height = document.documentElement.clientHeight;
+            document.body.innerHTML = `
+            <iframe src="${url}" width="${width}" height="${height}"></iframe>`;
+        }
+    </script>
+</body>
+</html>
